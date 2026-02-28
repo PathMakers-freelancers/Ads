@@ -512,3 +512,118 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Global Number Counter Effect
+document.addEventListener('DOMContentLoaded', () => {
+    function initCounters() {
+        // Regex to match numbers with optional prefix/suffix like "$1,000", "500+", "1.5M", "50"
+        const regex = /^([+\-$]?)\s*(\d{1,3}([, ]\d{3})*|\d+)(\.\d+)?\s*([kKmMbB%+]?)$/i;
+
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+            acceptNode: function (node) {
+                if (node.parentElement) {
+                    const tag = node.parentElement.tagName;
+                    // Ignore scripts, styles, buttons (to not mess up UI), and SVG text
+                    if (['SCRIPT', 'STYLE', 'NOSCRIPT', 'IFRAME', 'BUTTON'].includes(tag) ||
+                        node.parentElement.closest('svg') ||
+                        node.parentElement.closest('.no-count')) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                }
+                const txt = node.textContent.trim();
+                // We want to avoid single digits like '0' or '1' that might be pagination if they don't have symbols,
+                // but user said "all numbers". To be safe, let's strictly test against regex.
+                if (txt.length > 0 && regex.test(txt)) {
+                    // Slight heuristic: don't count years starting with 202x unless there's a symbol
+                    if (txt.length === 4 && txt.startsWith('202')) return NodeFilter.FILTER_SKIP;
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+                return NodeFilter.FILTER_SKIP;
+            }
+        });
+
+        const textNodes = [];
+        let currentNode;
+        while (currentNode = walker.nextNode()) {
+            textNodes.push(currentNode);
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    if (!el.classList.contains('counted')) {
+                        el.classList.add('counted');
+                        animateValue(el);
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+
+        textNodes.forEach(node => {
+            const txt = node.textContent.trim();
+            const match = txt.match(regex);
+            if (match) {
+                const prefix = match[1] || '';
+                const numStr = match[2];
+                const decimal = match[4] || '';
+                const suffix = match[5] || '';
+
+                // Parse float (removing commas/spaces)
+                const targetValue = parseFloat(numStr.replace(/[, ]/g, '') + decimal);
+                if (isNaN(targetValue)) return;
+
+                const wrapper = document.createElement('span');
+                wrapper.className = 'counter-wrapper inline-block';
+                wrapper.setAttribute('data-target', targetValue);
+                wrapper.setAttribute('data-prefix', prefix);
+                wrapper.setAttribute('data-suffix', suffix);
+                wrapper.setAttribute('data-decimals', decimal ? decimal.length - 1 : 0);
+                wrapper.setAttribute('data-original', txt);
+
+                wrapper.textContent = txt; // start with original to avoid layout shift
+
+                node.parentNode.replaceChild(wrapper, node);
+                observer.observe(wrapper);
+            }
+        });
+
+        function animateValue(el) {
+            const target = parseFloat(el.getAttribute('data-target'));
+            const prefix = el.getAttribute('data-prefix');
+            const suffix = el.getAttribute('data-suffix');
+            const decimals = parseInt(el.getAttribute('data-decimals'));
+
+            const duration = 2000; // 2 seconds
+            const start = performance.now();
+
+            function update(time) {
+                const elapsed = time - start;
+                const progress = Math.min(elapsed / duration, 1);
+
+                // easeOutExpo
+                const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+                const current = target * ease;
+
+                // Format
+                let currentStr = current.toFixed(decimals);
+                const parts = currentStr.split('.');
+                parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+                el.textContent = prefix + parts.join('.') + suffix;
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    el.textContent = el.getAttribute('data-original');
+                }
+            }
+            // Start at 0
+            el.textContent = prefix + (0).toFixed(decimals) + suffix;
+            requestAnimationFrame(update);
+        }
+    }
+
+    // Delay slightly to let ApexCharts or other dynamic DOM settle
+    setTimeout(initCounters, 300);
+});

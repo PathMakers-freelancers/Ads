@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Classified-ads-website - About Us</title>
+    <title>AdNova - Modern Marketplace</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         // Pre-load Theme & Direction
@@ -24,9 +23,8 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        outfit: ['Outfit', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
+                        sans: ['DM Sans', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif'],
                     }
                 }
             },
@@ -37,37 +35,30 @@
             ]
         }
     </script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;700;900&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
-
-<body class="bg-white dark:bg-slate-950 transition-colors duration-300 bg-about">
-
-    <!-- Navbar (Standard) -->
-    <nav
-        class="sticky top-0 z-[100] bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 py-3">
+<body class="bg-slate-50 dark:bg-slate-950 transition-colors duration-500 text-slate-900 dark:text-slate-100">
+    <div class="fixed inset-0 bg-gradient-to-br from-slate-50 to-emerald-50/20 dark:from-slate-950 dark:to-violet-950/20 -z-10 absolute pointer-events-none"></div>
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-[100] bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 py-5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center gap-8">
                     <a href="index.html" class="flex items-center gap-2 group" dir="ltr">
                         <div
-                            class="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-xl shadow-indigo-500/20 group-hover:rotate-6 transition-transform">
-                            C</div>
+                            class="w-12 h-12 bg-emerald-600 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-xl shadow-emerald-500/20 group-hover:rotate-6 transition-transform">A</div>
                         <span
-                            class="text-2xl font-black tracking-tighter dark:text-white hidden sm:block">Classified-ads-<span
-                                class="text-blue-900">website</span></span>
+                            class="text-2xl font-black tracking-tighter dark:text-white hidden sm:block">Ad<span class="text-emerald-500">Nova</span></span>
                     </a>
 
                     <!-- Desktop Menu -->
-                    <div class="hidden lg:flex items-center gap-4">
+                    <div class="hidden lg:flex items-center gap-1">
                         <div class="relative group">
                             <button
-                                class="dropdown-trigger flex items-center space-x-1 px-4 py-2 rounded-xl text-sm font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                                class="dropdown-trigger flex items-center space-x-1 px-4 py-2 rounded-xl text-sm font-bold text-slate-600 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
                                 <span>Home</span>
                                 <i data-lucide="chevron-down"
                                     class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
@@ -75,24 +66,24 @@
                             <div
                                 class="absolute top-full left-0 w-48 bg-white dark:bg-slate-900 shadow-2xl rounded-2xl border border-slate-100 dark:border-slate-800 p-2 hidden opacity-0 translate-y-2 transition-all duration-200">
                                 <a href="index.html"
-                                    class="block px-4 py-3 text-sm font-semibold rounded-xl hover:bg-indigo-50 dark:hover:bg-indigo-900/30 text-slate-700 dark:text-slate-300 hover:text-indigo-600">Home
+                                    class="block px-4 py-3 text-sm font-semibold rounded-xl hover:bg-emerald-50 dark:hover:bg-emerald-900/30 text-slate-700 dark:text-white hover:text-emerald-600">Home
                                     Bold (V1)</a>
                                 <a href="index2.html"
-                                    class="block px-4 py-3 text-sm font-semibold rounded-xl hover:bg-indigo-50 dark:hover:bg-indigo-900/30 text-slate-700 dark:text-slate-300 hover:text-indigo-600">Home
+                                    class="block px-4 py-3 text-sm font-semibold rounded-xl hover:bg-emerald-50 dark:hover:bg-emerald-900/30 text-slate-700 dark:text-white hover:text-emerald-600">Home
                                     Calm (V2)</a>
                             </div>
                         </div>
 
                         <a href="about.html"
-                            class="px-4 py-2 rounded-xl text-sm font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">About</a>
+                            class="px-4 py-2 rounded-xl text-sm font-bold text-slate-600 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">About</a>
                         <a href="services.html"
-                            class="px-4 py-2 rounded-xl text-sm font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Services</a>
+                            class="px-4 py-2 rounded-xl text-sm font-bold text-slate-600 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Services</a>
                         <a href="contact.html"
-                            class="px-4 py-2 rounded-xl text-sm font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Contact</a>
+                            class="px-4 py-2 rounded-xl text-sm font-bold text-slate-600 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Contact</a>
 
                         <div class="relative group">
                             <button
-                                class="dropdown-trigger flex items-center space-x-1 px-4 py-2 rounded-xl text-sm font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                                class="dropdown-trigger flex items-center space-x-1 px-4 py-2 rounded-xl text-sm font-bold text-slate-600 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
                                 <span>Dashboards</span>
                                 <i data-lucide="chevron-down"
                                     class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
@@ -100,12 +91,12 @@
                             <div
                                 class="absolute top-full left-0 w-56 bg-white dark:bg-slate-900 shadow-2xl rounded-2xl border border-slate-100 dark:border-slate-800 p-2 hidden opacity-0 translate-y-2 transition-all duration-200">
                                 <a href="user_dashboard.html"
-                                    class="flex items-center space-x-3 px-4 py-3 text-sm font-semibold rounded-xl hover:bg-indigo-50 dark:hover:bg-indigo-900/30 text-slate-700 dark:text-slate-300 hover:text-indigo-600">
+                                    class="flex items-center space-x-3 px-4 py-3 text-sm font-semibold rounded-xl hover:bg-emerald-50 dark:hover:bg-emerald-900/30 text-slate-700 dark:text-white hover:text-emerald-600">
                                     <i data-lucide="user" class="w-4 h-4"></i>
                                     <span>User Dashboard</span>
                                 </a>
                                 <a href="admin_dashboard.html"
-                                    class="flex items-center space-x-3 px-4 py-3 text-sm font-semibold rounded-xl hover:bg-indigo-50 dark:hover:bg-indigo-900/30 text-slate-700 dark:text-slate-300 hover:text-indigo-600">
+                                    class="flex items-center space-x-3 px-4 py-3 text-sm font-semibold rounded-xl hover:bg-emerald-50 dark:hover:bg-emerald-900/30 text-slate-700 dark:text-white hover:text-emerald-600">
                                     <i data-lucide="shield-check" class="w-4 h-4"></i>
                                     <span>Admin Control</span>
                                 </a>
@@ -116,22 +107,23 @@
 
                 <div class="flex items-center gap-4 sm:gap-6">
                     <a href="login.html"
-                        class="hidden sm:block px-6 py-2 text-sm font-bold text-slate-600 dark:text-white transition-all border border-indigo-500/30 dark:border-indigo-500 shadow-[0_0_10px_rgba(99,102,241,0.2)] dark:shadow-[0_0_15px_rgba(99,102,241,0.5)] hover:shadow-[0_0_20px_rgba(99,102,241,0.6)] hover:border-indigo-500 rounded-xl hover:text-indigo-600 dark:hover:text-white bg-white/50 dark:bg-slate-900/50">Log
+                        class="hidden sm:block px-6 py-2 text-sm font-bold text-slate-600 dark:text-white transition-all border border-emerald-500/30 dark:border-emerald-500 shadow-[0_0_10px_rgba(99,102,241,0.2)] dark:shadow-[0_0_15px_rgba(99,102,241,0.5)] hover:shadow-[0_0_20px_rgba(99,102,241,0.6)] hover:border-emerald-500 rounded-xl hover:text-emerald-600 dark:hover:text-white bg-white/50 dark:bg-slate-900/50">Log
                         In</a>
                     <button id="dir-toggle"
-                        class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-indigo-600 hover:text-white transition-all shadow-sm">
+                        class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-white hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
                         <i data-lucide="globe" class="w-5 h-5"></i>
                     </button>
                     <button id="theme-toggle"
-                        class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-indigo-600 hover:text-white transition-all shadow-sm">
+                        class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-white hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
                         <i data-lucide="moon" class="w-5 h-5"></i>
                     </button>
+                    <!-- Mobile Menu Button -->
                     <button id="mobile-menu-btn"
-                        class="lg:hidden p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-indigo-600 hover:text-white transition-all shadow-sm">
+                        class="lg:hidden p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-white hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
                         <i data-lucide="menu" class="w-5 h-5"></i>
                     </button>
                     <a href="login.html#register"
-                        class="px-6 py-3 bg-indigo-600 text-white font-black rounded-2xl hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-600/20 active:scale-95 hidden sm:block">
+                        class="px-6 py-3 bg-emerald-600 text-white font-black rounded-2xl hover:bg-emerald-700 transition-all shadow-xl shadow-emerald-600/20 active:scale-95 hidden sm:block">
                         Get Started
                     </a>
                 </div>
@@ -139,7 +131,6 @@
         </div>
 
     </nav>
-
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu-overlay"
         class="fixed inset-0 bg-black/60 z-[190] hidden opacity-0 transition-opacity duration-300 backdrop-blur-sm lg:hidden">
@@ -152,7 +143,7 @@
         <div class="flex items-center justify-between p-4 border-b border-slate-100 dark:border-slate-800">
             <span class="font-black text-xl tracking-tighter dark:text-white">Menu</span>
             <button id="mobile-menu-close-btn"
-                class="p-2 text-slate-500 hover:text-rose-500 transition-colors rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+                class="p-2 text-slate-500 hover:text-violet-500 transition-colors rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
                 <i data-lucide="x" class="w-6 h-6"></i>
             </button>
         </div>
@@ -182,901 +173,366 @@
                     <i data-lucide="shield-check" class="w-4 h-4"></i><span>Admin Dashboard</span>
                 </a>
                 <a href="login.html"
-                    class="flex items-center space-x-2 px-4 py-3 rounded-xl bg-indigo-600 text-white font-bold hover:bg-indigo-700 mt-4 justify-center shadow-lg shadow-indigo-600/20 active:scale-95 transition-all">
+                    class="flex items-center space-x-2 px-4 py-3 rounded-xl bg-emerald-600 text-white font-bold hover:bg-emerald-700 mt-4 justify-center shadow-lg shadow-emerald-600/20 active:scale-95 transition-all">
                     <span>Get Started</span>
                 </a>
             </div>
         </div>
     </div>
 
-    <div class="relative py-20 overflow-hidden">
-        <!-- Hero Background Image -->
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop"
-                class="w-full h-full object-cover" alt="About Hero">
-            <div class="absolute inset-0 bg-white/90 dark:bg-slate-950/90 backdrop-blur-sm"></div>
+    <!-- Background Orbs -->
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div
+            class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-emerald-500/10 dark:bg-emerald-500/5 blur-[120px] rounded-full animate-float">
         </div>
-
-        <div class="relative z-10 max-w-7xl mx-auto px-4 mb-12">
-            <div class="text-center max-w-4xl mx-auto animate-fade-in-up">
-                <span class="text-indigo-600 font-black uppercase tracking-widest text-sm mb-6 block">The Pro
-                    Story</span>
-                <h1
-                    class="text-6xl md:text-8xl font-black text-slate-900 dark:text-white leading-none font-outfit mb-10">
-                    A PLATFORM FOR <br /> <span class="text-indigo-600">EVERY DOMAIN.</span>
-                </h1>
-                <p class="text-xl text-slate-700 font-bold leading-relaxed">
-                    From luxury cars to sustainable food systems, we provide a vibrant hub for every human passion and
-                    necessity.
-                </p>
-            </div>
-        </div>
-
-        <!-- Animated Counters Section -->
-        <div class="relative z-10 max-w-5xl mx-auto px-4 mt-16">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center" id="counters">
-                <div
-                    class="bg-white/50 dark:bg-slate-800/50 backdrop-blur-md p-8 rounded-3xl border border-white/20 dark:border-slate-700/50 hover:-translate-y-2 transition-transform duration-300">
-                    <div class="text-4xl md:text-6xl font-black text-indigo-600 mb-2 counter" data-target="15000"
-                        data-suffix="+">0
-                    </div>
-                    <div class="text-sm font-bold uppercase tracking-widest text-slate-700">Total Ads</div>
-                </div>
-                <div
-                    class="bg-white/50 dark:bg-slate-800/50 backdrop-blur-md p-8 rounded-3xl border border-white/20 dark:border-slate-700/50 hover:-translate-y-2 transition-transform duration-300">
-                    <div class="text-4xl md:text-6xl font-black text-purple-600 mb-2 counter" data-target="25000"
-                        data-suffix="+">0
-                    </div>
-                    <div class="text-sm font-bold uppercase tracking-widest text-slate-700">Active Users</div>
-                </div>
-                <div
-                    class="bg-white/50 dark:bg-slate-800/50 backdrop-blur-md p-8 rounded-3xl border border-white/20 dark:border-slate-700/50 hover:-translate-y-2 transition-transform duration-300">
-                    <div class="text-4xl md:text-6xl font-black text-pink-600 mb-2 counter" data-target="450"
-                        data-suffix="+">0</div>
-                    <div class="text-sm font-bold uppercase tracking-widest text-slate-700">Cities Covered</div>
-                </div>
-            </div>
-        </div>
+        <div class="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-violet-500/10 dark:bg-violet-500/5 blur-[150px] rounded-full animate-float"
+            style="animation-delay: 1s;"></div>
     </div>
 
-    <section class="bg-slate-50 dark:bg-slate-900/50 py-20 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 mb-16 flex justify-between items-end">
-            <div>
-                <h2 class="text-4xl font-black dark:text-white font-outfit">OUR UNIVERSE</h2>
-                <p class="text-slate-700 font-bold uppercase text-xs tracking-widest mt-2">25 Core domains of
-                    excellence</p>
-            </div>
-            <div class="text-indigo-600 font-black animate-pulse">SCROLL RIGHT <i data-lucide="arrow-right"
-                    class="inline w-4 h-4"></i></div>
+    <div class="absolute inset-0 z-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none bold-pattern"></div>
+
+    
+    
+    <main>
+        
+    <!-- Premium About Hero -->
+    <section class="max-w-7xl mx-auto px-4 pt-24 pb-16">
+        <div class="text-center max-w-4xl mx-auto mb-16">
+            <span class="inline-block py-2 px-6 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 font-bold tracking-[0.2em] uppercase text-xs mb-8 border border-emerald-200 dark:border-emerald-800 shadow-sm">
+                The AdNova Philosophy
+            </span>
+            <h1 class="premium-h1 text-5xl md:text-7xl font-heading tracking-tighter mb-8 leading-[1.1]">
+                Redefining the <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-violet-500">Value of Exchange.</span>
+            </h1>
+            <p class="text-xl text-slate-600 dark:text-slate-300 font-light leading-relaxed">
+                We believe that every item has a story, and every service has a purpose. AdNova was built to be the premium layer connecting quality people with quality goods, securely and beautifully.
+                <br><br>
+                Founded in 2026, we recognized a massive gap in the digital marketplace: a lack of curated, high-trust environments for significant transactions. From rare vintage collectibles and modern architectural furniture to cutting-edge tech hardware and premium real estate, AdNova serves as the discerning nexus for buyers and sellers who demand excellence.
+            </p>
         </div>
-
-        <div class="flex space-x-8 px-4 sm:px-8 overflow-x-auto hide-scrollbar pb-20 snap-x">
-
-            <div
-                class="min-w-[340px] bg-white dark:bg-slate-800 p-10 rounded-[3rem] shadow-2xl border border-slate-100 dark:border-slate-700 relative group cursor-pointer snap-center hover:scale-105 transition-transform">
-                <div
-                    class="absolute top-8 right-8 rtl:right-auto rtl:left-8 text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest">
-                    Cars</div>
-                <div
-                    class="w-16 h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-8 shadow-xl shadow-indigo-600/20 group-hover:rotate-6 transition-transform">
-                    <i data-lucide="car" class="w-8 h-8"></i>
+        
+        <!-- Massive Hero Image -->
+        <div class="relative w-full h-[60vh] rounded-[3rem] overflow-hidden shadow-2xl group">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1600&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="AdNova Team">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-12">
+                <div class="max-w-2xl text-left">
+                    <h3 class="text-white text-3xl font-heading font-black mb-4">Founded on Trust. Built for Speed.</h3>
+                    <p class="text-slate-200 text-lg">Our headquarters in San Francisco acts as the nexus for our global operations, monitoring millions of secure transactions daily.</p>
                 </div>
-                <h4 class="text-2xl font-black mb-4 dark:text-white font-outfit">Automotive Vision</h4>
-                <p class="text-slate-700 dark:text-slate-200 font-bold leading-relaxed">Transforming how you trade
-                    cars and vehicles with 3D views.</p>
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop"
-                    class="mt-8 rounded-2xl w-full h-40 object-cover" alt="Milestone Visual">
-            </div>
-
-            <div
-                class="min-w-[340px] bg-white dark:bg-slate-800 p-10 rounded-[3rem] shadow-2xl border border-slate-100 dark:border-slate-700 relative group cursor-pointer snap-center hover:scale-105 transition-transform">
-                <div
-                    class="absolute top-8 right-8 rtl:right-auto rtl:left-8 text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest">
-                    Buildings</div>
-                <div
-                    class="w-16 h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-8 shadow-xl shadow-indigo-600/20 group-hover:rotate-6 transition-transform">
-                    <i data-lucide="home" class="w-8 h-8"></i>
-                </div>
-                <h4 class="text-2xl font-black mb-4 dark:text-white font-outfit">Architectural Hub</h4>
-                <p class="text-slate-700 dark:text-slate-200 font-bold leading-relaxed">Connecting builders and
-                    buyers for a better living future.</p>
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800&auto=format&fit=crop"
-                    class="mt-8 rounded-2xl w-full h-40 object-cover" alt="Milestone Visual">
-            </div>
-
-            <div
-                class="min-w-[340px] bg-white dark:bg-slate-800 p-10 rounded-[3rem] shadow-2xl border border-slate-100 dark:border-slate-700 relative group cursor-pointer snap-center hover:scale-105 transition-transform">
-                <div
-                    class="absolute top-8 right-8 rtl:right-auto rtl:left-8 text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest">
-                    Home Decor</div>
-                <div
-                    class="w-16 h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-8 shadow-xl shadow-indigo-600/20 group-hover:rotate-6 transition-transform">
-                    <i data-lucide="palette" class="w-8 h-8"></i>
-                </div>
-                <h4 class="text-2xl font-black mb-4 dark:text-white font-outfit">Interior Design</h4>
-                <p class="text-slate-700 dark:text-slate-200 font-bold leading-relaxed">A world of home decor, from
-                    vintage to modern minimal.</p>
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop"
-                    class="mt-8 rounded-2xl w-full h-40 object-cover" alt="Milestone Visual">
-            </div>
-
-            <div
-                class="min-w-[340px] bg-white dark:bg-slate-800 p-10 rounded-[3rem] shadow-2xl border border-slate-100 dark:border-slate-700 relative group cursor-pointer snap-center hover:scale-105 transition-transform">
-                <div
-                    class="absolute top-8 right-8 rtl:right-auto rtl:left-8 text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest">
-                    Food</div>
-                <div
-                    class="w-16 h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-8 shadow-xl shadow-indigo-600/20 group-hover:rotate-6 transition-transform">
-                    <i data-lucide="coffee" class="w-8 h-8"></i>
-                </div>
-                <h4 class="text-2xl font-black mb-4 dark:text-white font-outfit">Gourmet Market</h4>
-                <p class="text-slate-700 dark:text-slate-200 font-bold leading-relaxed">Supporting local food
-                    systems and artisanal food trading.</p>
-                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=800&auto=format&fit=crop"
-                    class="mt-8 rounded-2xl w-full h-40 object-cover" alt="Milestone Visual">
-            </div>
-
-            <div
-                class="min-w-[340px] bg-white dark:bg-slate-800 p-10 rounded-[3rem] shadow-2xl border border-slate-100 dark:border-slate-700 relative group cursor-pointer snap-center hover:scale-105 transition-transform">
-                <div
-                    class="absolute top-8 right-8 rtl:right-auto rtl:left-8 text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest">
-                    Growth</div>
-                <div
-                    class="w-16 h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-8 shadow-xl shadow-indigo-600/20 group-hover:rotate-6 transition-transform">
-                    <i data-lucide="globe" class="w-8 h-8"></i>
-                </div>
-                <h4 class="text-2xl font-black mb-4 dark:text-white font-outfit">Global Expansion</h4>
-                <p class="text-slate-700 dark:text-slate-200 font-bold leading-relaxed">Operating in 150+ countries
-                    with localized markets.</p>
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop"
-                    class="mt-8 rounded-2xl w-full h-40 object-cover" alt="Milestone Visual">
-            </div>
-
-        </div>
-        </div>
-    </section>
-
-    <!-- Section 1: Our Story -->
-    <section class="py-20 max-w-7xl mx-auto px-4">
-        <div class="flex flex-col md:flex-row items-center gap-12">
-            <div class="flex-1 space-y-6">
-                <span class="text-indigo-600 font-bold tracking-widest uppercase text-sm">Our Story</span>
-                <h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white font-outfit">From Garage to
-                    Global</h2>
-                <p class="text-slate-600 dark:text-slate-200 text-lg leading-relaxed">
-                    It started with a simple idea in 2020: what if trading locally was as easy as sending a text?
-                    We built Classified-ads-website to bridge the gap between community trust and modern technology.
-                    Today, we're a team of dreamers and doers, redefining how the world buys, sells, and connects.
-                </p>
-                <div class="flex gap-4 pt-4">
-                    <div class="text-center">
-                        <span class="block text-3xl font-black text-indigo-600">5M+</span>
-                        <span class="text-xs text-slate-700 font-bold uppercase">Users</span>
-                    </div>
-                    <div class="w-px bg-slate-200 dark:bg-slate-700"></div>
-                    <div class="text-center">
-                        <span class="block text-3xl font-black text-indigo-600">150+</span>
-                        <span class="text-xs text-slate-700 font-bold uppercase">Countries</span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex-1 w-full order-first md:order-last">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop"
-                    class="rounded-[3rem] shadow-2xl w-full object-cover aspect-square transform md:rotate-3 hover:rotate-0 transition-transform duration-500">
             </div>
         </div>
     </section>
 
-    <!-- Section 2: Mission & Vision -->
-    <section class="py-20 bg-slate-50 dark:bg-slate-800/50">
+    <!-- The Mission -->
+    <section class="py-24 bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800 relative z-10">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Mission Card -->
-                <div
-                    class="bg-white dark:bg-slate-900 p-10 rounded-[2.5rem] shadow-xl border border-slate-100 dark:border-slate-700 relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i data-lucide="target" class="w-32 h-32 text-indigo-600"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="premium-h2 text-4xl md:text-5xl mb-8">Our Mission</h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">To create the world's most trusted, aesthetically refined, and efficient marketplace architecture.</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">For too long, classified ads platforms have been riddled with friction, poor design, and lack of trust. We engineered AdNova from the ground up to eradicate these pain points, employing state-of-the-art verification, a zero-latency interface, and a community-first support model.
+                    <br><br>
+                    Our mission isn't just to facilitate a transaction—it's to redefine the standard of e-commerce. By integrating AI-driven fraud detection, blockchain-verified digital certificates of authenticity for high-ticket items, and a UI design that honors the aesthetics of the products we host, we are building a sanctuary for global commerce.</p>
+                    
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <span class="block text-4xl font-black text-emerald-500 mb-2 font-heading tracking-tighter">0%</span>
+                            <span class="text-sm font-bold text-slate-500 uppercase tracking-widest">Fraud Tolerance</span>
+                        </div>
+                        <div>
+                            <span class="block text-4xl font-black text-violet-500 mb-2 font-heading tracking-tighter">150+</span>
+                            <span class="text-sm font-bold text-slate-500 uppercase tracking-widest">Countries Served</span>
+                        </div>
                     </div>
-                    <div
-                        class="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 rounded-2xl flex items-center justify-center mb-6">
-                        <i data-lucide="flag" class="w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-3xl font-black text-slate-900 dark:text-white mb-4">Our Mission</h3>
-                    <p class="text-slate-600 dark:text-slate-200 text-lg leading-relaxed">
-                        To empower individuals and businesses by providing the safest, fastest, and most intuitive
-                        platform for local commerce.
-                    </p>
                 </div>
-                <!-- Vision Card -->
-                <div
-                    class="bg-indigo-600 p-10 rounded-[2.5rem] shadow-xl shadow-indigo-600/20 relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i data-lucide="rocket" class="w-32 h-32 text-white"></i>
+                <!-- Glass Card Stack -->
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-emerald-400/20 to-violet-400/20 blur-3xl rounded-full"></div>
+                    <div class="glass-card p-8 rounded-[2rem] border border-white/40 dark:border-slate-700 shadow-2xl relative z-10 backdrop-blur-xl bg-white/60 dark:bg-slate-800/60 translate-x-4 -translate-y-4">
+                        <i data-lucide="shield" class="w-10 h-10 text-emerald-500 mb-6"></i>
+                        <h4 class="text-xl font-bold mb-3 dark:text-white font-heading">Complete Security</h4>
+                        <p class="text-slate-600 dark:text-slate-300 leading-relaxed">End-to-end encryption on all communications and bank-grade security for escrow transactions.</p>
                     </div>
-                    <div class="w-14 h-14 bg-white/20 text-white rounded-2xl flex items-center justify-center mb-6">
-                        <i data-lucide="eye" class="w-7 h-7"></i>
+                    <div class="glass-card p-8 rounded-[2rem] border border-white/40 dark:border-slate-700 shadow-2xl relative z-20 backdrop-blur-xl bg-white/80 dark:bg-slate-900/80 -translate-x-4 translate-y-4">
+                        <i data-lucide="zap" class="w-10 h-10 text-violet-500 mb-6"></i>
+                        <h4 class="text-xl font-bold mb-3 dark:text-white font-heading">Zero Latency</h4>
+                        <p class="text-slate-600 dark:text-slate-300 leading-relaxed">Our globally distributed edge network ensures that your items load instantly, no matter where you are.</p>
                     </div>
-                    <h3 class="text-3xl font-black text-white mb-4">Our Vision</h3>
-                    <p class="text-indigo-100 text-lg leading-relaxed">
-                        A world where every item finds a second life, and every service finds a neighbor in need,
-                        creating a sustainable global economy.
-                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 3: What Makes Us Different (Expandable) -->
-    <section class="py-24 max-w-7xl mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-black text-slate-900 dark:text-white font-outfit mb-4">WHAT MAKES US DIFFERENT</h2>
-            <p class="text-slate-700 dark:text-slate-200 text-lg max-w-2xl mx-auto">Discover the 15 pillars of our
-                excellence.</p>
-        </div>
-
-        <div class="w-full max-w-2xl mx-auto mb-10">
-            <button
-                class="accordion-trigger w-full flex items-center justify-between p-6 bg-indigo-600 text-white rounded-2xl hover:bg-indigo-700 transition-colors">
-                <span class="text-xl font-bold">What Makes Us Different (15 Points)</span>
-                <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
-            </button>
-            <div class="accordion-content hidden mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <!-- 15 Items -->
-
-                <!-- Helper to generate item structure -->
-                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl">
-                    <button class="accordion-trigger w-full flex items-center justify-between text-left">
-                        <span class="font-bold dark:text-white">Verified Advertisers</span>
-                        <i data-lucide="plus" class="w-4 h-4 text-indigo-600"></i>
-                    </button>
-                    <div class="accordion-content hidden mt-2 text-sm text-slate-700">
-                        Every advertiser undergoes a strict ID verification process to ensure safety.
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl">
-                    <button class="accordion-trigger w-full flex items-center justify-between text-left">
-                        <span class="font-bold dark:text-white">Smart Ad Ranking</span>
-                        <i data-lucide="plus" class="w-4 h-4 text-indigo-600"></i>
-                    </button>
-                    <div class="accordion-content hidden mt-2 text-sm text-slate-700">
-                        AI-powered algorithms show you the most relevant ads first.
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl">
-                    <button class="accordion-trigger w-full flex items-center justify-between text-left">
-                        <span class="font-bold dark:text-white">Location-based Targeting</span>
-                        <i data-lucide="plus" class="w-4 h-4 text-indigo-600"></i>
-                    </button>
-                    <div class="accordion-content hidden mt-2 text-sm text-slate-700">
-                        Find exactly what you need within your local neighborhood.
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl">
-                    <button class="accordion-trigger w-full flex items-center justify-between text-left">
-                        <span class="font-bold dark:text-white">Real-time Analytics</span>
-                        <i data-lucide="plus" class="w-4 h-4 text-indigo-600"></i>
-                    </button>
-                    <div class="accordion-content hidden mt-2 text-sm text-slate-700">
-                        Track views and clicks on your ads instantly.
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl">
-                    <button class="accordion-trigger w-full flex items-center justify-between text-left">
-                        <span class="font-bold dark:text-white">Fraud Detection</span>
-                        <i data-lucide="plus" class="w-4 h-4 text-indigo-600"></i>
-                    </button>
-                    <div class="accordion-content hidden mt-2 text-sm text-slate-700">
-                        Advanced systems block suspicious activity before it reaches you.
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl">
-                    <button class="accordion-trigger w-full flex items-center justify-between text-left">
-                        <span class="font-bold dark:text-white">Premium Boosts</span>
-                        <i data-lucide="plus" class="w-4 h-4 text-indigo-600"></i>
-                    </button>
-                    <div class="accordion-content hidden mt-2 text-sm text-slate-700">
-                        Get up to 10x more visibility with affordable power-ups.
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl">
-                    <button class="accordion-trigger w-full flex items-center justify-between text-left">
-                        <span class="font-bold dark:text-white">Business Tools</span>
-                        <i data-lucide="plus" class="w-4 h-4 text-indigo-600"></i>
-                    </button>
-                    <div class="accordion-content hidden mt-2 text-sm text-slate-700">
-                        Dedicated features for high-volume sellers and shops.
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl">
-                    <button class="accordion-trigger w-full flex items-center justify-between text-left">
-                        <span class="font-bold dark:text-white">User Dashboards</span>
-                        <i data-lucide="plus" class="w-4 h-4 text-indigo-600"></i>
-                    </button>
-                    <div class="accordion-content hidden mt-2 text-sm text-slate-700">
-                        Manage all your activities from one sleek interface.
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl">
-                    <button class="accordion-trigger w-full flex items-center justify-between text-left">
-                        <span class="font-bold dark:text-white">Secure Payments</span>
-                        <i data-lucide="plus" class="w-4 h-4 text-indigo-600"></i>
-                    </button>
-                    <div class="accordion-content hidden mt-2 text-sm text-slate-700">
-                        Integrated escrow services for peace of mind.
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl">
-                    <button class="accordion-trigger w-full flex items-center justify-between text-left">
-                        <span class="font-bold dark:text-white">Multi-category Support</span>
-                        <i data-lucide="plus" class="w-4 h-4 text-indigo-600"></i>
-                    </button>
-                    <div class="accordion-content hidden mt-2 text-sm text-slate-700">
-                        From cars to jobs, we handle it all with specialized fields.
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl">
-                    <button class="accordion-trigger w-full flex items-center justify-between text-left">
-                        <span class="font-bold dark:text-white">Mobile Optimization</span>
-                        <i data-lucide="plus" class="w-4 h-4 text-indigo-600"></i>
-                    </button>
-                    <div class="accordion-content hidden mt-2 text-sm text-slate-700">
-                        Experience a flawless app-like feel on your phone browser.
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl">
-                    <button class="accordion-trigger w-full flex items-center justify-between text-left">
-                        <span class="font-bold dark:text-white">SEO-friendly Listings</span>
-                        <i data-lucide="plus" class="w-4 h-4 text-indigo-600"></i>
-                    </button>
-                    <div class="accordion-content hidden mt-2 text-sm text-slate-700">
-                        Your ads get indexed by Google for maximum organic reach.
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl">
-                    <button class="accordion-trigger w-full flex items-center justify-between text-left">
-                        <span class="font-bold dark:text-white">Instant Moderation</span>
-                        <i data-lucide="plus" class="w-4 h-4 text-indigo-600"></i>
-                    </button>
-                    <div class="accordion-content hidden mt-2 text-sm text-slate-700">
-                        Ads are reviewed and live in minutes, not days.
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl">
-                    <button class="accordion-trigger w-full flex items-center justify-between text-left">
-                        <span class="font-bold dark:text-white">Performance Insights</span>
-                        <i data-lucide="plus" class="w-4 h-4 text-indigo-600"></i>
-                    </button>
-                    <div class="accordion-content hidden mt-2 text-sm text-slate-700">
-                        Deep dive into what makes your ads successful.
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl">
-                    <button class="accordion-trigger w-full flex items-center justify-between text-left">
-                        <span class="font-bold dark:text-white">24/7 System Monitoring</span>
-                        <i data-lucide="plus" class="w-4 h-4 text-indigo-600"></i>
-                    </button>
-                    <div class="accordion-content hidden mt-2 text-sm text-slate-700">
-                        We never sleep, ensuring the platform is always up.
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 4: Who We Serve -->
-    <section class="py-24 bg-white dark:bg-slate-900 overflow-hidden relative">
-        <div class="absolute -right-20 top-20 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
+    <!-- Leadership / Team -->
+    <section class="py-32 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="flex flex-col md:flex-row items-center gap-16">
-                <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop"
-                        class="rounded-3xl object-cover w-full h-full md:translate-y-12">
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop"
-                        class="rounded-3xl object-cover w-full h-full">
+            <div class="text-center mb-20">
+                <h2 class="premium-h2 text-4xl md:text-5xl mb-6">The Architects</h2>
+                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Meet the visionaries building the future of digital exchange.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Team 1 -->
+                <div class="group">
+                    <div class="aspect-[3/4] rounded-[2rem] overflow-hidden mb-6 relative shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                            <div class="flex gap-4">
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-emerald-500 transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-emerald-500 transition-colors"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold dark:text-white font-heading">Sarah Kensington</h3>
+                    <p class="text-emerald-500 font-bold text-sm tracking-widest uppercase mt-1">Founding CEO</p>
                 </div>
-                <div class="flex-1 space-y-8">
-                    <h2 class="text-4xl font-black dark:text-white font-outfit">Empowering Everyone</h2>
-
-                    <div class="flex items-start gap-4">
-                        <div class="bg-indigo-100 dark:bg-indigo-900/50 p-3 rounded-xl text-indigo-600"><i
-                                data-lucide="user" class="w-6 h-6"></i></div>
-                        <div>
-                            <h4 class="text-xl font-bold dark:text-white">Individuals</h4>
-                            <p class="text-slate-700 dark:text-slate-200 mt-1">Declutter your home or find hidden gems
-                                in your neighborhood.</p>
+                <!-- Team 2 -->
+                <div class="group">
+                    <div class="aspect-[3/4] rounded-[2rem] overflow-hidden mb-6 relative shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                            <div class="flex gap-4">
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-violet-500 transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-violet-500 transition-colors"><i data-lucide="github" class="w-4 h-4"></i></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex items-start gap-4">
-                        <div class="bg-purple-100 dark:bg-purple-900/50 p-3 rounded-xl text-purple-600"><i
-                                data-lucide="briefcase" class="w-6 h-6"></i></div>
-                        <div>
-                            <h4 class="text-xl font-bold dark:text-white">Businesses</h4>
-                            <p class="text-slate-700 dark:text-slate-200 mt-1">Reach local customers and grow your
-                                service business efficiently.</p>
+                    <h3 class="text-2xl font-bold dark:text-white font-heading">David Chen</h3>
+                    <p class="text-violet-500 font-bold text-sm tracking-widest uppercase mt-1">Chief Technology Officer</p>
+                </div>
+                <!-- Team 3 -->
+                <div class="group">
+                    <div class="aspect-[3/4] rounded-[2rem] overflow-hidden mb-6 relative shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                            <div class="flex gap-4">
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-emerald-500 transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-emerald-500 transition-colors"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex items-start gap-4">
-                        <div class="bg-pink-100 dark:bg-pink-900/50 p-3 rounded-xl text-pink-600"><i
-                                data-lucide="heart-handshake" class="w-6 h-6"></i></div>
-                        <div>
-                            <h4 class="text-xl font-bold dark:text-white">Non-Profits</h4>
-                            <p class="text-slate-700 dark:text-slate-200 mt-1">Connect with donors and volunteers for
-                                community causes.</p>
-                        </div>
-                    </div>
+                    <h3 class="text-2xl font-bold dark:text-white font-heading">Maya Patel</h3>
+                    <p class="text-emerald-500 font-bold text-sm tracking-widest uppercase mt-1">Head of Trust & Safety</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 5: Roadmap -->
-    <section class="max-w-7xl mx-auto px-4 py-24">
-        <h2 class="text-4xl font-black text-center dark:text-white font-outfit mb-16">OUR JOURNEY</h2>
-        <div class="relative border-l-4 border-indigo-200 dark:border-slate-800 ml-6 md:ml-12 space-y-12">
-            <!-- Event 1 -->
-            <div class="relative pl-8 md:pl-12">
-                <div
-                    class="absolute -left-[14px] top-1 w-6 h-6 rounded-full bg-indigo-600 border-4 border-white dark:border-slate-950">
-                </div>
-                <span
-                    class="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/50 dark:text-indigo-300 rounded-full text-xs font-bold mb-2">2020</span>
-                <h3 class="text-2xl font-bold dark:text-white">The Inception</h3>
-                <p class="text-slate-700 dark:text-slate-300 md:w-2/3 leading-relaxed">Classified-ads-website started as
-                    a small local
-                    project in a
-                    garage, aiming to simplify community trading.</p>
-            </div>
-            <!-- Event 2 -->
-            <div class="relative pl-8 md:pl-12">
-                <div
-                    class="absolute -left-[14px] top-1 w-6 h-6 rounded-full bg-indigo-600 border-4 border-white dark:border-slate-950">
-                </div>
-                <span
-                    class="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/50 dark:text-indigo-300 rounded-full text-xs font-bold mb-2">2022</span>
-                <h3 class="text-2xl font-bold dark:text-white">Going National</h3>
-                <p class="text-slate-700 dark:text-slate-300 md:w-2/3 leading-relaxed">After receiving Series A funding,
-                    we expanded our
-                    operations to cover the entire country.</p>
-            </div>
-            <!-- Event 3 -->
-            <div class="relative pl-8 md:pl-12">
-                <div
-                    class="absolute -left-[14px] top-1 w-6 h-6 rounded-full bg-indigo-600 border-4 border-white dark:border-slate-950">
-                </div>
-                <span
-                    class="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/50 dark:text-indigo-300 rounded-full text-xs font-bold mb-2">2024</span>
-                <h3 class="text-2xl font-bold dark:text-white">AI Integration</h3>
-                <p class="text-slate-700 dark:text-slate-300 md:w-2/3 leading-relaxed">Launched our core AI verification
-                    engine, reducing
-                    fraud by 99%.</p>
-            </div>
-            <!-- Event 4 -->
-            <div class="relative pl-8 md:pl-12">
-                <div
-                    class="absolute -left-[14px] top-1 w-6 h-6 rounded-full bg-indigo-600 border-4 border-white dark:border-slate-950">
-                </div>
-                <span
-                    class="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/50 dark:text-indigo-300 rounded-full text-xs font-bold mb-2">2026</span>
-                <h3 class="text-2xl font-bold dark:text-white">Global Dominance</h3>
-                <p class="text-slate-700 dark:text-slate-300 md:w-2/3 leading-relaxed">Now serving millions of users
-                    worldwide with
-                    localized support and currency.</p>
-            </div>
-            <!-- Event 5: Future -->
-            <div class="relative pl-8 md:pl-12 opacity-60">
-                <div
-                    class="absolute -left-[14px] top-1 w-6 h-6 rounded-full bg-slate-300 dark:bg-slate-700 border-4 border-white dark:border-slate-950">
-                </div>
-                <span
-                    class="inline-block px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-xs font-bold mb-2">2028+</span>
-                <h3 class="text-2xl font-bold dark:text-white">Metaverse Commerce</h3>
-                <p class="text-slate-700 dark:text-slate-300 md:w-2/3 leading-relaxed">Planning full integration with
-                    virtual worlds for
-                    digital asset trading.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 7: Community & Trust Signals (Expandable) -->
-    <section class="max-w-7xl mx-auto px-4 mb-20">
-        <button
-            class="accordion-trigger w-full flex items-center justify-between p-6 bg-slate-900 text-white rounded-2xl mb-4 hover:bg-slate-800 transition-colors">
-            <div class="flex items-center gap-4">
-                <i data-lucide="shield-check" class="w-8 h-8 text-green-400"></i>
-                <span class="text-2xl font-black text-white">Community & Trust Signals</span>
-            </div>
-            <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
-        </button>
-        <div
-            class="accordion-content hidden p-8 bg-slate-50 dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                <div class="p-4">
-                    <div
-                        class="w-16 h-16 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600">
-                        <i data-lucide="check-circle" class="w-8 h-8"></i>
-                    </div>
-                    <h4 class="font-bold dark:text-white">Verified Sellers</h4>
-                </div>
-                <div class="p-4">
-                    <div
-                        class="w-16 h-16 bg-purple-100 dark:bg-purple-900/50 rounded-full flex items-center justify-center mx-auto mb-4 text-purple-600">
-                        <i data-lucide="briefcase" class="w-8 h-8"></i>
-                    </div>
-                    <h4 class="font-bold dark:text-white">Trusted Businesses</h4>
-                </div>
-                <div class="p-4">
-                    <div
-                        class="w-16 h-16 bg-pink-100 dark:bg-pink-900/50 rounded-full flex items-center justify-center mx-auto mb-4 text-pink-600">
-                        <i data-lucide="heart" class="w-8 h-8"></i>
-                    </div>
-                    <h4 class="font-bold dark:text-white">Partner Brands</h4>
-                </div>
-                <div class="p-4">
-                    <div
-                        class="w-16 h-16 bg-amber-100 dark:bg-amber-900/50 rounded-full flex items-center justify-center mx-auto mb-4 text-amber-600">
-                        <i data-lucide="award" class="w-8 h-8"></i>
-                    </div>
-                    <h4 class="font-bold dark:text-white">Awards & Recognition</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 8: Testimonials & Success Stories (Expandable) -->
-    <section class="max-w-7xl mx-auto px-4 mb-24">
-        <button
-            class="accordion-trigger w-full flex items-center justify-between p-6 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-2xl mb-4 hover:scale-[1.01] transition-transform">
-            <div class="flex items-center gap-4">
-                <i data-lucide="message-circle" class="w-8 h-8"></i>
-                <span class="text-2xl font-black text-white">Testimonials & Success Stories</span>
-            </div>
-            <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
-        </button>
-        <div class="accordion-content hidden">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-                <div
-                    class="bg-white dark:bg-slate-900 p-8 rounded-[2rem] shadow-lg border border-slate-100 dark:border-slate-800">
-                    <div class="flex items-center gap-4 mb-6">
-                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop"
-                            class="w-14 h-14 rounded-full">
-                        <div>
-                            <h4 class="font-bold dark:text-white">Elena R.</h4>
-                            <div class="flex text-yellow-400 text-xs">★★★★★</div>
-                        </div>
-                    </div>
-                    <p class="text-slate-600 dark:text-slate-300 italic">"I found my dream apartment on
-                        Classified-ads-website in
-                        less than a week."</p>
-                </div>
-                <div
-                    class="bg-white dark:bg-slate-900 p-8 rounded-[2rem] shadow-lg border border-slate-100 dark:border-slate-800">
-                    <div class="flex items-center gap-4 mb-6">
-                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop"
-                            class="w-14 h-14 rounded-full">
-                        <div>
-                            <h4 class="font-bold dark:text-white">Marcus T.</h4>
-                            <div class="flex text-yellow-400 text-xs">★★★★★</div>
-                        </div>
-                    </div>
-                    <p class="text-slate-600 dark:text-slate-300 italic">"Selling his vintage camera collection was
-                        emotional but easy."</p>
-                </div>
-                <div
-                    class="bg-white dark:bg-slate-900 p-8 rounded-[2rem] shadow-lg border border-slate-100 dark:border-slate-800">
-                    <div class="flex items-center gap-4 mb-6">
-                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop"
-                            class="w-14 h-14 rounded-full">
-                        <div>
-                            <h4 class="font-bold dark:text-white">Sarah L.</h4>
-                            <div class="flex text-yellow-400 text-xs">★★★★★</div>
-                        </div>
-                    </div>
-                    <p class="text-slate-600 dark:text-slate-300 italic">"The support team helped me set up my business
-                        profile."</p>
-                </div>
-            </div>
-            <div class="flex justify-center gap-4 mt-8">
-                <button class="px-6 py-2 bg-indigo-600 text-white rounded-lg font-bold hover:bg-indigo-700">Read
-                    Stories</button>
-                <button
-                    class="px-6 py-2 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg font-bold hover:bg-slate-300">Join
-                    Sellers</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 9: Technology & Platform Strength -->
-    <section class="py-24 bg-slate-50 dark:bg-slate-900/50 mb-20">
+    </main>
+    
+    <!-- Values Section (New) -->
+    <section class="py-24 bg-slate-50 dark:bg-slate-950 border-y border-slate-200 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="flex-1 space-y-8">
-                    <h2 class="text-4xl font-black dark:text-white font-outfit">Technology Core</h2>
-                    <p class="text-slate-600 dark:text-slate-600">Our infrastructure is built for scale, security, and
-                        speed.</p>
+            <div class="text-center mb-16">
+                <span class="text-emerald-500 font-bold uppercase tracking-widest text-sm mb-4 block">Core Tenets</span>
+                <h2 class="premium-h2 text-4xl md:text-5xl">Our Unwavering Standards</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-10 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 rounded-xl bg-violet-100 dark:bg-violet-900/30 flex items-center justify-center text-violet-600 mb-6"><i data-lucide="eye" class="w-6 h-6"></i></div>
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=250&fit=crop" class="w-full h-32 object-cover rounded-xl mb-6 shadow-sm"><h3 class="text-xl font-bold dark:text-white mb-3">Absolute Transparency</h3>
+                    <p class="text-slate-600 dark:text-slate-400">Every listing on AdNova undergoes rigorous metadata extraction, ensuring buyers know exactly what they are getting.</p>
+                </div>
+                <div class="glass-card p-10 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 mb-6"><i data-lucide="shield" class="w-6 h-6"></i></div>
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop" class="w-full h-32 object-cover rounded-xl mb-6 shadow-sm"><h3 class="text-xl font-bold dark:text-white mb-3">Defensive Engineering</h3>
+                    <p class="text-slate-600 dark:text-slate-400">Our escrow structure and real-time fraud monitoring algorithms provide a fortress around every single transaction.</p>
+                </div>
+                <div class="glass-card p-10 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 rounded-xl bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center text-pink-600 mb-6"><i data-lucide="heart" class="w-6 h-6"></i></div>
+                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=250&fit=crop" class="w-full h-32 object-cover rounded-xl mb-6 shadow-sm"><h3 class="text-xl font-bold dark:text-white mb-3">Aesthetic Integrity</h3>
+                    <p class="text-slate-600 dark:text-slate-400">We refuse to let our platform look like a bulletin board from 2005. Design is a fundamental pillar of user trust.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between text-sm font-bold mb-1 dark:text-white">
-                                <span>Scalable Infrastructure</span>
-                                <span>99.99%</span>
-                            </div>
-                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
-                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 99.9%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between text-sm font-bold mb-1 dark:text-white">
-                                <span>Secure Data Handling</span>
-                                <span>100%</span>
-                            </div>
-                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
-                                <div class="bg-green-500 h-2 rounded-full" style="width: 100%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between text-sm font-bold mb-1 dark:text-white">
-                                <span>Performance Opt.</span>
-                                <span>98%</span>
-                            </div>
-                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
-                                <div class="bg-blue-500 h-2 rounded-full" style="width: 98%"></div>
-                            </div>
-                        </div>
+
+    <!-- Global Metrics Section (New) -->
+    <section class="py-24 bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-5xl font-black text-emerald-500 mb-2 font-heading">2.4M</div>
+                    <div class="text-slate-500 font-bold uppercase tracking-widest text-xs">Active Listings</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-black text-violet-500 mb-2 font-heading">$800M+</div>
+                    <div class="text-slate-500 font-bold uppercase tracking-widest text-xs">Quarterly Volume</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-black text-blue-500 mb-2 font-heading">0.1s</div>
+                    <div class="text-slate-500 font-bold uppercase tracking-widest text-xs">Avg Response Time</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-black text-amber-500 mb-2 font-heading">24/7</div>
+                    <div class="text-slate-500 font-bold uppercase tracking-widest text-xs">Support Availability</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- Platform Architecture (New Unique) -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-slate-900 dark:bg-slate-950"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center">
+            <h2 class="premium-h2 text-white text-4xl md:text-5xl mb-6">Built For Resilience</h2>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-16">AdNova’s infrastructure relies on a decentralized, hybrid-cloud architecture to ensure 99.99% uptime, even during massive high-value asset drops.</p>
+            
+            <div class="flex flex-wrap justify-center gap-6 opacity-80 hover:opacity-100 transition-opacity">
+                <!-- Architecture Nodes -->
+                <div class="w-32 h-32 rounded-3xl bg-emerald-500/10 backdrop-blur-md border border-emerald-500/20 flex flex-col items-center justify-center text-emerald-400 group hover:bg-emerald-500/20 transition-all">
+                    <i data-lucide="shield-check" class="w-8 h-8 mb-2 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-xs font-bold uppercase tracking-widest">WAF Shield</span>
+                </div>
+                <div class="w-32 h-32 rounded-3xl bg-violet-500/10 backdrop-blur-md border border-violet-500/20 flex flex-col items-center justify-center text-violet-400 group hover:bg-violet-500/20 transition-all">
+                    <i data-lucide="zap" class="w-8 h-8 mb-2 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-xs font-bold uppercase tracking-widest">Edge CDN</span>
+                </div>
+                <div class="w-32 h-32 rounded-3xl bg-blue-500/10 backdrop-blur-md border border-blue-500/20 flex flex-col items-center justify-center text-blue-400 group hover:bg-blue-500/20 transition-all">
+                    <i data-lucide="database" class="w-8 h-8 mb-2 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-xs font-bold uppercase tracking-widest">Cold Storage</span>
+                </div>
+            </div>
+            
+            <a href="#" class="inline-flex items-center gap-2 mt-12 text-slate-300 hover:text-white font-bold pb-1 transition-colors">Read our Whitepaper <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        </div>
+    </section>
+
+
+    <!-- Evolution Timeline (New) -->
+    <section class="py-24 relative overflow-hidden bg-slate-50 dark:bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-emerald-500 font-bold uppercase tracking-widest text-sm mb-4 block">The Journey</span>
+                <h2 class="premium-h2 text-4xl md:text-5xl">Evolution of AdNova</h2>
+            </div>
+            
+            <div class="relative wrap overflow-hidden p-10 h-full">
+                <!-- Timeline vertical line -->
+                <div class="border-2-2 absolute border-opacity-20 border-slate-700 h-full border" style="left: 50%"></div>
+                
+                <!-- 2024 -->
+                <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-emerald-500 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
+                    </div>
+                    <div class="order-1 bg-white dark:bg-slate-900 rounded-2xl shadow-xl w-5/12 px-6 py-4 border border-slate-200 dark:border-slate-800">
+                        <h3 class="font-bold dark:text-white text-xl mb-1">Inception</h3>
+                        <p class="text-sm text-emerald-500 font-bold mb-3">Q1 2024</p>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-snug">The core architecture of AdNova was drafted, focusing on zero-latency interactions and a glassmorphic aesthetic.</p>
                     </div>
                 </div>
-                <div class="flex-1">
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop"
-                        class="rounded-[2rem] shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 aspect-square h-80 object-cover">
+
+                <!-- 2025 -->
+                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-violet-500 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
+                    </div>
+                    <div class="order-1 bg-white dark:bg-slate-900 rounded-2xl shadow-xl w-5/12 px-6 py-4 border border-slate-200 dark:border-slate-800 text-right">
+                        <h3 class="font-bold dark:text-white text-xl mb-1">The Verification Layer</h3>
+                        <p class="text-sm text-violet-500 font-bold mb-3">Q3 2025</p>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-snug">Integration of AI-driven fraud detection and blockchain certificates for high-ticket asset transfers.</p>
+                    </div>
+                </div>
+
+                <!-- 2026 -->
+                <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-emerald-500 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
+                    </div>
+                    <div class="order-1 bg-white dark:bg-slate-900 rounded-2xl shadow-xl w-5/12 px-6 py-4 border border-slate-200 dark:border-slate-800">
+                        <h3 class="font-bold dark:text-white text-xl mb-1">Global Scale</h3>
+                        <p class="text-sm text-emerald-500 font-bold mb-3">Q2 2026</p>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-snug">Expansion to 40+ countries with regional CDN bridging and a massive 2.4M active listing milestone.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 10: Engagement & CTA Block -->
-    <section class="mb-20 mx-4">
-        <div
-            class="bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 rounded-[3rem] p-12 md:p-24 text-center text-white relative overflow-hidden shadow-2xl animate-gradient-xy">
-            <div
-                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop')] opacity-20 bg-cover mix-blend-overlay">
-            </div>
-            <div class="relative z-10 max-w-3xl mx-auto">
-                <h2 class="text-4xl md:text-6xl font-black mb-8">Start Advertising With Confidence</h2>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <button
-                        class="bg-white text-indigo-600 px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">Post
-                        Your First Ad</button>
-                    <button
-                        class="bg-indigo-900/50 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-indigo-900/70 transition-all">Explore
-                        Categories</button>
-                    <button class="text-white underline underline-offset-4 hover:text-indigo-200 font-semibold">View
-                        Plans</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Meet The Team (Expanded) -->
-    <section class="bg-indigo-900 text-white py-20 rounded-[3rem] mx-4 mb-20 overflow-hidden relative">
-        <div
-            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop')] opacity-10 bg-cover mix-blend-overlay">
-        </div>
-        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
-
-            <button
-                class="accordion-trigger w-full flex items-center justify-between p-6 bg-white/10 backdrop-blur-sm rounded-2xl mb-12 hover:bg-white/20 transition-all">
-                <span class="text-3xl font-black font-outfit">MEET THE CREATORS</span>
-                <i data-lucide="chevron-down" class="w-8 h-8 transition-transform"></i>
-            </button>
-
-            <div class="accordion-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Member 1 -->
-                <div
-                    class="group relative bg-white/5 p-6 rounded-3xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop"
-                        class="w-32 h-32 mx-auto rounded-full border-4 border-white/20 mb-4 object-cover shadow-lg group-hover:scale-110 transition-transform">
-                    <h3 class="text-xl font-bold">Alex Morgan</h3>
-                    <p class="text-indigo-300 text-xs font-bold uppercase tracking-widest mb-2">CEO & Founder</p>
-                    <p
-                        class="text-slate-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity h-0 group-hover:h-auto pb-4">
-                        Visionary leader with 15 years in tech.</p>
-                </div>
-                <!-- Member 2 -->
-                <div
-                    class="group relative bg-white/5 p-6 rounded-3xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop"
-                        class="w-32 h-32 mx-auto rounded-full border-4 border-white/20 mb-4 object-cover shadow-lg group-hover:scale-110 transition-transform">
-                    <h3 class="text-xl font-bold">Sarah Lee</h3>
-                    <p class="text-indigo-300 text-xs font-bold uppercase tracking-widest mb-2">Head of Product</p>
-                    <p
-                        class="text-slate-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity h-0 group-hover:h-auto pb-4">
-                        Product genius obsessed with UX.</p>
-                </div>
-                <!-- Member 3 -->
-                <div
-                    class="group relative bg-white/5 p-6 rounded-3xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop"
-                        class="w-32 h-32 mx-auto rounded-full border-4 border-white/20 mb-4 object-cover shadow-lg group-hover:scale-110 transition-transform">
-                    <h3 class="text-xl font-bold">David Chen</h3>
-                    <p class="text-indigo-300 text-xs font-bold uppercase tracking-widest mb-2">Lead Engineer</p>
-                    <p
-                        class="text-slate-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity h-0 group-hover:h-auto pb-4">
-                        Architect of our scalable systems.</p>
-                </div>
-                <!-- Member 4 -->
-                <div
-                    class="group relative bg-white/5 p-6 rounded-3xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop"
-                        class="w-32 h-32 mx-auto rounded-full border-4 border-white/20 mb-4 object-cover shadow-lg group-hover:scale-110 transition-transform">
-                    <h3 class="text-xl font-bold">Emily Blunt</h3>
-                    <p class="text-indigo-300 text-xs font-bold uppercase tracking-widest mb-2">CMO</p>
-                    <p
-                        class="text-slate-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity h-0 group-hover:h-auto pb-4">
-                        Driving our global brand presence.</p>
-                </div>
-                <!-- Member 5 -->
-                <div
-                    class="group relative bg-white/5 p-6 rounded-3xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                    <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?q=80&w=600&auto=format&fit=crop"
-                        class="w-32 h-32 mx-auto rounded-full border-4 border-white/20 mb-4 object-cover shadow-lg group-hover:scale-110 transition-transform">
-                    <h3 class="text-xl font-bold">Michael Ross</h3>
-                    <p class="text-indigo-300 text-xs font-bold uppercase tracking-widest mb-2">CFO</p>
-                    <p
-                        class="text-slate-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity h-0 group-hover:h-auto pb-4">
-                        Financial strategist extraordinaire.</p>
-                </div>
-                <!-- Member 6 -->
-                <div
-                    class="group relative bg-white/5 p-6 rounded-3xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                    <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=600&auto=format&fit=crop"
-                        class="w-32 h-32 mx-auto rounded-full border-4 border-white/20 mb-4 object-cover shadow-lg group-hover:scale-110 transition-transform">
-                    <h3 class="text-xl font-bold">Jessica Pearson</h3>
-                    <p class="text-indigo-300 text-xs font-bold uppercase tracking-widest mb-2">Legal Head</p>
-                    <p
-                        class="text-slate-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity h-0 group-hover:h-auto pb-4">
-                        Ensuring compliance worldwide.</p>
-                </div>
-                <!-- Member 7 -->
-                <div
-                    class="group relative bg-white/5 p-6 rounded-3xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                    <img src="https://images.unsplash.com/photo-1520005785081-998ea1276a6b?q=80&w=600&auto=format&fit=crop"
-                        class="w-32 h-32 mx-auto rounded-full border-4 border-white/20 mb-4 object-cover shadow-lg group-hover:scale-110 transition-transform">
-                    <h3 class="text-xl font-bold">Raj Patel</h3>
-                    <p class="text-indigo-300 text-xs font-bold uppercase tracking-widest mb-2">Head of Security</p>
-                    <p
-                        class="text-slate-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity h-0 group-hover:h-auto pb-4">
-                        Keeping user data ironclad.</p>
-                </div>
-                <!-- Member 8 -->
-                <div
-                    class="group relative bg-white/5 p-6 rounded-3xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&auto=format&fit=crop"
-                        class="w-32 h-32 mx-auto rounded-full border-4 border-white/20 mb-4 object-cover shadow-lg group-hover:scale-110 transition-transform">
-                    <h3 class="text-xl font-bold">Lisa Wong</h3>
-                    <p class="text-indigo-300 text-xs font-bold uppercase tracking-widest mb-2">HR Director</p>
-                    <p
-                        class="text-slate-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity h-0 group-hover:h-auto pb-4">
-                        Building our dream team.</p>
-                </div>
-            </div>
-
-            <div class="mt-12 flex justify-center gap-4">
-                <button
-                    class="px-8 py-3 bg-white text-indigo-900 font-bold rounded-xl hover:bg-indigo-50 transition-colors">Meet
-                    the full team</button>
-                <button
-                    class="px-8 py-3 border border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-colors">Careers
-                    Page</button>
-            </div>
-
-        </div>
-    </section>
-    </div>
-    <!-- Footer -->
-    <footer class="footer-gradient text-slate-300 pt-16 pb-8 border-t border-slate-700/50 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10">
-        </div>
+<!-- Footer -->
+    <footer class="footer-gradient text-slate-300 pt-20 pb-10 border-t border-slate-800 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
 
                 <!-- Brand -->
                 <div class="space-y-6 animate-fade-in-up brand-glow cursor-default">
                     <div class="flex items-center gap-3">
-                        <div class="logo-bg bg-indigo-600 p-3 rounded-xl transition-all duration-300">
-                            <span class="text-white font-black text-2xl">C</span>
+                        <div class="logo-bg bg-emerald-500 p-3 rounded-xl transition-all duration-300 shadow-lg shadow-emerald-500/20">
+                            <span class="text-white font-black text-2xl font-heading">A</span>
                         </div>
-                        <span class="text-2xl font-black text-white tracking-tight">Classified-ads-website</span>
+                        <span class="text-3xl font-black text-white tracking-tight font-heading">AdNova</span>
                     </div>
-                    <p class="text-white text-sm leading-relaxed max-w-xs">
-                        The world’s most modern classified ads platform. Sell your items, find services, and connect
-                        with your community.
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-xs font-medium">
+                        The ultimate intelligent marketplace. Trade secure, fast, and seamlessly in our glassmorphic ecosystem.
                     </p>
                 </div>
 
                 <!-- Quick Links -->
                 <div class="animate-fade-in-up delay-200">
-                    <h4 class="text-white font-bold mb-6 text-lg relative inline-block">Quick Links <div
-                            class="absolute -bottom-2 left-0 w-1/2 h-1 bg-indigo-500 rounded-full"></div>
-                    </h4>
-                    <ul class="space-y-3 text-sm font-medium">
-                        <li><a href="index.html" class="footer-link block">Home Page</a></li>
-                        <li><a href="about.html" class="footer-link block">About Us</a></li>
-                        <li><a href="services.html" class="footer-link block">Our Services</a></li>
-                        <li><a href="contact.html" class="footer-link block">Contact Support</a></li>
+                    <h4 class="text-white font-bold mb-6 text-lg relative inline-block font-heading tracking-wide">Directory <div class="absolute -bottom-2 left-0 w-1/3 h-1 bg-emerald-500 rounded-full"></div></h4>
+                    <ul class="space-y-4 text-sm font-medium text-slate-400">
+                        <li><a href="index.html" class="hover:text-emerald-400 transition-colors block">Discovery Hub</a></li>
+                        <li><a href="about.html" class="hover:text-emerald-400 transition-colors block">Our Manifesto</a></li>
+                        <li><a href="services.html" class="hover:text-emerald-400 transition-colors block">Platform Solutions</a></li>
+                        <li><a href="contact.html" class="hover:text-emerald-400 transition-colors block">Support Nodes</a></li>
                     </ul>
                 </div>
 
                 <!-- Account -->
                 <div class="animate-fade-in-up delay-400">
-                    <h4 class="text-white font-bold mb-6 text-lg relative inline-block">Account <div
-                            class="absolute -bottom-2 left-0 w-1/2 h-1 bg-indigo-500 rounded-full"></div>
-                    </h4>
-                    <ul class="space-y-3 text-sm font-medium">
-                        <li><a href="user_dashboard.html" class="footer-link block group flex items-center gap-2"><i
-                                    data-lucide="layout-dashboard"
-                                    class="w-4 h-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>
-                                User Dashboard</a></li>
-                        <li><a href="admin_dashboard.html" class="footer-link block group flex items-center gap-2"><i
-                                    data-lucide="shield"
-                                    class="w-4 h-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>
-                                Admin Dashboard</a></li>
-                        <li><a href="login.html" class="footer-link block group flex items-center gap-2"><i
-                                    data-lucide="log-in"
-                                    class="w-4 h-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>
-                                Login / Sign Up</a></li>
-                        <li><a href="#" class="footer-link block group flex items-center gap-2"><i
-                                    data-lucide="file-text"
-                                    class="w-4 h-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>
-                                Terms of Service</a></li>
+                    <h4 class="text-white font-bold mb-6 text-lg relative inline-block font-heading tracking-wide">Terminal <div class="absolute -bottom-2 left-0 w-1/3 h-1 bg-violet-500 rounded-full"></div></h4>
+                    <ul class="space-y-4 text-sm font-medium text-slate-400">
+                        <li><a href="user_dashboard.html" class="hover:text-violet-400 transition-colors block group flex items-center gap-2"><i data-lucide="layout-dashboard" class="w-4 h-4 opacity-50 group-hover:opacity-100 transition-all"></i> Client Dashboard</a></li>
+                        <li><a href="admin_dashboard.html" class="hover:text-violet-400 transition-colors block group flex items-center gap-2"><i data-lucide="shield" class="w-4 h-4 opacity-50 group-hover:opacity-100 transition-all"></i> Admin Controls</a></li>
+                        <li><a href="login.html" class="hover:text-violet-400 transition-colors block group flex items-center gap-2"><i data-lucide="log-in" class="w-4 h-4 opacity-50 group-hover:opacity-100 transition-all"></i> Authentication</a></li>
+                        <li><a href="#" class="hover:text-violet-400 transition-colors block group flex items-center gap-2"><i data-lucide="file-text" class="w-4 h-4 opacity-50 group-hover:opacity-100 transition-all"></i> Legal Framework</a></li>
                     </ul>
                 </div>
 
                 <!-- Newsletter -->
                 <div class="animate-fade-in-up delay-600">
-                    <h4 class="text-white font-bold mb-6 text-lg relative inline-block">Newsletter <div
-                            class="absolute -bottom-2 left-0 w-1/2 h-1 bg-indigo-500 rounded-full"></div>
-                    </h4>
-                    <p class="text-white text-sm mb-4">Stay updated with the latest ads.</p>
+                    <h4 class="text-white font-bold mb-6 text-lg relative inline-block font-heading tracking-wide">Ping List <div class="absolute -bottom-2 left-0 w-1/3 h-1 bg-emerald-500 rounded-full"></div></h4>
+                    <p class="text-slate-400 text-sm mb-4 font-medium">Receive signal bursts regarding high-value asset drops.</p>
                     <div class="relative group">
-                        <input type="email" placeholder="Email address"
-                            class="bg-slate-800/50 border border-slate-700 text-white text-sm rounded-xl w-full pl-4 pr-16 rtl:pl-16 rtl:pr-4 py-3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all placeholder-slate-500 group-hover:bg-slate-800">
-                        <button
-                            class="absolute right-1 rtl:right-auto rtl:left-1 top-1 bottom-1 bg-indigo-600 text-white px-4 rounded-lg font-bold hover:bg-indigo-500 transition-all hover:scale-105 active:scale-95 shadow-lg">Go</button>
+                        <input type="email" placeholder="Transmit address"
+                            class="bg-slate-800 border border-slate-700 text-white text-sm rounded-xl w-full pl-4 pr-16 py-3.5 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all placeholder-slate-500 group-hover:bg-slate-700/50">
+                        <button class="absolute right-1 top-1 bottom-1 bg-emerald-500 text-slate-900 px-4 rounded-lg font-black hover:bg-emerald-400 transition-all hover:scale-105 active:scale-95 shadow-lg">TX</button>
                     </div>
                 </div>
+
             </div>
 
-            <!-- Bottom Bar -->
-            <div
-                class="border-t border-slate-800/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-semibold text-slate-400 animate-fade-in-up delay-600">
-                <p>© 2026 Classified-ads-website Inc. All rights reserved.</p>
-                <div class="flex gap-6">
-                    <a href="#" class="social-icon transition-all duration-300"><i data-lucide="facebook"
-                            class="w-5 h-5"></i></a>
-                    <a href="#" class="social-icon transition-all duration-300"><i data-lucide="twitter"
-                            class="w-5 h-5"></i></a>
-                    <a href="#" class="social-icon transition-all duration-300"><i data-lucide="instagram"
-                            class="w-5 h-5"></i></a>
+            <!-- Footer Bottom -->
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-slate-800 text-sm font-medium">
+                <p class="mb-4 md:mb-0 text-slate-500">&copy; <script>document.write(new Date().getFullYear())</script> AdNova Systems. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-500 hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="text-slate-500 hover:text-white transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                    <a href="#" class="text-slate-500 hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="text-slate-500 hover:text-white transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
                 </div>
             </div>
         </div>
     </footer>
+    
+    <!-- Back to top button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-emerald-500 text-slate-900 p-3 rounded-full shadow-2xl opacity-0 invisible transition-all duration-300 hover:-translate-y-2 hover:bg-emerald-400 active:scale-95 z-50">
+        <i data-lucide="arrow-up" class="w-6 h-6"></i>
+    </button>
+    <script>
+        lucide.createIcons();
+        
+        
+        
+    </script>
     <script src="main.js"></script>
     <script src="rtltoggle.js"></script>
 </body>
-
 </html>

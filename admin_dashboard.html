@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard | Classified-ads-website</title>
+    <title>Admin Dashboard | AdNova</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -25,36 +25,8 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        inter: ['Inter', 'sans-serif'],
-                        outfit: ['Outfit', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                    animation: {
-                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-                        'slide-in': 'slideIn 0.5s ease-out forwards',
-                        'scale-up': 'scaleUp 0.3s ease-out forwards',
-                        'pulse-slow': 'pulse 3s infinite',
-                        'blob': 'blob 7s infinite',
-                    },
-                    keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        slideIn: {
-                            '0%': { transform: 'translateX(-20px)', opacity: '0' },
-                            '100%': { transform: 'translateX(0)', opacity: '1' },
-                        },
-                        scaleUp: {
-                            '0%': { transform: 'scale(0.95)', opacity: '0' },
-                            '100%': { transform: 'scale(1)', opacity: '1' },
-                        },
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        }
+                        sans: ['DM Sans', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif'],
                     }
                 }
             },
@@ -68,9 +40,7 @@
     <!-- ApexCharts -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <!-- Custom CSS -->
@@ -163,92 +133,37 @@
 
 <body
     class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300 font-inter bg-admin-dash">
+    <div class="fixed inset-0 bg-gradient-to-br from-slate-50 to-emerald-50/20 dark:from-slate-950 dark:to-violet-950/20 -z-10 absolute pointer-events-none"></div>
 
     <!-- Navbar (Global) -->
-    <nav
-        class="sticky top-0 z-[100] bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 py-3">
+    <nav class="sticky top-0 z-[100] bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 py-5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center gap-8">
                     <a href="index.html" class="flex items-center gap-2 group" dir="ltr">
                         <div
-                            class="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-xl shadow-indigo-500/20 group-hover:rotate-6 transition-transform">
-                            C</div>
+                            class="w-12 h-12 bg-emerald-600 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-xl shadow-emerald-500/20 group-hover:rotate-6 transition-transform">A</div>
                         <span
-                            class="text-2xl font-black tracking-tighter dark:text-white hidden sm:block">Classified-ads-<span
-                                class="text-blue-900">website</span></span>
+                            class="text-2xl font-black tracking-tighter dark:text-white hidden sm:block">Ad<span class="text-emerald-500">Nova</span></span>
                     </a>
 
                     <!-- Desktop Menu -->
-                    <div class="hidden lg:flex items-center gap-1">
-                        <div class="relative group">
-                            <button
-                                class="dropdown-trigger flex items-center space-x-1 px-4 py-2 rounded-xl text-sm font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-                                <span>Home</span>
-                                <i data-lucide="chevron-down"
-                                    class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
-                            </button>
-                            <div
-                                class="absolute top-full start-0 w-48 bg-white dark:bg-slate-900 shadow-2xl rounded-2xl border border-slate-100 dark:border-slate-800 p-2 hidden opacity-0 translate-y-2 transition-all duration-200">
-                                <a href="index.html"
-                                    class="block px-4 py-3 text-sm font-semibold rounded-xl hover:bg-indigo-50 dark:hover:bg-indigo-900/30 text-slate-700 dark:text-slate-300 hover:text-indigo-600">Home
-                                    Bold (V1)</a>
-                                <a href="index2.html"
-                                    class="block px-4 py-3 text-sm font-semibold rounded-xl hover:bg-indigo-50 dark:hover:bg-indigo-900/30 text-slate-700 dark:text-slate-300 hover:text-indigo-600">Home
-                                    Calm (V2)</a>
-                            </div>
-                        </div>
-
-                        <a href="about.html"
-                            class="px-4 py-2 rounded-xl text-sm font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">About</a>
-                        <a href="services.html"
-                            class="px-4 py-2 rounded-xl text-sm font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Services</a>
-                        <a href="contact.html"
-                            class="px-4 py-2 rounded-xl text-sm font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Contact</a>
-
-                        <div class="relative group">
-                            <button
-                                class="dropdown-trigger flex items-center space-x-1 px-4 py-2 rounded-xl text-sm font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-                                <span>Dashboards</span>
-                                <i data-lucide="chevron-down"
-                                    class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
-                            </button>
-                            <div
-                                class="absolute top-full start-0 w-56 bg-white dark:bg-slate-900 shadow-2xl rounded-2xl border border-slate-100 dark:border-slate-800 p-2 hidden opacity-0 translate-y-2 transition-all duration-200">
-                                <a href="user_dashboard.html"
-                                    class="flex items-center space-x-3 px-4 py-3 text-sm font-semibold rounded-xl hover:bg-indigo-50 dark:hover:bg-indigo-900/30 text-slate-700 dark:text-slate-300 hover:text-indigo-600">
-                                    <i data-lucide="user" class="w-4 h-4"></i>
-                                    <span>User Dashboard</span>
-                                </a>
-                                <a href="admin_dashboard.html"
-                                    class="flex items-center space-x-3 px-4 py-3 text-sm font-semibold rounded-xl hover:bg-indigo-50 dark:hover:bg-indigo-900/30 text-slate-700 dark:text-slate-300 hover:text-indigo-600">
-                                    <i data-lucide="shield-check" class="w-4 h-4"></i>
-                                    <span>Admin Control</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-4 sm:gap-6">
+                    <div class="flex items-center gap-4 sm:gap-6">
                     <button id="dir-toggle"
-                        class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-indigo-600 hover:text-white transition-all shadow-sm">
+                        class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
                         <i data-lucide="globe" class="w-5 h-5"></i>
                     </button>
                     <button id="theme-toggle"
-                        class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-indigo-600 hover:text-white transition-all shadow-sm">
+                        class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
                         <!-- Moon for Light Mode (hidden in dark) -->
                         <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
                         <!-- Sun for Dark Mode (hidden in light) -->
                         <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
                     </button>
-                    <a href="login.html" id="btn-logout-header-nav"
-                        class="px-6 py-3 bg-indigo-600 text-white font-black rounded-2xl hover:bg-rose-600 transition-all shadow-xl shadow-indigo-600/20 active:scale-95 hidden sm:block text-center flex items-center justify-center">
-                        Logout
-                    </a>
+                    
                     <!-- Mobile Menu Button -->
                     <button id="mobile-menu-btn"
-                        class="lg:hidden p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-indigo-600 hover:text-white transition-all shadow-sm">
+                        class="lg:hidden p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
                         <i data-lucide="menu" class="w-5 h-5"></i>
                     </button>
                 </div>
@@ -268,7 +183,7 @@
         <div class="flex items-center justify-between p-4 border-b border-slate-100 dark:border-slate-800">
             <span class="font-black text-xl tracking-tighter dark:text-white">Menu</span>
             <button id="mobile-menu-close-btn"
-                class="p-2 text-slate-500 hover:text-rose-500 transition-colors rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+                class="p-2 text-slate-500 hover:text-violet-500 transition-colors rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
                 <i data-lucide="x" class="w-6 h-6"></i>
             </button>
         </div>
@@ -298,7 +213,7 @@
                     <i data-lucide="shield-check" class="w-4 h-4"></i><span>Admin Dashboard</span>
                 </a>
                 <a href="login.html"
-                    class="flex items-center space-x-2 px-4 py-3 rounded-xl bg-rose-600 text-white font-bold hover:bg-rose-700 mt-4 justify-center shadow-lg shadow-rose-600/20 active:scale-95 transition-all">
+                    class="flex items-center space-x-2 px-4 py-3 rounded-xl bg-violet-600 text-white font-bold hover:bg-violet-700 mt-4 justify-center shadow-lg shadow-violet-600/20 active:scale-95 transition-all">
                     <i data-lucide="log-out" class="w-4 h-4"></i>
                     <span>Logout</span>
                 </a>
@@ -316,7 +231,7 @@
                 <!-- Mobile Close Button & User Info -->
                 <div class="flex flex-col gap-4 mb-6 border-b border-slate-100 dark:border-slate-800/50 pb-4">
                     <div class="lg:hidden flex justify-end">
-                        <button id="closeSidebarBtn" class="p-2 text-slate-500 hover:text-rose-500">
+                        <button id="closeSidebarBtn" class="p-2 text-slate-500 hover:text-violet-500">
                             <i data-lucide="x" class="w-6 h-6"></i>
                         </button>
                     </div>
@@ -329,7 +244,7 @@
                         </div>
                         <div class="flex-1 min-w-0">
                             <p class="text-sm font-bold text-slate-800 dark:text-white truncate">Admin User</p>
-                            <p class="text-xs text-indigo-500 font-bold truncate">Super Admin</p>
+                            <p class="text-xs text-emerald-500 font-bold truncate">Super Admin</p>
                         </div>
                     </div>
                 </div>
@@ -342,22 +257,22 @@
                         <span class="font-medium">Overview</span>
                     </a>
                     <a href="#view-users" id="sidebar-users"
-                        class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all group">
+                        class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all group">
                         <i data-lucide="users" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
                         <span>Users</span>
                     </a>
                     <a href="#view-listings" id="sidebar-listings"
-                        class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all group">
+                        class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all group">
                         <i data-lucide="shopping-bag" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
                         <span>Listings</span>
                     </a>
                     <a href="#view-analytics" id="sidebar-analytics"
-                        class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all group">
+                        class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all group">
                         <i data-lucide="pie-chart" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
                         <span>Analytics</span>
                     </a>
                     <a href="#view-settings" id="sidebar-settings"
-                        class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all group">
+                        class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all group">
                         <i data-lucide="settings" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
                         <span>Settings</span>
                     </a>
@@ -366,7 +281,7 @@
                 <!-- Logout Section (Mobile/Sidebar) -->
                 <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800">
                     <a href="login.html"
-                        class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-rose-600 dark:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-900/20 transition-all group">
+                        class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-violet-600 dark:text-violet-400 hover:bg-violet-50 dark:hover:bg-violet-900/20 transition-all group">
                         <i data-lucide="log-out" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
                         <span class="font-bold">Logout</span>
                     </a>
@@ -397,7 +312,7 @@
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 animate-fade-in-up"
                     style="animation-delay: 0.1s;">
                     <div>
-                        <h1 class="text-3xl font-black text-slate-800 dark:text-white mb-2 flex items-center gap-2">
+                        <h1 class="premium-h1 text-3xl mb-2 flex items-center gap-2">
                             Admin Overview <span class="animate-pulse">🚀</span>
                         </h1>
                         <p class="text-slate-700 dark:text-slate-200">Deep dive into platform performance and metrics.
@@ -410,7 +325,7 @@
                                 class="hidden sm:inline">Refresh</span>
                         </button>
                         <button id="btn-export-report"
-                            class="px-4 py-2 bg-indigo-600 text-white rounded-xl font-bold shadow-lg shadow-indigo-500/20 hover:bg-indigo-700 transition-all flex items-center gap-2">
+                            class="px-4 py-2 bg-emerald-600 text-white rounded-xl font-bold shadow-lg shadow-emerald-500/20 hover:bg-emerald-700 transition-all flex items-center gap-2">
                             <i data-lucide="download" class="w-4 h-4"></i> Export Report
                         </button>
                     </div>
@@ -549,7 +464,7 @@
                 class="admin-view p-4 lg:p-8 max-w-7xl mx-auto space-y-6 animate-fade-in-up scroll-mt-24">
                 <div class="flex justify-between items-center mb-6">
                     <div>
-                        <h2 class="text-2xl font-bold dark:text-white">User Management</h2>
+                        <h2 class="premium-h2 text-2xl">User Management</h2>
                         <p class="text-slate-400">Manage all registered users.</p>
                     </div>
                 </div>
@@ -569,7 +484,7 @@
                                 <td class="p-4">
                                     <div class="flex items-center gap-3">
                                         <div
-                                            class="w-8 h-8 rounded-full bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 font-bold">
+                                            class="w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 font-bold">
                                             A</div>
                                         <div>
                                             <p class="font-bold dark:text-white">Alice Cooper</p>
@@ -581,14 +496,14 @@
                                         class="px-2 py-1 rounded-lg text-xs font-bold bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-400">Active</span>
                                 </td>
                                 <td class="p-4 text-sm dark:text-slate-300">Jan 12, 2024</td>
-                                <td class="p-4"><button class="text-slate-400 hover:text-indigo-500"><i
+                                <td class="p-4"><button class="text-slate-400 hover:text-emerald-500"><i
                                             data-lucide="more-horizontal" class="w-4 h-4"></i></button></td>
                             </tr>
                             <tr>
                                 <td class="p-4">
                                     <div class="flex items-center gap-3">
                                         <div
-                                            class="w-8 h-8 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 font-bold">
+                                            class="w-8 h-8 rounded-full bg-violet-100 dark:bg-violet-900/30 flex items-center justify-center text-violet-600 font-bold">
                                             B</div>
                                         <div>
                                             <p class="font-bold dark:text-white">Bob Smith</p>
@@ -600,7 +515,7 @@
                                         class="px-2 py-1 rounded-lg text-xs font-bold bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400">Pending</span>
                                 </td>
                                 <td class="p-4 text-sm dark:text-slate-300">Jan 10, 2024</td>
-                                <td class="p-4"><button class="text-slate-400 hover:text-indigo-500"><i
+                                <td class="p-4"><button class="text-slate-400 hover:text-emerald-500"><i
                                             data-lucide="more-horizontal" class="w-4 h-4"></i></button></td>
                             </tr>
                         </tbody>
@@ -613,7 +528,7 @@
                 class="admin-view p-4 lg:p-8 max-w-7xl mx-auto space-y-6 animate-fade-in-up scroll-mt-24">
                 <div class="flex justify-between items-center mb-6">
                     <div>
-                        <h2 class="text-2xl font-bold dark:text-white">All Listings</h2>
+                        <h2 class="premium-h2 text-2xl">All Listings</h2>
                         <p class="text-slate-400">Review and moderate ads.</p>
                     </div>
                 </div>
@@ -622,15 +537,15 @@
                         class="bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-200 dark:border-slate-800">
                         <div class="aspect-video bg-slate-100 dark:bg-slate-800 rounded-lg mb-4 relative">
                             <span
-                                class="absolute top-2 right-2 px-2 py-1 bg-rose-500 text-white text-xs font-bold rounded">Reported</span>
+                                class="absolute top-2 right-2 px-2 py-1 bg-violet-500 text-white text-xs font-bold rounded">Reported</span>
                         </div>
                         <h3 class="font-bold dark:text-white mb-1">Suspicious Ad Item</h3>
                         <p class="text-xs text-slate-700 mb-4">Posted by Unknown</p>
                         <div class="flex gap-2">
                             <button
-                                class="flex-1 py-2 bg-rose-50 text-rose-600 dark:bg-rose-900/20 dark:text-rose-400 rounded-lg text-sm font-bold">Ban</button>
+                                class="flex-1 py-2 bg-violet-50 text-violet-600 dark:bg-violet-900/20 dark:text-violet-400 rounded-lg text-sm font-bold">Ban</button>
                             <button
-                                class="flex-1 py-2 bg-indigo-50 text-indigo-600 dark:bg-indigo-900/20 dark:text-indigo-400 rounded-lg text-sm font-bold">Ignore</button>
+                                class="flex-1 py-2 bg-emerald-50 text-emerald-600 dark:bg-emerald-900/20 dark:text-emerald-400 rounded-lg text-sm font-bold">Ignore</button>
                         </div>
                     </div>
                 </div>
@@ -640,7 +555,7 @@
             <div id="view-analytics"
                 class="admin-view p-4 lg:p-8 max-w-7xl mx-auto space-y-6 animate-fade-in-up scroll-mt-24">
                 <div class="flex justify-between items-center mb-6">
-                    <h2 class="text-2xl font-bold dark:text-white">Deep Analytics</h2>
+                    <h2 class="premium-h2 text-2xl">Deep Analytics</h2>
                 </div>
                 <!-- Placeholder for future analytics -->
                 <div class="p-12 text-center border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-3xl">
@@ -654,13 +569,13 @@
             <div id="view-settings"
                 class="admin-view p-4 lg:p-8 max-w-7xl mx-auto space-y-6 animate-fade-in-up scroll-mt-24">
                 <div class="max-w-3xl">
-                    <h2 class="text-2xl font-bold dark:text-white mb-6">Platform Settings</h2>
+                    <h2 class="premium-h2 text-2xl mb-6">Platform Settings</h2>
                     <div
                         class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 space-y-6">
                         <div class="space-y-2">
                             <label class="font-bold text-sm dark:text-slate-300">Site Name</label>
-                            <input type="text" value="Classified-ads-website"
-                                class="w-full p-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 dark:text-white outline-none focus:ring-2 focus:ring-indigo-500">
+                            <input type="text" value="AdNova"
+                                class="w-full p-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 dark:text-white outline-none focus:ring-2 focus:ring-emerald-500">
                         </div>
                         <div class="space-y-2">
                             <label class="font-bold text-sm dark:text-slate-300">Maintenance Mode</label>
@@ -672,7 +587,7 @@
                                 <span class="text-sm text-slate-700">Off</span>
                             </div>
                         </div>
-                        <button class="px-6 py-3 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-700">Save
+                        <button class="px-6 py-3 bg-emerald-600 text-white font-bold rounded-xl hover:bg-emerald-700">Save
                             Changes</button>
                     </div>
                 </div>
@@ -682,100 +597,7 @@
 
                 <!-- Footer -->
                 <!-- Footer -->
-                <footer
-                    class="footer-gradient text-slate-300 pt-16 pb-8 border-t border-slate-700/50 relative overflow-hidden">
-                    <div
-                        class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10">
-                    </div>
-                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-
-                            <!-- Brand -->
-                            <div class="space-y-6 animate-fade-in-up brand-glow cursor-default">
-                                <div class="flex items-center space-x-3">
-                                    <div class="logo-bg bg-indigo-600 p-3 rounded-xl transition-all duration-300">
-                                        <span class="text-white font-black text-2xl">C</span>
-                                    </div>
-                                    <span
-                                        class="text-2xl font-black text-white tracking-tight">Classified-ads-website</span>
-                                </div>
-                                <p class="text-white text-sm leading-relaxed max-w-xs">
-                                    The world’s most modern classified ads platform. Sell your items, find services, and
-                                    connect
-                                    with your community.
-                                </p>
-                            </div>
-
-                            <!-- Quick Links -->
-                            <div class="animate-fade-in-up delay-200">
-                                <h4 class="text-white font-bold mb-6 text-lg relative inline-block">Quick Links <div
-                                        class="absolute -bottom-2 left-0 w-1/2 h-1 bg-indigo-500 rounded-full"></div>
-                                </h4>
-                                <ul class="space-y-3 text-sm font-medium">
-                                    <li><a href="index.html" class="footer-link block">Home Page</a></li>
-                                    <li><a href="about.html" class="footer-link block">About Us</a></li>
-                                    <li><a href="services.html" class="footer-link block">Our Services</a></li>
-                                    <li><a href="contact.html" class="footer-link block">Contact Support</a></li>
-                                </ul>
-                            </div>
-
-                            <!-- Account -->
-                            <div class="animate-fade-in-up delay-400">
-                                <h4 class="text-white font-bold mb-6 text-lg relative inline-block">Account <div
-                                        class="absolute -bottom-2 left-0 w-1/2 h-1 bg-indigo-500 rounded-full"></div>
-                                </h4>
-                                <ul class="space-y-3 text-sm font-medium">
-                                    <li><a href="user_dashboard.html"
-                                            class="footer-link block group flex items-center gap-2"><i
-                                                data-lucide="layout-dashboard"
-                                                class="w-4 h-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>
-                                            User Dashboard</a></li>
-                                    <li><a href="admin_dashboard.html"
-                                            class="footer-link block group flex items-center gap-2"><i
-                                                data-lucide="shield"
-                                                class="w-4 h-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>
-                                            Admin Dashboard</a></li>
-                                    <li><a href="login.html" class="footer-link block group flex items-center gap-2"><i
-                                                data-lucide="log-in"
-                                                class="w-4 h-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>
-                                            Login / Sign Up</a></li>
-                                    <li><a href="#" class="footer-link block group flex items-center gap-2"><i
-                                                data-lucide="file-text"
-                                                class="w-4 h-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>
-                                            Terms of Service</a></li>
-                                </ul>
-                            </div>
-
-                            <!-- Newsletter -->
-                            <div class="animate-fade-in-up delay-600">
-                                <h4 class="text-white font-bold mb-6 text-lg relative inline-block">Newsletter <div
-                                        class="absolute -bottom-2 left-0 w-1/2 h-1 bg-indigo-500 rounded-full"></div>
-                                </h4>
-                                <p class="text-white text-sm mb-4">Stay updated with the latest ads.</p>
-                                <div class="relative group">
-                                    <input type="email" placeholder="Email address"
-                                        class="bg-slate-800/50 border border-slate-700 text-white text-sm rounded-xl w-full pl-4 pr-16 rtl:pl-16 rtl:pr-4 py-3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all placeholder-slate-500 group-hover:bg-slate-800">
-                                    <button
-                                        class="absolute right-1 rtl:right-auto rtl:left-1 top-1 bottom-1 bg-indigo-600 text-white px-4 rounded-lg font-bold hover:bg-indigo-500 transition-all hover:scale-105 active:scale-95 shadow-lg">Go</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Bottom Bar -->
-                        <div
-                            class="border-t border-slate-800/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-semibold text-slate-400 animate-fade-in-up delay-600">
-                            <p>© 2026 Classified-ads-website Inc. All rights reserved.</p>
-                            <div class="flex gap-6">
-                                <a href="#" class="social-icon transition-all duration-300"><i data-lucide="facebook"
-                                        class="w-5 h-5"></i></a>
-                                <a href="#" class="social-icon transition-all duration-300"><i data-lucide="twitter"
-                                        class="w-5 h-5"></i></a>
-                                <a href="#" class="social-icon transition-all duration-300"><i data-lucide="instagram"
-                                        class="w-5 h-5"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                
             </div>
         </main>
     </div>
@@ -1080,7 +902,7 @@
         // Classes for Active State
         // IMPORTANT: admin has specific active class "sidebar-item-active" defined in <style>
         // We will toggle that class plus the text colors
-        const inactiveClasses = ['text-slate-700', 'dark:text-slate-200', 'hover:bg-slate-50', 'dark:hover:bg-slate-800/50', 'hover:text-indigo-600', 'dark:hover:text-indigo-400'];
+        const inactiveClasses = ['text-slate-700', 'dark:text-slate-200', 'hover:bg-slate-50', 'dark:hover:bg-slate-800/50', 'hover:text-emerald-600', 'dark:hover:text-emerald-400'];
 
         function updateSidebarUI(targetId) {
             sidebarLinks.forEach(link => {
@@ -1142,9 +964,9 @@
             }
             const toast = document.createElement('div');
             const icon = type === 'success' ? 'check-circle' : 'info';
-            const color = type === 'success' ? 'text-emerald-500' : 'text-indigo-500';
-            const bg = type === 'success' ? 'bg-emerald-50 dark:bg-emerald-900/30' : 'bg-indigo-50 dark:bg-indigo-900/30';
-            const border = type === 'success' ? 'border-emerald-100 dark:border-emerald-800' : 'border-indigo-100 dark:border-indigo-800';
+            const color = type === 'success' ? 'text-emerald-500' : 'text-emerald-500';
+            const bg = type === 'success' ? 'bg-emerald-50 dark:bg-emerald-900/30' : 'bg-emerald-50 dark:bg-emerald-900/30';
+            const border = type === 'success' ? 'border-emerald-100 dark:border-emerald-800' : 'border-emerald-100 dark:border-emerald-800';
 
             toast.className = `pointer-events-auto transform translate-x-full transition-all duration-500 ease-out bg-white dark:bg-slate-900 border ${border} shadow-2xl rounded-2xl p-4 flex items-start gap-4 w-80 backdrop-blur-xl`;
             toast.innerHTML = `<div class="flex-shrink-0 p-2 rounded-xl ${bg} ${color}"><i data-lucide="${icon}" class="w-5 h-5"></i></div><div class="flex-1 min-w-0"><h4 class="font-bold text-slate-800 dark:text-white text-sm">${title}</h4><p class="text-xs text-slate-700 dark:text-slate-200 mt-1">${message}</p></div>`;
@@ -1164,6 +986,8 @@
     </script>
     <script src="main.js"></script>
     <script src="rtltoggle.js"></script>
+
+    
 </body>
 
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Classified-ads-website - Calm Market</title>
+    <title>AdNova - Calm Market</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         // Pre-load Theme & Direction
@@ -24,9 +24,8 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        outfit: ['Outfit', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
+                        sans: ['DM Sans', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif'],
                     }
                 }
             },
@@ -46,19 +45,16 @@
 <body class="bg-[#fdfcf9] dark:bg-slate-950 transition-colors duration-500 bg-home-v2">
 
     <!-- Navbar (Standard) -->
-    <nav
-        class="sticky top-0 z-[100] bg-white/60 dark:bg-slate-950/60 backdrop-blur-xl border-b border-white/50 dark:border-slate-800 py-3">
+    <nav class="sticky top-0 z-[100] bg-white/60 dark:bg-slate-950/60 backdrop-blur-xl border-b border-white/50 dark:border-slate-800 py-5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center gap-8">
                     <!-- Logo (Forced LTR for brand consistency) -->
                     <a href="index.html" class="flex flex-row items-center gap-3 group flex-shrink-0" dir="ltr">
                         <div
-                            class="w-12 h-12 bg-slate-900 dark:bg-white rounded-2xl flex items-center justify-center text-white dark:text-slate-900 font-bold text-2xl shadow-xl group-hover:rotate-6 transition-transform">
-                            C</div>
+                            class="w-12 h-12 bg-slate-900 dark:bg-white rounded-2xl flex items-center justify-center text-white dark:text-slate-900 font-bold text-2xl shadow-xl group-hover:rotate-6 transition-transform">A</div>
                         <span
-                            class="text-2xl font-bold tracking-tighter text-slate-900 dark:text-white hidden sm:block whitespace-nowrap">Classified-ads-<span
-                                class="text-blue-900">website</span></span>
+                            class="text-2xl font-bold tracking-tighter text-slate-900 dark:text-white hidden sm:block whitespace-nowrap">Ad<span class="text-emerald-500">Nova</span></span>
                     </a>
 
                     <!-- Desktop Menu -->
@@ -114,7 +110,7 @@
 
                 <div class="flex flex-row items-center gap-4 sm:gap-6">
                     <a href="login.html"
-                        class="hidden sm:block px-6 py-2 text-sm font-bold text-slate-600 dark:text-white transition-all border border-indigo-500/30 dark:border-indigo-500 shadow-[0_0_10px_rgba(99,102,241,0.2)] dark:shadow-[0_0_15px_rgba(99,102,241,0.5)] hover:shadow-[0_0_20px_rgba(99,102,241,0.6)] hover:border-indigo-500 rounded-xl hover:text-indigo-600 dark:hover:text-white bg-white/50 dark:bg-slate-900/50">Log
+                        class="hidden sm:block px-6 py-2 text-sm font-bold text-slate-600 dark:text-white transition-all border border-emerald-500/30 dark:border-emerald-500 shadow-[0_0_10px_rgba(99,102,241,0.2)] dark:shadow-[0_0_15px_rgba(99,102,241,0.5)] hover:shadow-[0_0_20px_rgba(99,102,241,0.6)] hover:border-emerald-500 rounded-xl hover:text-emerald-600 dark:hover:text-white bg-white/50 dark:bg-slate-900/50">Log
                         In</a>
                     <button id="dir-toggle"
                         class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all shadow-sm flex-shrink-0">
@@ -125,11 +121,11 @@
                         <i data-lucide="moon" class="w-5 h-5"></i>
                     </button>
                     <button id="mobile-menu-btn"
-                        class="lg:hidden p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-indigo-600 hover:text-white transition-all shadow-sm flex-shrink-0">
+                        class="lg:hidden p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition-all shadow-sm flex-shrink-0">
                         <i data-lucide="menu" class="w-5 h-5"></i>
                     </button>
                     <a href="login.html#register"
-                        class="px-6 py-3 bg-indigo-600 text-white font-black rounded-2xl hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-600/20 active:scale-95 hidden sm:block">
+                        class="px-6 py-3 bg-emerald-600 text-white font-black rounded-2xl hover:bg-emerald-700 transition-all shadow-xl shadow-emerald-600/20 active:scale-95 hidden sm:block">
                         Get Started
                     </a>
                 </div>
@@ -149,7 +145,7 @@
         <div class="flex items-center justify-between p-4 border-b border-slate-100 dark:border-slate-800">
             <span class="font-black text-xl tracking-tighter dark:text-white">Menu</span>
             <button id="mobile-menu-close-btn"
-                class="p-2 text-slate-500 hover:text-rose-500 transition-colors rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+                class="p-2 text-slate-500 hover:text-violet-500 transition-colors rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
                 <i data-lucide="x" class="w-6 h-6"></i>
             </button>
         </div>
@@ -189,11 +185,11 @@
     <!-- Ambient Light Effects -->
     <div class="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div
-            class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-200/20 dark:bg-purple-900/10 rounded-full blur-[100px] animate-pulse">
+            class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-violet-200/20 dark:bg-violet-900/10 rounded-full blur-[100px] animate-pulse">
         </div>
-        <div class="absolute top-[20%] right-[-5%] w-[30%] h-[30%] bg-indigo-200/20 dark:bg-indigo-900/10 rounded-full blur-[100px] animate-pulse"
+        <div class="absolute top-[20%] right-[-5%] w-[30%] h-[30%] bg-emerald-200/20 dark:bg-emerald-900/10 rounded-full blur-[100px] animate-pulse"
             style="animation-delay: 2s"></div>
-        <div class="absolute bottom-[-10%] left-[20%] w-[30%] h-[30%] bg-teal-200/20 dark:bg-teal-900/10 rounded-full blur-[100px] animate-pulse"
+        <div class="absolute bottom-[-10%] left-[20%] w-[30%] h-[30%] bg-emerald-200/20 dark:bg-emerald-900/10 rounded-full blur-[100px] animate-pulse"
             style="animation-delay: 4s"></div>
     </div>
 
@@ -210,23 +206,23 @@
         </div>
         <div class="max-w-5xl mx-auto px-4 text-center relative z-10 animate-fade-in-up">
             <span
-                class="inline-block py-2 px-6 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-300 font-bold tracking-[0.2em] uppercase text-xs mb-8 border border-indigo-100 dark:border-indigo-800 animate-slide-down">
-                The Future of Classifieds
+                class="inline-block py-2 px-6 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-300 font-bold tracking-[0.2em] uppercase text-xs mb-8 border border-emerald-100 dark:border-emerald-800 animate-slide-down">
+                The Calm Architecture
             </span>
             <h1
-                class="text-6xl md:text-8xl lg:text-9xl font-serif italic text-slate-900 dark:text-white leading-[1] mb-8 tracking-tight">
-                Buy. Sell. <br>
+                class="text-6xl md:text-8xl lg:text-9xl font-heading tracking-tight italic text-slate-900 dark:text-white leading-[1] mb-8 tracking-tight">
+                Trade. Connect. <br>
                 <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500 bg-[length:200%_auto] animate-gradient-x">Classified.</span>
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 via-violet-500 to-emerald-500 bg-[length:200%_auto] animate-gradient-x">AdNova.</span>
             </h1>
             <p class="text-xl text-slate-600 dark:text-slate-300 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
                 Connect with <span class="font-medium text-slate-900 dark:text-white">authentic communities</span> and
                 discover
                 <span
-                    class="typewriter-text font-medium text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-300"
+                    class="typewriter-text font-medium text-emerald-600 dark:text-emerald-400 border-b-2 border-emerald-300"
                     data-words='["hidden gems.", "career moves.", "dream homes.", "services."]'></span>
             </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-16 lg:mb-24 relative z-30">
                 <button
                     class="group px-10 py-5 bg-white/50 dark:bg-slate-800/50 backdrop-blur-md text-slate-700 dark:text-slate-200 font-bold rounded-full border border-slate-200 dark:border-slate-700 hover:bg-white dark:hover:bg-slate-800 transition-all hover:shadow-lg">
                     <span class="relative z-10 flex items-center gap-2">Start Exploring <i data-lucide="arrow-right"
@@ -248,7 +244,7 @@
             <input type="text" placeholder="Search for unique treasures..."
                 class="flex-1 bg-transparent outline-none text-xl font-light text-slate-600 dark:text-white">
             <button
-                class="w-14 h-14 bg-indigo-50 dark:bg-slate-800 rounded-full flex items-center justify-center text-indigo-400 hover:bg-indigo-600 hover:text-white transition-all shadow-sm">
+                class="w-14 h-14 bg-emerald-50 dark:bg-slate-800 rounded-full flex items-center justify-center text-emerald-400 hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
                 <i data-lucide="compass" class="w-6 h-6"></i>
             </button>
         </div>
@@ -259,7 +255,7 @@
         <h3 class="text-2xl font-light text-slate-400 dark:text-slate-500 flex justify-center items-center gap-2">
             Explore:
             <span
-                class="font-serif italic text-slate-800 dark:text-white rotating-text-container h-[1.5em] overflow-hidden block text-left w-48">
+                class="font-heading tracking-tight italic text-slate-800 dark:text-white rotating-text-container h-[1.5em] overflow-hidden block text-left w-48">
                 <span class="block animate-slide-up-fade">Mid-Century Layouts</span>
                 <span class="block animate-slide-up-fade" style="animation-delay: 2s">Vintage Cameras</span>
                 <span class="block animate-slide-up-fade" style="animation-delay: 4s">Artisan Ceramics</span>
@@ -273,24 +269,24 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div class="order-2 lg:order-1 relative animate-on-scroll opacity-0">
                 <div
-                    class="absolute -top-10 -left-10 w-32 h-32 bg-indigo-100 dark:bg-indigo-900/30 rounded-full blur-2xl opacity-60">
+                    class="absolute -top-10 -left-10 w-32 h-32 bg-emerald-100 dark:bg-emerald-900/30 rounded-full blur-2xl opacity-60">
                 </div>
                 <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop"
                     class="rounded-[2rem] shadow-2xl relative z-10 w-full object-cover h-[600px] grayscale hover:grayscale-0 transition-all duration-700 ease-in-out"
                     alt="Philosophy">
                 <div
-                    class="absolute -bottom-6 -right-6 w-full h-full border-2 border-indigo-100 dark:border-slate-800 rounded-[2rem] -z-0">
+                    class="absolute -bottom-6 -right-6 w-full h-full border-2 border-emerald-100 dark:border-slate-800 rounded-[2rem] -z-0">
                 </div>
             </div>
             <div class="order-1 lg:order-2 lg:pl-10 rtl:lg:pl-0 rtl:lg:pr-10 animate-on-scroll opacity-0">
-                <span class="text-indigo-500 font-bold tracking-[0.2em] text-sm uppercase mb-4 block">Our
+                <span class="text-emerald-500 font-bold tracking-[0.2em] text-sm uppercase mb-4 block">Our
                     Philosophy</span>
-                <h2 class="text-5xl md:text-6xl font-serif italic text-slate-800 dark:text-white mb-8 leading-tight">
-                    Curating for the <br><span class="text-indigo-600 dark:text-indigo-400">Mindful Eye.</span>
+                <h2 class="premium-h2 text-5xl md:text-6xl mb-8 leading-tight">
+                    Curating for the <br><span class="text-emerald-600 dark:text-emerald-400">Mindful Eye.</span>
                 </h2>
                 <div class="space-y-6 text-lg text-slate-600 dark:text-slate-300 font-light leading-relaxed">
                     <p>
-                        Classified-ads-website isn’t just a marketplace; it’s a
+                        AdNova isn’t just a marketplace; it’s a
                         collection of stories, a gallery of intentional objects that bring joy and utility to your life.
                     </p>
                     <p>
@@ -300,7 +296,7 @@
                 </div>
                 <div class="mt-10 flex items-center gap-4">
                     <div class="h-px flex-1 bg-slate-200 dark:bg-slate-800"></div>
-                    <span class="font-serif italic text-slate-400 text-xl">Est. 2026</span>
+                    <span class="font-heading tracking-tight italic text-slate-400 text-xl">Est. 2026</span>
                 </div>
             </div>
         </div>
@@ -311,8 +307,8 @@
     <!-- Category Highlights Section -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="flex justify-between items-end mb-12">
-            <h2 class="text-3xl md:text-4xl font-serif italic text-slate-800 dark:text-white">Curated Categories</h2>
-            <a href="#" class="text-indigo-600 font-bold hover:underline flex items-center gap-1">View All <i
+            <h2 class="premium-h2 text-3xl md:text-4xl">Curated Categories</h2>
+            <a href="#" class="text-emerald-600 font-bold hover:underline flex items-center gap-1">View All <i
                     data-lucide="arrow-right" class="w-4 h-4"></i></a>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -320,7 +316,7 @@
             <a href="#"
                 class="group flex flex-col items-center p-6 bg-white dark:bg-slate-900 rounded-[2rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center">
                 <div
-                    class="w-16 h-16 rounded-2xl bg-indigo-50 dark:bg-slate-800 flex items-center justify-center text-indigo-600 mb-4 group-hover:scale-110 transition-transform">
+                    class="w-16 h-16 rounded-2xl bg-emerald-50 dark:bg-slate-800 flex items-center justify-center text-emerald-600 mb-4 group-hover:scale-110 transition-transform">
                     <i data-lucide="car" class="w-8 h-8"></i>
                 </div>
                 <h3 class="font-bold text-slate-800 dark:text-white mb-1">Motors</h3>
@@ -330,7 +326,7 @@
             <a href="#"
                 class="group flex flex-col items-center p-6 bg-white dark:bg-slate-900 rounded-[2rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center">
                 <div
-                    class="w-16 h-16 rounded-2xl bg-teal-50 dark:bg-slate-800 flex items-center justify-center text-teal-600 mb-4 group-hover:scale-110 transition-transform">
+                    class="w-16 h-16 rounded-2xl bg-emerald-50 dark:bg-slate-800 flex items-center justify-center text-emerald-600 mb-4 group-hover:scale-110 transition-transform">
                     <i data-lucide="briefcase" class="w-8 h-8"></i>
                 </div>
                 <h3 class="font-bold text-slate-800 dark:text-white mb-1">Jobs</h3>
@@ -340,7 +336,7 @@
             <a href="#"
                 class="group flex flex-col items-center p-6 bg-white dark:bg-slate-900 rounded-[2rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center">
                 <div
-                    class="w-16 h-16 rounded-2xl bg-rose-50 dark:bg-slate-800 flex items-center justify-center text-rose-600 mb-4 group-hover:scale-110 transition-transform">
+                    class="w-16 h-16 rounded-2xl bg-violet-50 dark:bg-slate-800 flex items-center justify-center text-violet-600 mb-4 group-hover:scale-110 transition-transform">
                     <i data-lucide="home" class="w-8 h-8"></i>
                 </div>
                 <h3 class="font-bold text-slate-800 dark:text-white mb-1">Estates</h3>
@@ -360,7 +356,7 @@
             <a href="#"
                 class="group flex flex-col items-center p-6 bg-white dark:bg-slate-900 rounded-[2rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center">
                 <div
-                    class="w-16 h-16 rounded-2xl bg-purple-50 dark:bg-slate-800 flex items-center justify-center text-purple-600 mb-4 group-hover:scale-110 transition-transform">
+                    class="w-16 h-16 rounded-2xl bg-violet-50 dark:bg-slate-800 flex items-center justify-center text-violet-600 mb-4 group-hover:scale-110 transition-transform">
                     <i data-lucide="wrench" class="w-8 h-8"></i>
                 </div>
                 <h3 class="font-bold text-slate-800 dark:text-white mb-1">Services</h3>
@@ -390,27 +386,26 @@
                     <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop"
                         class="rounded-[2.5rem] shadow-xl relative z-10 w-full aspect-square object-cover rotate-2 hover:rotate-0 transition-transform duration-500">
                     <!-- Reduced decorative blobs -->
-                    <div class="absolute -top-4 -right-4 w-32 h-32 bg-indigo-500/10 rounded-full blur-xl"></div>
-                    <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-teal-500/10 rounded-full blur-xl"></div>
+                    <div class="absolute -top-4 -right-4 w-32 h-32 bg-emerald-500/10 rounded-full blur-xl"></div>
+                    <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-emerald-500/10 rounded-full blur-xl"></div>
                 </div>
 
                 <!-- Right Column: Text Content -->
                 <div class="space-y-6">
-                    <h2
-                        class="text-3xl md:text-4xl font-serif italic text-slate-800 dark:text-white mb-2 drop-shadow-[0_0_15px_rgba(99,102,241,0.5)]">
-                        Core Advantages</h2>
+                    <h1 class="premium-h1 text-5xl md:text-[6rem] mb-6">
+                        Core Advantages</h1>
 
                     <div class="space-y-4">
                         <!-- Item 1 -->
                         <div class="flex gap-4 animate-on-scroll opacity-0 translate-y-4 transition-all duration-500">
                             <div
-                                class="w-12 h-12 rounded-xl bg-white dark:bg-slate-800 shadow-md flex items-center justify-center text-indigo-600 flex-shrink-0">
+                                class="w-12 h-12 rounded-xl bg-white dark:bg-slate-800 shadow-md flex items-center justify-center text-emerald-600 flex-shrink-0">
                                 <i data-lucide="search-check" class="w-6 h-6"></i>
                             </div>
                             <div>
                                 <h3 class="text-lg font-bold text-slate-800 dark:text-white mb-1">Smart Discovery</h3>
                                 <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">AI <span
-                                        class="bg-indigo-100 dark:bg-indigo-900/50 px-1 rounded text-indigo-700 dark:text-indigo-300">highlights</span>
+                                        class="bg-emerald-100 dark:bg-emerald-900/50 px-1 rounded text-emerald-700 dark:text-emerald-300">highlights</span>
                                     relevant features.</p>
                             </div>
                         </div>
@@ -419,13 +414,13 @@
                         <div
                             class="flex gap-4 animate-on-scroll opacity-0 translate-y-4 transition-all duration-500 delay-100">
                             <div
-                                class="w-12 h-12 rounded-xl bg-white dark:bg-slate-800 shadow-md flex items-center justify-center text-teal-600 flex-shrink-0">
+                                class="w-12 h-12 rounded-xl bg-white dark:bg-slate-800 shadow-md flex items-center justify-center text-emerald-600 flex-shrink-0">
                                 <i data-lucide="shield-check" class="w-6 h-6"></i>
                             </div>
                             <div>
                                 <h3 class="text-lg font-bold text-slate-800 dark:text-white mb-1">Verified Trust</h3>
                                 <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"><span
-                                        class="bg-teal-100 dark:bg-teal-900/50 px-1 rounded text-teal-700 dark:text-teal-300">Triple-Check</span>
+                                        class="bg-emerald-100 dark:bg-emerald-900/50 px-1 rounded text-emerald-700 dark:text-emerald-300">Triple-Check</span>
                                     verification for sellers.</p>
                             </div>
                         </div>
@@ -434,7 +429,7 @@
                         <div
                             class="flex gap-4 animate-on-scroll opacity-0 translate-y-4 transition-all duration-500 delay-200">
                             <div
-                                class="w-12 h-12 rounded-xl bg-white dark:bg-slate-800 shadow-md flex items-center justify-center text-purple-600 flex-shrink-0">
+                                class="w-12 h-12 rounded-xl bg-white dark:bg-slate-800 shadow-md flex items-center justify-center text-violet-600 flex-shrink-0">
                                 <i data-lucide="zap" class="w-6 h-6"></i>
                             </div>
                             <div>
@@ -448,7 +443,7 @@
                         <div
                             class="flex gap-4 animate-on-scroll opacity-0 translate-y-4 transition-all duration-500 delay-300">
                             <div
-                                class="w-12 h-12 rounded-xl bg-white dark:bg-slate-800 shadow-md flex items-center justify-center text-rose-500 flex-shrink-0">
+                                class="w-12 h-12 rounded-xl bg-white dark:bg-slate-800 shadow-md flex items-center justify-center text-violet-500 flex-shrink-0">
                                 <i data-lucide="heart" class="w-6 h-6"></i>
                             </div>
                             <div>
@@ -467,7 +462,7 @@
     <section class="py-24 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-end mb-16">
-                <h2 class="text-4xl font-serif text-slate-800 dark:text-white italic">The Curator's Choice</h2>
+                <h2 class="premium-h2 text-4xl">The Curator's Choice</h2>
             </div>
             <!-- Adjusted for exactly 5 items -->
             <div class="flex flex-wrap justify-center gap-10">
@@ -475,42 +470,42 @@
                 <div class="group cursor-pointer w-full md:w-[calc(50%-2rem)] lg:w-[calc(20%-2rem)]">
                     <div
                         class="aspect-[3/4] rounded-[2.5rem] overflow-hidden mb-6 bg-slate-100 dark:bg-slate-900 shadow-sm group-hover:shadow-2xl transition-all">
-                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?q=80&w=1200&auto=format&fit=crop"
+                        <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?q=80&w=1200&auto=format&fit=crop"
                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                            alt="Calm">
+                            alt="Lounge Chair">
                     </div>
-                    <h3 class="text-lg font-bold text-slate-800 dark:text-slate-100 mb-1">Curated Item #1</h3>
+                    <h3 class="text-lg font-bold text-slate-800 dark:text-slate-100 mb-1">Minimalist Lounge Chair</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-200">$120.00</p>
                 </div>
                 <!-- Item 2 -->
                 <div class="group cursor-pointer w-full md:w-[calc(50%-2rem)] lg:w-[calc(20%-2rem)]">
                     <div
                         class="aspect-[3/4] rounded-[2.5rem] overflow-hidden mb-6 bg-slate-100 dark:bg-slate-900 shadow-sm group-hover:shadow-2xl transition-all">
-                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop"
+                        <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?q=80&w=1200&auto=format&fit=crop"
                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                            alt="Calm">
+                            alt="Curated Item">
                     </div>
-                    <h3 class="text-lg font-bold text-slate-800 dark:text-slate-100 mb-1">Curated Item #2</h3>
+                    <h3 class="text-lg font-bold text-slate-800 dark:text-slate-100 mb-1">Vintage Leica Camera</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-200">$85.00</p>
                 </div>
                 <!-- Item 3 -->
                 <div class="group cursor-pointer w-full md:w-[calc(50%-2rem)] lg:w-[calc(20%-2rem)]">
                     <div
                         class="aspect-[3/4] rounded-[2.5rem] overflow-hidden mb-6 bg-slate-100 dark:bg-slate-900 shadow-sm group-hover:shadow-2xl transition-all">
-                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop"
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1200&auto=format&fit=crop"
                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                            alt="Calm">
+                            alt="Curated Item">
                     </div>
-                    <h3 class="text-lg font-bold text-slate-800 dark:text-slate-100 mb-1">Curated Item #3</h3>
+                    <h3 class="text-lg font-bold text-slate-800 dark:text-slate-100 mb-1">MacBook Pro M2</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-200">$210.00</p>
                 </div>
                 <!-- Item 4 -->
                 <div class="group cursor-pointer w-full md:w-[calc(50%-2rem)] lg:w-[calc(20%-2rem)]">
                     <div
                         class="aspect-[3/4] rounded-[2.5rem] overflow-hidden mb-6 bg-slate-100 dark:bg-slate-900 shadow-sm group-hover:shadow-2xl transition-all">
-                        <img src="https://images.unsplash.com/photo-1486401899868-0e435ed85128?q=80&w=600&auto=format&fit=crop"
+                        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=1200&auto=format&fit=crop"
                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                            alt="Calm">
+                            alt="Curated Item">
                     </div>
                     <h3 class="text-lg font-bold text-slate-800 dark:text-slate-100 mb-1">Leather Totebag</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-200">$140.00</p>
@@ -519,9 +514,9 @@
                 <div class="group cursor-pointer w-full md:w-[calc(50%-2rem)] lg:w-[calc(20%-2rem)]">
                     <div
                         class="aspect-[3/4] rounded-[2.5rem] overflow-hidden mb-6 bg-slate-100 dark:bg-slate-900 shadow-sm group-hover:shadow-2xl transition-all">
-                        <img src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?q=80&w=600&auto=format&fit=crop"
+                        <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?q=80&w=1200&auto=format&fit=crop"
                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                            alt="Calm">
+                            alt="Curated Item">
                     </div>
                     <h3 class="text-lg font-bold text-slate-800 dark:text-slate-100 mb-1">Ceramic Vase</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-200">$65.00</p>
@@ -538,8 +533,8 @@
             <span
                 class="inline-block py-2 px-6 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold tracking-widest text-xs uppercase mb-6 shadow-[0_0_15px_rgba(255,255,255,0.3)] animate-glow">Editor's
                 Pick</span>
-            <h2 class="text-6xl md:text-7xl font-serif text-white italic mb-8 drop-shadow-lg">The Mid-Century Modern
-                Edit</h2>
+            <h2 class="premium-h2 text-6xl md:text-7xl mb-8">The Mid-Century Modern
+                Chair</h2>
             <p class="text-xl text-slate-100 max-w-2xl mx-auto mb-10 font-light">Timeless lines, organic curves, and
                 material honesty. Discover our most sought-after furniture collection.</p>
             <button
@@ -554,11 +549,10 @@
     <section class="max-w-4xl mx-auto px-6 py-24">
         <div class="text-center mb-16">
             <span
-                class="text-indigo-600 dark:text-indigo-400 font-bold tracking-widest uppercase text-sm mb-4 block">The
+                class="text-emerald-600 dark:text-emerald-400 font-bold tracking-widest uppercase text-sm mb-4 block">The
                 Advantage</span>
-            <h2 class="text-4xl md:text-5xl font-serif italic text-slate-800 dark:text-white">Why Choose
-                Classified-ads-website?
-            </h2>
+            <h2 class="premium-h2 text-4xl md:text-5xl">Why Choose
+                Premium?</h2>
         </div>
         <div class="space-y-4">
             <!-- Item 1 -->
@@ -569,7 +563,7 @@
                     onclick="{ let content=this.nextElementSibling; content.classList.toggle('hidden'); content.classList.contains('hidden')?null:content.scrollIntoView({behavior:'smooth',block:'nearest'}); this.querySelector('.icon-plus').classList.toggle('rotate-45'); }">
                     <div class="flex items-center gap-6">
                         <div
-                            class="w-12 h-12 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center text-indigo-600">
+                            class="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center text-emerald-600">
                             <i data-lucide="shield" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-xl font-bold text-slate-800 dark:text-white">Enterprise-Grade Security</h3>
@@ -591,7 +585,7 @@
                     onclick="{ let content=this.nextElementSibling; content.classList.toggle('hidden'); content.classList.contains('hidden')?null:content.scrollIntoView({behavior:'smooth',block:'nearest'}); this.querySelector('.icon-plus').classList.toggle('rotate-45'); }">
                     <div class="flex items-center gap-6">
                         <div
-                            class="w-12 h-12 rounded-full bg-teal-100 dark:bg-teal-900/50 flex items-center justify-center text-teal-600">
+                            class="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center text-emerald-600">
                             <i data-lucide="globe" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-xl font-bold text-slate-800 dark:text-white">Global Reach, Local Feel</h3>
@@ -613,7 +607,7 @@
                     onclick="{ let content=this.nextElementSibling; content.classList.toggle('hidden'); content.classList.contains('hidden')?null:content.scrollIntoView({behavior:'smooth',block:'nearest'}); this.querySelector('.icon-plus').classList.toggle('rotate-45'); }">
                     <div class="flex items-center gap-6">
                         <div
-                            class="w-12 h-12 rounded-full bg-rose-100 dark:bg-rose-900/50 flex items-center justify-center text-rose-600">
+                            class="w-12 h-12 rounded-full bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600">
                             <i data-lucide="heart" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-xl font-bold text-slate-800 dark:text-white">Community First</h3>
@@ -640,9 +634,8 @@
                 <div>
                     <span class="text-white font-bold tracking-widest uppercase text-xs mb-2 block animate-pulse">Live
                         Feed</span>
-                    <h2 class="text-4xl md:text-5xl font-serif italic text-white"
-                        style="color: white !important; text-shadow: 0 0 15px rgba(0,0,0,0.9);">
-                        Trending Now</h2>
+                    <h2 class="premium-h2 text-4xl md:text-5xl mb-6">Concierge Listing Service
+                    </h2>
                 </div>
                 <div class="flex gap-2">
                     <button
@@ -713,44 +706,44 @@
 
     <!-- Trust & Safety Section -->
     <section class="max-w-7xl mx-auto px-6 py-24">
-        <div class="bg-indigo-600 rounded-[3rem] p-12 md:p-20 relative overflow-hidden text-center md:text-left">
-            <div class="absolute top-0 right-0 w-1/2 h-full bg-indigo-500 skew-x-12 translate-x-32 hidden md:block">
+        <div class="bg-emerald-600 rounded-[3rem] p-12 md:p-20 relative overflow-hidden text-center md:text-left">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-emerald-500 skew-x-12 translate-x-32 hidden md:block">
             </div>
             <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-4xl md:text-5xl font-serif italic text-white mb-8">Safe. Secure. Confident.</h2>
+                    <h2 class="premium-h2 text-4xl md:text-5xl mb-8">Safe. Secure. Confident.</h2>
 
                     <ul class="space-y-4 mb-10 max-w-md mx-auto md:mx-0 text-left">
-                        <li class="flex items-center gap-3 text-indigo-100 text-lg">
-                            <div class="w-2 h-2 rounded-full bg-teal-400 shadow-[0_0_10px_rgba(45,212,191,0.5)]"></div>
+                        <li class="flex items-center gap-3 text-emerald-100 text-lg">
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(45,212,191,0.5)]"></div>
                             Every listing manually verified
                         </li>
-                        <li class="flex items-center gap-3 text-indigo-100 text-lg">
-                            <div class="w-2 h-2 rounded-full bg-teal-400 shadow-[0_0_10px_rgba(45,212,191,0.5)]"></div>
+                        <li class="flex items-center gap-3 text-emerald-100 text-lg">
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(45,212,191,0.5)]"></div>
                             Secure payment protection
                         </li>
-                        <li class="flex items-center gap-3 text-indigo-100 text-lg">
-                            <div class="w-2 h-2 rounded-full bg-teal-400 shadow-[0_0_10px_rgba(45,212,191,0.5)]"></div>
+                        <li class="flex items-center gap-3 text-emerald-100 text-lg">
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(45,212,191,0.5)]"></div>
                             24/7 Dispute resolution support
                         </li>
-                        <li class="flex items-center gap-3 text-indigo-100 text-lg">
-                            <div class="w-2 h-2 rounded-full bg-teal-400 shadow-[0_0_10px_rgba(45,212,191,0.5)]"></div>
+                        <li class="flex items-center gap-3 text-emerald-100 text-lg">
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(45,212,191,0.5)]"></div>
                             Identity-checked community
                         </li>
-                        <li class="flex items-center gap-3 text-indigo-100 text-lg">
-                            <div class="w-2 h-2 rounded-full bg-teal-400 shadow-[0_0_10px_rgba(45,212,191,0.5)]"></div>
+                        <li class="flex items-center gap-3 text-emerald-100 text-lg">
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(45,212,191,0.5)]"></div>
                             End-to-end Data Privacy
                         </li>
-                        <li class="flex items-center gap-3 text-indigo-100 text-lg">
-                            <div class="w-2 h-2 rounded-full bg-teal-400 shadow-[0_0_10px_rgba(45,212,191,0.5)]"></div>
+                        <li class="flex items-center gap-3 text-emerald-100 text-lg">
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(45,212,191,0.5)]"></div>
                             Strict Community Guidelines
                         </li>
-                        <li class="flex items-center gap-3 text-indigo-100 text-lg">
-                            <div class="w-2 h-2 rounded-full bg-teal-400 shadow-[0_0_10px_rgba(45,212,191,0.5)]"></div>
+                        <li class="flex items-center gap-3 text-emerald-100 text-lg">
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(45,212,191,0.5)]"></div>
                             Transparent Fee Structure
                         </li>
-                        <li class="flex items-center gap-3 text-indigo-100 text-lg">
-                            <div class="w-2 h-2 rounded-full bg-teal-400 shadow-[0_0_10px_rgba(45,212,191,0.5)]"></div>
+                        <li class="flex items-center gap-3 text-emerald-100 text-lg">
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(45,212,191,0.5)]"></div>
                             24/7 Priority Support
                         </li>
                     </ul>
@@ -807,11 +800,11 @@
         <div class="relative py-20">
             <!-- Glow Effects -->
             <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-teal-500/20 blur-[80px] rounded-full pointer-events-none">
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-r from-emerald-500/20 via-violet-500/20 to-emerald-500/20 blur-[80px] rounded-full pointer-events-none">
             </div>
 
-            <h2 class="text-5xl md:text-7xl font-serif italic text-slate-900 dark:text-white mb-8 relative z-10">Start
-                Your Journey</h2>
+            <h2 class="premium-h2 text-5xl md:text-7xl mb-8 relative z-10">Start
+                Your Journey.</h2>
             <p class="text-xl text-slate-600 dark:text-slate-300 mb-12 max-w-2xl mx-auto relative z-10">Join thousands
                 of curators, collectors, and creators. The marketplace for the mindful.</p>
 
@@ -827,7 +820,7 @@
     <!-- How It Works (Steps) - Simplified version kept for flow -->
     <section class="py-12 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-serif italic text-slate-800 dark:text-white text-center mb-16 opacity-50">It's
+            <h2 class="text-3xl font-heading tracking-tight italic text-slate-800 dark:text-white text-center mb-16 opacity-50">It's
                 simple.</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-16 relative">
 
@@ -837,7 +830,7 @@
                 <!-- Step 1 -->
                 <div class="relative flex flex-col items-center text-center">
                     <div
-                        class="w-24 h-24 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-full flex items-center justify-center text-2xl font-serif italic text-slate-800 dark:text-white z-10 mb-8 shadow-lg">
+                        class="w-24 h-24 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-full flex items-center justify-center text-2xl font-heading tracking-tight italic text-slate-800 dark:text-white z-10 mb-8 shadow-lg">
                         1</div>
                     <h3 class="text-xl font-bold text-slate-800 dark:text-slate-200 mb-4">Discover</h3>
                     <p class="text-slate-500 dark:text-slate-200 leading-relaxed">Browse through our curated collection
@@ -846,7 +839,7 @@
                 <!-- Step 2 -->
                 <div class="relative flex flex-col items-center text-center">
                     <div
-                        class="w-24 h-24 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-full flex items-center justify-center text-2xl font-serif italic text-slate-800 dark:text-white z-10 mb-8 shadow-lg">
+                        class="w-24 h-24 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-full flex items-center justify-center text-2xl font-heading tracking-tight italic text-slate-800 dark:text-white z-10 mb-8 shadow-lg">
                         2</div>
                     <h3 class="text-xl font-bold text-slate-800 dark:text-slate-200 mb-4">Connect</h3>
                     <p class="text-slate-500 dark:text-slate-200 leading-relaxed">Reach out to sellers directly through
@@ -855,7 +848,7 @@
                 <!-- Step 3 -->
                 <div class="relative flex flex-col items-center text-center">
                     <div
-                        class="w-24 h-24 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-full flex items-center justify-center text-2xl font-serif italic text-slate-800 dark:text-white z-10 mb-8 shadow-lg">
+                        class="w-24 h-24 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-full flex items-center justify-center text-2xl font-heading tracking-tight italic text-slate-800 dark:text-white z-10 mb-8 shadow-lg">
                         3</div>
                     <h3 class="text-xl font-bold text-slate-800 dark:text-slate-200 mb-4">Exchange</h3>
                     <p class="text-slate-500 dark:text-slate-200 leading-relaxed">Complete the trade securely and enjoy
@@ -865,7 +858,7 @@
 
             <!-- Accordion FAQs -->
             <div class="max-w-3xl mx-auto px-4 mt-20 space-y-4">
-                <h3 class="text-center text-2xl font-serif italic text-slate-800 dark:text-white mb-8">Common Questions
+                <h3 class="text-center text-2xl font-heading tracking-tight italic text-slate-800 dark:text-white mb-8">Common Questions
                 </h3>
                 <!-- Item 1 -->
                 <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden">
@@ -1022,11 +1015,11 @@
     </section>
 
     <!-- Trust Stats -->
-    <section class="py-16 bg-indigo-50 dark:bg-slate-900/30 border-y border-indigo-100 dark:border-slate-800"
+    <section class="py-16 bg-emerald-50 dark:bg-slate-900/30 border-y border-emerald-100 dark:border-slate-800"
         id="counters">
         <div class="max-w-7xl mx-auto px-6 animate-on-scroll opacity-0">
             <div
-                class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x rtl:divide-x-reverse divide-indigo-200 dark:divide-slate-800">
+                class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x rtl:divide-x-reverse divide-emerald-200 dark:divide-slate-800">
                 <div class="p-4">
                     <div class="text-4xl md:text-5xl font-black text-slate-800 dark:text-white mb-2 counter"
                         data-target="15000" data-suffix="+">0</div>
@@ -1053,21 +1046,21 @@
 
     <!-- Curated Collections (Scrollable Tabbed Content for Home 2) -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 border-t border-slate-100 dark:border-slate-800">
-        <h2 class="text-4xl font-serif italic text-slate-800 dark:text-white mb-10 text-center">Curated Collections</h2>
+        <h2 class="text-4xl font-heading tracking-tight italic text-slate-800 dark:text-white mb-10 text-center">Curated Collections</h2>
 
         <!-- Centered Tab Chips -->
         <div class="flex justify-center flex-wrap gap-4 mb-16">
             <button
-                class="tab-btn px-8 py-3 rounded-full font-serif italic bg-slate-900 dark:bg-white text-white dark:text-slate-900 border border-transparent shadow-lg transition-transform hover:scale-105 active:scale-95"
+                class="tab-btn px-8 py-3 rounded-full font-heading tracking-tight italic bg-slate-900 dark:bg-white text-white dark:text-slate-900 border border-transparent shadow-lg transition-transform hover:scale-105 active:scale-95"
                 data-tab-target="#collection-minimal">Minimalist</button>
             <button
-                class="tab-btn px-8 py-3 rounded-full font-serif italic bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 shadow-sm transition-transform hover:scale-105 active:scale-95 hover:border-slate-400"
+                class="tab-btn px-8 py-3 rounded-full font-heading tracking-tight italic bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 shadow-sm transition-transform hover:scale-105 active:scale-95 hover:border-slate-400"
                 data-tab-target="#collection-vintage">Vintage</button>
             <button
-                class="tab-btn px-8 py-3 rounded-full font-serif italic bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 shadow-sm transition-transform hover:scale-105 active:scale-95 hover:border-slate-400"
+                class="tab-btn px-8 py-3 rounded-full font-heading tracking-tight italic bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 shadow-sm transition-transform hover:scale-105 active:scale-95 hover:border-slate-400"
                 data-tab-target="#collection-artisan">Artisan</button>
             <button
-                class="tab-btn px-8 py-3 rounded-full font-serif italic bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 shadow-sm transition-transform hover:scale-105 active:scale-95 hover:border-slate-400"
+                class="tab-btn px-8 py-3 rounded-full font-heading tracking-tight italic bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 shadow-sm transition-transform hover:scale-105 active:scale-95 hover:border-slate-400"
                 data-tab-target="#collection-audio">Audiophile</button>
         </div>
 
@@ -1079,15 +1072,15 @@
                     <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">Concrete Lamp</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">Concrete Lamp</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Lighting</p>
             </div>
             <div class="group cursor-pointer">
                 <div class="aspect-square rounded-[2rem] overflow-hidden bg-slate-100 dark:bg-slate-900 mb-4">
-                    <img src="https://images.unsplash.com/photo-1520005785081-998ea1276a6b?q=80&w=600&auto=format&fit=crop"
+                    <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">White Vase</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">White Vase</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Decor</p>
             </div>
             <div class="group cursor-pointer">
@@ -1095,15 +1088,15 @@
                     <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">Oak Chair</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">Oak Chair</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Furniture</p>
             </div>
             <div class="group cursor-pointer">
                 <div class="aspect-square rounded-[2rem] overflow-hidden bg-slate-100 dark:bg-slate-900 mb-4">
-                    <img src="https://images.unsplash.com/photo-1622979135240-caa6648190b4?q=80&w=600&auto=format&fit=crop"
+                    <img src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">Glass Carafe</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">Glass Carafe</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Dining</p>
             </div>
             <div class="group cursor-pointer">
@@ -1111,7 +1104,7 @@
                     <img src="https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">Linen Throw</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">Linen Throw</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Textile</p>
             </div>
         </div>
@@ -1123,7 +1116,7 @@
                     <img src="https://images.unsplash.com/photo-1606220588913-b3eea415a2ed?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">Typewriter</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">Typewriter</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">1950s</p>
             </div>
             <div class="group cursor-pointer">
@@ -1131,7 +1124,7 @@
                     <img src="https://images.unsplash.com/photo-1595225476474-87563907a212?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">Film Camera</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">Film Camera</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Photography</p>
             </div>
             <div class="group cursor-pointer">
@@ -1139,7 +1132,7 @@
                     <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">Leather Trunk</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">Leather Trunk</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Travel</p>
             </div>
             <div class="group cursor-pointer">
@@ -1147,7 +1140,7 @@
                     <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">Desk Fan</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">Desk Fan</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Industrial</p>
             </div>
             <div class="group cursor-pointer">
@@ -1155,7 +1148,7 @@
                     <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">Brass Telescope</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">Brass Telescope</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Nautical</p>
             </div>
         </div>
@@ -1167,7 +1160,7 @@
                     <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">Ceramic Bowl</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">Ceramic Bowl</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Handmade</p>
             </div>
             <div class="group cursor-pointer">
@@ -1175,7 +1168,7 @@
                     <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">Woven Basket</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">Woven Basket</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Craft</p>
             </div>
             <div class="group cursor-pointer">
@@ -1183,7 +1176,7 @@
                     <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">Wooden Spoon</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">Wooden Spoon</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Kitchen</p>
             </div>
             <div class="group cursor-pointer">
@@ -1191,7 +1184,7 @@
                     <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">Clay Mug</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">Clay Mug</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Drinkware</p>
             </div>
             <div class="group cursor-pointer">
@@ -1199,7 +1192,7 @@
                     <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">Wall Hanging</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">Wall Hanging</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Art</p>
             </div>
         </div>
@@ -1211,7 +1204,7 @@
                     <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">Turntable</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">Turntable</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">High Fidelity</p>
             </div>
             <div class="group cursor-pointer">
@@ -1219,7 +1212,7 @@
                     <img src="https://images.unsplash.com/photo-1620052349788-b22031a5eb23?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">Headphones</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">Headphones</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Studio</p>
             </div>
             <div class="group cursor-pointer">
@@ -1227,7 +1220,7 @@
                     <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">Speaker</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">Speaker</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Wireless</p>
             </div>
             <div class="group cursor-pointer">
@@ -1235,7 +1228,7 @@
                     <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">Amplifier</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">Amplifier</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Tube</p>
             </div>
             <div class="group cursor-pointer">
@@ -1243,7 +1236,7 @@
                     <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?q=80&w=600&auto=format&fit=crop"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
                 </div>
-                <h4 class="font-serif text-slate-900 dark:text-white">Microphone</h4>
+                <h4 class="font-heading tracking-tight text-slate-900 dark:text-white">Microphone</h4>
                 <p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Recording</p>
             </div>
         </div>
@@ -1253,7 +1246,7 @@
     <!-- Elite Members -->
     <section class="py-20 bg-slate-50 dark:bg-slate-900/50">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-5xl font-serif italic text-slate-800 dark:text-white mb-16">Distinguished Collectors</h2>
+            <h2 class="text-5xl font-heading tracking-tight italic text-slate-800 dark:text-white mb-16">Distinguished Collectors</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Member 1 -->
                 <div class="text-center group">
@@ -1263,7 +1256,7 @@
                             class="w-full h-full object-cover">
                     </div>
                     <h4 class="text-xl font-bold text-slate-800 dark:text-white">Eleanor P.</h4>
-                    <p class="text-indigo-500 font-serif italic text-sm">Antique Specialist</p>
+                    <p class="text-emerald-500 font-heading tracking-tight italic text-sm">Antique Specialist</p>
                 </div>
                 <!-- Member 2 -->
                 <div class="text-center group">
@@ -1273,7 +1266,7 @@
                             class="w-full h-full object-cover">
                     </div>
                     <h4 class="text-xl font-bold text-slate-800 dark:text-white">Marcus T.</h4>
-                    <p class="text-indigo-500 font-serif italic text-sm">Horology Expert</p>
+                    <p class="text-emerald-500 font-heading tracking-tight italic text-sm">Horology Expert</p>
                 </div>
                 <!-- Member 3 -->
                 <div class="text-center group">
@@ -1283,7 +1276,7 @@
                             class="w-full h-full object-cover">
                     </div>
                     <h4 class="text-xl font-bold text-slate-800 dark:text-white">Julia R.</h4>
-                    <p class="text-indigo-500 font-serif italic text-sm">Design Curator</p>
+                    <p class="text-emerald-500 font-heading tracking-tight italic text-sm">Design Curator</p>
                 </div>
                 <!-- Member 4 -->
                 <div class="text-center group">
@@ -1293,7 +1286,7 @@
                             class="w-full h-full object-cover">
                     </div>
                     <h4 class="text-xl font-bold text-slate-800 dark:text-white">David B.</h4>
-                    <p class="text-indigo-500 font-serif italic text-sm">Automotive</p>
+                    <p class="text-emerald-500 font-heading tracking-tight italic text-sm">Automotive</p>
                 </div>
             </div>
         </div>
@@ -1302,18 +1295,18 @@
     <!-- Testimonials Slider -->
     <section class="py-24 overflow-hidden relative">
         <div
-            class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-100/40 via-transparent to-transparent dark:from-indigo-900/20">
+            class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-emerald-100/40 via-transparent to-transparent dark:from-emerald-900/20">
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <h2
-                class="text-center text-4xl font-serif italic text-slate-800 dark:text-white mb-16 animate-on-scroll opacity-0">
+                class="text-center text-4xl font-heading tracking-tight italic text-slate-800 dark:text-white mb-16 animate-on-scroll opacity-0">
                 Voices of the
                 Community</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 animate-on-scroll opacity-0">
                 <!-- Review 1 -->
                 <div
-                    class="bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl p-8 rounded-[2rem] border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all duration-300 group">
-                    <div class="flex items-center gap-1 text-indigo-500 mb-6">
+                    class="bg-white/40 dark:bg-slate-900/40 glass-card backdrop-blur-xl p-8 rounded-[2rem] border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all duration-300 group">
+                    <div class="flex items-center gap-1 text-emerald-500 mb-6">
                         <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                         <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                         <i data-lucide="star" class="w-4 h-4 fill-current"></i>
@@ -1328,21 +1321,21 @@
                             class="w-12 h-12 rounded-full object-cover">
                         <div>
                             <h4 class="font-bold text-slate-900 dark:text-white text-sm">Sarah Jenkins</h4>
-                            <p class="text-indigo-500 text-xs uppercase tracking-wider">Interior Designer</p>
+                            <p class="text-emerald-500 text-xs uppercase tracking-wider">Interior Designer</p>
                         </div>
                     </div>
                 </div>
                 <!-- Review 2 -->
                 <div
-                    class="bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl p-8 rounded-[2rem] border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all duration-300 group hover:-translate-y-2">
-                    <div class="flex items-center gap-1 text-indigo-500 mb-6">
+                    class="bg-white/40 dark:bg-slate-900/40 glass-card backdrop-blur-xl p-8 rounded-[2rem] border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all duration-300 group hover:-translate-y-2">
+                    <div class="flex items-center gap-1 text-emerald-500 mb-6">
                         <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                         <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                         <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                         <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                         <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                     </div>
-                    <p class="text-lg text-slate-600 dark:text-slate-300 font-light italic mb-8">"Classified-ads-website
+                    <p class="text-lg text-slate-600 dark:text-slate-300 font-light italic mb-8">"AdNova
                         feels
                         different. It's not just a marketplace; it feels like a gallery. Selling my camera collection
                         here felt respectful to the items."</p>
@@ -1351,14 +1344,14 @@
                             class="w-12 h-12 rounded-full object-cover">
                         <div>
                             <h4 class="font-bold text-slate-900 dark:text-white text-sm">Michael Chen</h4>
-                            <p class="text-indigo-500 text-xs uppercase tracking-wider">Photographer</p>
+                            <p class="text-emerald-500 text-xs uppercase tracking-wider">Photographer</p>
                         </div>
                     </div>
                 </div>
                 <!-- Review 3 -->
                 <div
-                    class="bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl p-8 rounded-[2rem] border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all duration-300 group">
-                    <div class="flex items-center gap-1 text-indigo-500 mb-6">
+                    class="bg-white/40 dark:bg-slate-900/40 glass-card backdrop-blur-xl p-8 rounded-[2rem] border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all duration-300 group">
+                    <div class="flex items-center gap-1 text-emerald-500 mb-6">
                         <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                         <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                         <i data-lucide="star" class="w-4 h-4 fill-current"></i>
@@ -1373,7 +1366,7 @@
                             class="w-12 h-12 rounded-full object-cover">
                         <div>
                             <h4 class="font-bold text-slate-900 dark:text-white text-sm">Emma Wilson</h4>
-                            <p class="text-indigo-500 text-xs uppercase tracking-wider">Collector</p>
+                            <p class="text-emerald-500 text-xs uppercase tracking-wider">Collector</p>
                         </div>
                     </div>
                 </div>
@@ -1385,9 +1378,9 @@
     <section class="py-20 bg-white dark:bg-slate-950">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-end mb-16">
-                <h2 class="text-5xl font-serif italic text-slate-800 dark:text-white">Market Insights</h2>
+                <h2 class="text-5xl font-heading tracking-tight italic text-slate-800 dark:text-white">Market Insights</h2>
                 <a href="#"
-                    class="text-slate-600 dark:text-slate-200 hover:text-indigo-600 border-b border-transparent hover:border-indigo-600 transition-all">Read
+                    class="text-slate-600 dark:text-slate-200 hover:text-emerald-600 border-b border-transparent hover:border-emerald-600 transition-all">Read
                     Journal</a>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -1399,14 +1392,14 @@
                     </div>
                     <div class="flex-1 py-4">
                         <span
-                            class="text-xs font-bold tracking-widest uppercase text-indigo-500 mb-4 block">Trends</span>
+                            class="text-xs font-bold tracking-widest uppercase text-emerald-500 mb-4 block">Trends</span>
                         <h3
-                            class="text-2xl font-serif text-slate-800 dark:text-white mb-4 group-hover:text-indigo-600 transition-colors">
+                            class="text-2xl font-heading tracking-tight text-slate-800 dark:text-white mb-4 group-hover:text-emerald-600 transition-colors">
                             The Return of Analog</h3>
                         <p class="text-slate-500 dark:text-slate-200 leading-relaxed mb-6">Why film cameras and vinyl
                             records are seeing a massive resurgence in 2026.</p>
                         <button
-                            class="text-slate-900 dark:text-white font-bold text-sm underline decoration-slate-300 hover:decoration-indigo-600 underline-offset-4 transition-all">Read
+                            class="text-slate-900 dark:text-white font-bold text-sm underline decoration-slate-300 hover:decoration-emerald-600 underline-offset-4 transition-all">Read
                             Story</button>
                     </div>
                 </div>
@@ -1418,14 +1411,14 @@
                     </div>
                     <div class="flex-1 py-4">
                         <span
-                            class="text-xs font-bold tracking-widest uppercase text-indigo-500 mb-4 block">Guide</span>
+                            class="text-xs font-bold tracking-widest uppercase text-emerald-500 mb-4 block">Guide</span>
                         <h3
-                            class="text-2xl font-serif text-slate-800 dark:text-white mb-4 group-hover:text-indigo-600 transition-colors">
+                            class="text-2xl font-heading tracking-tight text-slate-800 dark:text-white mb-4 group-hover:text-emerald-600 transition-colors">
                             Investing in Design</h3>
                         <p class="text-slate-500 dark:text-slate-200 leading-relaxed mb-6">How to spot future classics
                             in furniture and mid-century lighting.</p>
                         <button
-                            class="text-slate-900 dark:text-white font-bold text-sm underline decoration-slate-300 hover:decoration-indigo-600 underline-offset-4 transition-all">Read
+                            class="text-slate-900 dark:text-white font-bold text-sm underline decoration-slate-300 hover:decoration-emerald-600 underline-offset-4 transition-all">Read
                             Story</button>
                     </div>
                 </div>
@@ -1436,7 +1429,7 @@
     <!-- Minimal CTA -->
     <section class="py-20 bg-slate-100 dark:bg-slate-900/30 border-t border-slate-200 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <h3 class="text-4xl font-serif italic text-slate-800 dark:text-white mb-12">Classified-ads-website Curated
+            <h3 class="text-4xl font-heading tracking-tight italic text-slate-800 dark:text-white mb-12">AdNova Curated
             </h3>
             <div class="flex justify-center gap-8 text-slate-400">
                 <i data-lucide="heart" class="w-5 h-5"></i>
@@ -1458,10 +1451,10 @@
                 <!-- Brand -->
                 <div class="space-y-6 animate-fade-in-up brand-glow cursor-default">
                     <div class="flex items-center gap-3">
-                        <div class="logo-bg bg-indigo-600 p-3 rounded-xl transition-all duration-300">
-                            <span class="text-white font-black text-2xl">C</span>
+                        <div class="logo-bg bg-emerald-600 p-3 rounded-xl transition-all duration-300">
+                            <span class="text-white font-black text-2xl">A</span>
                         </div>
-                        <span class="text-2xl font-black text-white tracking-tight">Classified-ads-website</span>
+                        <span class="text-2xl font-black text-white tracking-tight">AdNova</span>
                     </div>
                     <p class="text-white text-sm leading-relaxed max-w-xs">
                         The world’s most modern classified ads platform. Sell your items, find services, and connect
@@ -1472,7 +1465,7 @@
                 <!-- Quick Links -->
                 <div class="animate-fade-in-up delay-200">
                     <h4 class="text-white font-bold mb-6 text-lg relative inline-block">Quick Links <div
-                            class="absolute -bottom-2 left-0 w-1/2 h-1 bg-indigo-500 rounded-full"></div>
+                            class="absolute -bottom-2 left-0 w-1/2 h-1 bg-emerald-500 rounded-full"></div>
                     </h4>
                     <ul class="space-y-3 text-sm font-medium">
                         <li><a href="index.html" class="footer-link block">Home Page</a></li>
@@ -1485,7 +1478,7 @@
                 <!-- Account -->
                 <div class="animate-fade-in-up delay-400">
                     <h4 class="text-white font-bold mb-6 text-lg relative inline-block">Account <div
-                            class="absolute -bottom-2 left-0 w-1/2 h-1 bg-indigo-500 rounded-full"></div>
+                            class="absolute -bottom-2 left-0 w-1/2 h-1 bg-emerald-500 rounded-full"></div>
                     </h4>
                     <ul class="space-y-3 text-sm font-medium">
                         <li><a href="user_dashboard.html" class="footer-link block group flex items-center gap-2"><i
@@ -1510,14 +1503,14 @@
                 <!-- Newsletter -->
                 <div class="animate-fade-in-up delay-600">
                     <h4 class="text-white font-bold mb-6 text-lg relative inline-block">Newsletter <div
-                            class="absolute -bottom-2 left-0 w-1/2 h-1 bg-indigo-500 rounded-full"></div>
+                            class="absolute -bottom-2 left-0 w-1/2 h-1 bg-emerald-500 rounded-full"></div>
                     </h4>
                     <p class="text-white text-sm mb-4">Stay updated with the latest ads.</p>
                     <div class="relative group">
                         <input type="email" placeholder="Email address"
-                            class="bg-slate-800/50 border border-slate-700 text-white text-sm rounded-xl w-full pl-4 pr-16 rtl:pl-16 rtl:pr-4 py-3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all placeholder-slate-500 group-hover:bg-slate-800">
+                            class="bg-slate-800/50 border border-slate-700 text-white text-sm rounded-xl w-full pl-4 pr-16 rtl:pl-16 rtl:pr-4 py-3 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all placeholder-slate-500 group-hover:bg-slate-800">
                         <button
-                            class="absolute right-1 rtl:right-auto rtl:left-1 top-1 bottom-1 bg-indigo-600 text-white px-4 rounded-lg font-bold hover:bg-indigo-500 transition-all hover:scale-105 active:scale-95 shadow-lg">Go</button>
+                            class="absolute right-1 rtl:right-auto rtl:left-1 top-1 bottom-1 bg-emerald-600 text-white px-4 rounded-lg font-bold hover:bg-emerald-500 transition-all hover:scale-105 active:scale-95 shadow-lg">Go</button>
                     </div>
                 </div>
             </div>
@@ -1525,7 +1518,7 @@
             <!-- Bottom Bar -->
             <div
                 class="border-t border-slate-800/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-semibold text-slate-400 animate-fade-in-up delay-600">
-                <p>© 2026 Classified-ads-website Inc. All rights reserved.</p>
+                <p>© 2026 AdNova Inc. All rights reserved.</p>
                 <div class="flex gap-6">
                     <a href="#" class="social-icon transition-all duration-300"><i data-lucide="facebook"
                             class="w-5 h-5"></i></a>

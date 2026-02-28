@@ -1,46 +1,20 @@
-<!DOCTYPE html>
+const fs = require('fs');
+const path = require('path');
+
+const dir = 's:/JanBatch/Classifiedadspro';
+
+const indexHtmlPath = path.join(dir, 'index.html');
+const indexHtml = fs.readFileSync(indexHtmlPath, 'utf8');
+
+const headStart = indexHtml.indexOf('<head>');
+const headEnd = indexHtml.indexOf('</head>') + 7;
+const headHtml = indexHtml.substring(headStart, headEnd).replace('<title>AdNova Nexus</title>', '<title>AdNova | Access</title>');
+
+// For login, we will make it a full cinematic screen, no standard navbar or footer needed on this specific view.
+const cinematicLogin = `<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AdNova - Modern Marketplace</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        // Pre-load Theme & Direction
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        const savedDir = localStorage.getItem('dir') || 'ltr';
-
-        const html = document.documentElement;
-        html.dir = savedDir;
-        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            html.classList.add('dark');
-        } else {
-            html.classList.remove('dark');
-        }
-
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['DM Sans', 'sans-serif'],
-                        heading: ['Space Grotesk', 'sans-serif'],
-                    }
-                }
-            },
-            plugins: [
-                function ({ addVariant }) {
-                    addVariant('rtl', 'html[dir="rtl"] &');
-                }
-            ]
-        }
-    </script>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-</head>
-<body class="bg-slate-950 font-sans text-slate-100 overflow-x-hidden min-h-screen select-none">
+${headHtml}
+<body class="bg-slate-950 font-sans text-slate-100 overflow-hidden select-none">
     
     <!-- Cinematic Background -->
     <div class="fixed inset-0 z-0">
@@ -59,10 +33,12 @@
         <!-- Top branding -->
         <div class="flex justify-between items-center w-full animate-fade-in-down">
             <a href="index.html" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 md:w-12 md:h-12 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 flex items-center justify-center text-white font-black text-xl md:text-2xl group-hover:bg-emerald-500 transition-colors shadow-xl shrink-0">A</div>
-                <span class="text-xl md:text-2xl font-black tracking-tighter text-white">Ad<span class="text-emerald-400">Nova</span></span>
+                <div class="w-12 h-12 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 flex items-center justify-center text-white font-black text-2xl group-hover:bg-emerald-500 transition-colors shadow-xl">A</div>
+                <span class="text-2xl font-black tracking-tighter text-white">Ad<span class="text-emerald-400">Nova</span></span>
             </a>
-            
+            <a href="index.html" class="text-sm font-bold text-slate-400 hover:text-white transition-colors flex items-center gap-2">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Hub
+            </a>
         </div>
 
         <!-- Center Auth Modal -->
@@ -73,42 +49,42 @@
                 
                 <div class="text-center mb-10">
                     <h2 class="text-3xl font-heading font-black text-white mb-2 tracking-tight">Access Portal</h2>
-                    <p class="text-slate-300 font-medium text-sm">Secure entry via biometric or credentials.</p>
+                    <p class="text-slate-400 font-medium text-sm">Secure entry via biometric or credentials.</p>
                 </div>
 
                 <!-- Tabs -->
                 <div class="flex p-1 bg-black/40 rounded-full mb-8 backdrop-blur-md border border-white/5">
                     <button id="btn-login" class="flex-1 py-3 px-4 rounded-full text-sm font-bold bg-white text-slate-900 shadow-sm transition-all focus:outline-none">Sign In</button>
-                    <button id="btn-register" class="flex-1 py-3 px-4 rounded-full text-sm font-bold text-slate-300 hover:text-white transition-all focus:outline-none">Register</button>
+                    <button id="btn-register" class="flex-1 py-3 px-4 rounded-full text-sm font-bold text-slate-400 hover:text-white transition-all focus:outline-none">Register</button>
                 </div>
 
                 <form class="space-y-5" onsubmit="event.preventDefault(); window.location.href='user_dashboard.html';">
                     
                     <div id="register-field" class="hidden animate-fade-in-up">
-                        <label class="block text-[10px] font-black text-slate-300 uppercase tracking-widest mb-2 ml-1">Legal Name</label>
+                        <label class="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2 ml-1">Legal Name</label>
                         <div class="relative">
-                            <i data-lucide="user" class="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-300"></i>
-                            <input type="text" class="w-full bg-black/40 border border-white/10 rounded-2xl py-4 pl-14 pr-5 text-white placeholder-slate-400 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all font-medium" placeholder="E.g. Sarah Connor">
+                            <i data-lucide="user" class="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400"></i>
+                            <input type="text" class="w-full bg-black/40 border border-white/10 rounded-2xl py-4 pl-14 pr-5 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all font-medium" placeholder="E.g. Sarah Connor">
                         </div>
                     </div>
 
                     <div class="animate-fade-in-up delay-100">
-                        <label class="block text-[10px] font-black text-slate-300 uppercase tracking-widest mb-2 ml-1">Protocol / Email</label>
+                        <label class="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2 ml-1">Protocol / Email</label>
                         <div class="relative">
-                            <i data-lucide="mail" class="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-300"></i>
-                            <input type="email" class="w-full bg-black/40 border border-white/10 rounded-2xl py-4 pl-14 pr-5 text-white placeholder-slate-400 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all font-medium" placeholder="agent@adnova.co">
+                            <i data-lucide="mail" class="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400"></i>
+                            <input type="email" class="w-full bg-black/40 border border-white/10 rounded-2xl py-4 pl-14 pr-5 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all font-medium" placeholder="agent@adnova.co">
                         </div>
                     </div>
 
                     <div class="animate-fade-in-up delay-200">
                         <div class="flex justify-between items-end mb-2 ml-1">
-                            <label class="block text-[10px] font-black text-slate-300 uppercase tracking-widest">Passcode</label>
+                            <label class="block text-[10px] font-black text-slate-400 uppercase tracking-widest">Passcode</label>
                             <a href="#" class="text-[10px] font-bold text-emerald-400 hover:text-emerald-300 transition-colors uppercase tracking-wider">Reset?</a>
                         </div>
                         <div class="relative">
-                            <i data-lucide="lock" class="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-300"></i>
-                            <input type="password" class="w-full bg-black/40 border border-white/10 rounded-2xl py-4 pl-14 pr-12 text-white placeholder-slate-400 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all font-medium font-mono tracking-widest" placeholder="••••••••">
-                            <button type="button" class="absolute right-5 top-1/2 -translate-y-1/2 text-slate-300 hover:text-white transition-colors">
+                            <i data-lucide="lock" class="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400"></i>
+                            <input type="password" class="w-full bg-black/40 border border-white/10 rounded-2xl py-4 pl-14 pr-12 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all font-medium font-mono tracking-widest" placeholder="••••••••">
+                            <button type="button" class="absolute right-5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white transition-colors">
                                 <i data-lucide="eye" class="w-4 h-4"></i>
                             </button>
                         </div>
@@ -145,7 +121,7 @@
         <!-- Bottom status -->
         <div class="flex justify-between flex-col md:flex-row items-center w-full mt-auto opacity-60 hover:opacity-100 transition-opacity animate-fade-in-up">
             <span class="text-xs font-mono font-bold tracking-widest text-emerald-400 mb-2 md:mb-0"><span class="w-2 h-2 inline-block bg-emerald-400 rounded-full mr-2 animate-ping"></span> SECURE CONNECTION</span>
-            <span class="text-xs font-bold text-slate-300">AdNova Protocol v2.4.1</span>
+            <span class="text-xs font-bold text-slate-400">AdNova Protocol v2.4.1</span>
         </div>
 
     </div>
@@ -159,14 +135,14 @@
 
         btnLogin.addEventListener('click', () => {
             btnLogin.className = 'flex-1 py-3 px-4 rounded-full text-sm font-bold bg-white text-slate-900 shadow-sm transition-all focus:outline-none';
-            btnRegister.className = 'flex-1 py-3 px-4 rounded-full text-sm font-bold text-slate-300 hover:text-white transition-all focus:outline-none';
+            btnRegister.className = 'flex-1 py-3 px-4 rounded-full text-sm font-bold text-slate-400 hover:text-white transition-all focus:outline-none';
             registerField.classList.add('hidden');
             submitText.innerText = 'Initiate Link';
         });
 
         btnRegister.addEventListener('click', () => {
             btnRegister.className = 'flex-1 py-3 px-4 rounded-full text-sm font-bold bg-white text-slate-900 shadow-sm transition-all focus:outline-none';
-            btnLogin.className = 'flex-1 py-3 px-4 rounded-full text-sm font-bold text-slate-300 hover:text-white transition-all focus:outline-none';
+            btnLogin.className = 'flex-1 py-3 px-4 rounded-full text-sm font-bold text-slate-400 hover:text-white transition-all focus:outline-none';
             registerField.classList.remove('hidden');
             submitText.innerText = 'Create Identity';
         });
@@ -175,7 +151,8 @@
             btnRegister.click();
         }
     </script>
-    <script src="main.js"></script>
-    <script src="rtltoggle.js"></script>
 </body>
-</html>
+</html>`;
+
+fs.writeFileSync(path.join(dir, 'login.html'), cinematicLogin, 'utf8');
+console.log('Login.html redesigned as a cinematic portal.');

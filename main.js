@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
 
     // Theme Logic
-    const themeBtn = document.getElementById('theme-toggle');
+    const themeBtns = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle');
     const html = document.documentElement;
 
     const savedTheme = localStorage.getItem('theme');
@@ -15,13 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
         html.classList.remove('dark');
     }
 
-    if (themeBtn) {
-        themeBtn.addEventListener('click', () => {
+    themeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
             html.classList.toggle('dark');
             const isDark = html.classList.contains('dark');
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
-    }
+    });
 
     // Navbar Dropdown Logic (Hover for Desktop)
     const navDropdowns = document.querySelectorAll('.dropdown-trigger');

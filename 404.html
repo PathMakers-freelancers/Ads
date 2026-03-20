@@ -106,7 +106,7 @@
                 </div>
 
                 <div class="flex items-center gap-4 sm:gap-6">
-                    <div class="flex items-center gap-1.5 sm:gap-3">
+                    <div class="hidden sm:flex items-center gap-1.5 sm:gap-3">
                         <a href="login.html"
                         class="px-3 sm:px-6 py-2 text-sm font-bold text-slate-600 dark:text-white transition-all border border-emerald-500/30 dark:border-emerald-500 shadow-[0_0_10px_rgba(99,102,241,0.2)] dark:shadow-[0_0_15px_rgba(99,102,241,0.5)] hover:shadow-[0_0_20px_rgba(99,102,241,0.6)] hover:border-emerald-500 rounded-xl hover:text-emerald-600 dark:hover:text-white bg-white/50 dark:bg-slate-900/50">Log
                         In</a>
@@ -116,11 +116,11 @@
                     </a>
                     </div>
                     <button id="dir-toggle"
-                        class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-white hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
+                        class="hidden md:flex p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-white hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
                         <i data-lucide="globe" class="w-5 h-5"></i>
                     </button>
                     <button id="theme-toggle"
-                        class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-white hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
+                        class="hidden md:flex p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-white hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
                         <i data-lucide="moon" class="w-5 h-5"></i>
                     </button>
                     <!-- Mobile Menu Button -->
@@ -140,7 +140,7 @@
 
     <!-- Mobile Menu Drawer -->
     <div id="mobile-menu"
-        class="fixed inset-y-0 left-0 w-[50%] z-[200] bg-white dark:bg-slate-950 shadow-2xl transform -translate-x-full transition-transform duration-300 flex flex-col h-full overflow-y-auto border-r border-slate-200 dark:border-slate-800 lg:hidden rtl:right-0 rtl:left-auto rtl:translate-x-full">
+        class="fixed inset-y-0 left-0 w-[75%] sm:w-[50%] z-[200] bg-white dark:bg-slate-950 shadow-2xl transform -translate-x-full transition-transform duration-300 flex flex-col h-full overflow-y-auto border-r border-slate-200 dark:border-slate-800 lg:hidden rtl:right-0 rtl:left-auto rtl:translate-x-full">
 
         <div class="flex items-center justify-between p-4 border-b border-slate-100 dark:border-slate-800">
             <span class="font-black text-xl tracking-tighter dark:text-white">Menu</span>
@@ -166,6 +166,20 @@
                 class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 font-bold dark:text-white transition-colors">Contact</a>
 
             <div class="border-t border-slate-100 dark:border-slate-800 pt-4 mt-2">
+                <div class="px-4 py-2 text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Appearance</div>
+                <div class="flex items-center gap-2 px-4 mb-4">
+                    <button id="mobile-dir-toggle"
+                        class="flex-1 flex items-center justify-center gap-2 p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-white hover:bg-emerald-600 hover:text-white transition-all">
+                        <i data-lucide="globe" class="w-4 h-4"></i>
+                        <span class="text-xs font-bold">Language</span>
+                    </button>
+                    <button id="mobile-theme-toggle"
+                        class="flex-1 flex items-center justify-center gap-2 p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-white hover:bg-emerald-600 hover:text-white transition-all">
+                        <i data-lucide="moon" class="w-4 h-4"></i>
+                        <span class="text-xs font-bold">Theme</span>
+                    </button>
+                </div>
+
                 <a href="user_dashboard.html"
                     class="flex items-center space-x-2 px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 font-bold dark:text-white transition-colors">
                     <i data-lucide="user" class="w-4 h-4"></i><span>User Dashboard</span>
@@ -174,10 +188,16 @@
                     class="flex items-center space-x-2 px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 font-bold dark:text-white transition-colors">
                     <i data-lucide="shield-check" class="w-4 h-4"></i><span>Admin Dashboard</span>
                 </a>
-                <a href="login.html"
-                    class="flex items-center space-x-2 px-4 py-3 rounded-xl bg-emerald-600 text-white font-bold hover:bg-emerald-700 mt-4 justify-center shadow-lg shadow-emerald-600/20 active:scale-95 transition-all">
-                    <span>Get Started</span>
-                </a>
+                <div class="grid grid-cols-2 gap-2 mt-4">
+                    <a href="login.html"
+                        class="flex items-center justify-center px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 font-bold text-slate-600 dark:text-white hover:bg-slate-50 transition-all">
+                        Log In
+                    </a>
+                    <a href="register.html"
+                        class="flex items-center justify-center px-4 py-3 rounded-xl bg-emerald-600 text-white font-bold hover:bg-emerald-700 shadow-lg shadow-emerald-600/20 active:scale-95 transition-all">
+                        Join
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -218,10 +238,10 @@
             
             <!-- 404 Glitch Text -->
             <div class="relative inline-block mb-6 select-none group">
-                <h1 class="text-[12rem] md:text-[18rem] font-black font-heading leading-none text-transparent bg-clip-text bg-gradient-to-b from-slate-900 to-slate-400 dark:from-white dark:to-slate-600 opacity-20 filter blur-[2px]">
+                <h1 class="text-[8rem] sm:text-[12rem] md:text-[18rem] font-black font-heading leading-none text-transparent bg-clip-text bg-gradient-to-b from-slate-900 to-slate-400 dark:from-white dark:to-slate-600 opacity-20 filter blur-[2px]">
                     404
                 </h1>
-                <h1 class="absolute inset-0 text-[12rem] md:text-[18rem] font-black font-heading leading-none text-transparent bg-clip-text bg-gradient-to-tr from-emerald-500 to-violet-500 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform duration-500">
+                <h1 class="absolute inset-0 text-[8rem] sm:text-[12rem] md:text-[18rem] font-black font-heading leading-none text-transparent bg-clip-text bg-gradient-to-tr from-emerald-500 to-violet-500 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform duration-500">
                     404
                 </h1>
             </div>

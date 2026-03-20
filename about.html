@@ -51,7 +51,7 @@
                         <div
                             class="w-12 h-12 bg-emerald-600 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-xl shadow-emerald-500/20 group-hover:rotate-6 transition-transform">A</div>
                         <span
-                            class="text-2xl font-black tracking-tighter dark:text-white hidden sm:block">Ad<span class="text-emerald-500">Nova</span></span>
+                            class="text-2xl font-black tracking-tighter dark:text-white ">Ad<span class="text-emerald-500">Nova</span></span>
                     </a>
 
                     <!-- Desktop Menu -->
@@ -122,7 +122,7 @@
                         class="lg:hidden p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-white hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
                         <i data-lucide="menu" class="w-5 h-5"></i>
                     </button>
-                    <a href="login.html#register"
+                    <a href="register.html"
                         class="px-6 py-3 bg-emerald-600 text-white font-black rounded-2xl hover:bg-emerald-700 transition-all shadow-xl shadow-emerald-600/20 active:scale-95 hidden sm:block">
                         Get Started
                     </a>
@@ -402,61 +402,65 @@
     </section>
 
 
-    <!-- Evolution Timeline (New) -->
-    <section class="py-24 relative overflow-hidden bg-slate-50 dark:bg-slate-950">
-        <div class="max-w-5xl mx-auto px-4 relative z-10">
+    <!-- Evolution Timeline (New) -->\n    <section class="py-24 relative overflow-hidden bg-slate-50 dark:bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
             <div class="text-center mb-16">
                 <span class="text-emerald-500 font-bold uppercase tracking-widest text-sm mb-4 block">The Journey</span>
                 <h2 class="premium-h2 text-4xl md:text-5xl">Evolution of AdNova</h2>
             </div>
             
-            <div class="relative wrap overflow-hidden p-10 h-full">
-                <!-- Timeline vertical line -->
-                <div class="border-2-2 absolute border-opacity-20 border-slate-700 h-full border" style="left: 50%"></div>
+            <div class="relative wrap overflow-hidden p-4 lg:p-10 h-full">
+                <!-- Timeline vertical line: Left for mobile, center for desktop -->
+                <div class="absolute border-opacity-20 border-slate-700 h-full border left-[31px] lg:left-1/2"></div>
                 
-                <!-- 2024 -->
-                <div class="mb-8 flex justify-between items-center w-full right-timeline">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-emerald-500 shadow-xl w-8 h-8 rounded-full">
-                        <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
+                <!-- 2024 (Right aligned on Desktop) -->
+                <div class="mb-12 flex flex-col lg:flex-row items-center justify-between w-full">
+                    <div class="order-1 hidden lg:block lg:w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-emerald-500 shadow-xl w-10 h-10 rounded-full mb-6 lg:mb-0">
+                        <h1 class="mx-auto font-black text-lg text-white">1</h1>
                     </div>
-                    <div class="order-1 bg-white dark:bg-slate-900 rounded-2xl shadow-xl w-5/12 px-6 py-4 border border-slate-200 dark:border-slate-800">
-                        <h3 class="font-bold dark:text-white text-xl mb-1">Inception</h3>
-                        <p class="text-sm text-emerald-500 font-bold mb-3">Q1 2024</p>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-snug">The core architecture of AdNova was drafted, focusing on zero-latency interactions and a glassmorphic aesthetic.</p>
-                    </div>
-                </div>
-
-                <!-- 2025 -->
-                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-violet-500 shadow-xl w-8 h-8 rounded-full">
-                        <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
-                    </div>
-                    <div class="order-1 bg-white dark:bg-slate-900 rounded-2xl shadow-xl w-5/12 px-6 py-4 border border-slate-200 dark:border-slate-800 text-right">
-                        <h3 class="font-bold dark:text-white text-xl mb-1">The Verification Layer</h3>
-                        <p class="text-sm text-violet-500 font-bold mb-3">Q3 2025</p>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-snug">Integration of AI-driven fraud detection and blockchain certificates for high-ticket asset transfers.</p>
+                    <div class="order-1 bg-white dark:bg-slate-900 rounded-[2rem] shadow-xl w-full lg:w-5/12 px-6 py-6 border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 transition-colors ml-14 lg:ml-0">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold dark:text-white text-2xl mb-1">Inception</h3>
+                            <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 font-black text-xs rounded-lg">Q1 2024</span>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">The core architecture of AdNova was drafted, focusing on zero-latency interactions and a glassmorphic aesthetic.</p>
                     </div>
                 </div>
 
-                <!-- 2026 -->
-                <div class="mb-8 flex justify-between items-center w-full right-timeline">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-emerald-500 shadow-xl w-8 h-8 rounded-full">
-                        <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
+                <!-- 2025 (Left aligned on Desktop) -->
+                <div class="mb-12 flex flex-col lg:flex-row-reverse items-center justify-between w-full">
+                    <div class="order-1 hidden lg:block lg:w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-violet-500 shadow-xl w-10 h-10 rounded-full mb-6 lg:mb-0">
+                        <h1 class="mx-auto text-white font-black text-lg">2</h1>
                     </div>
-                    <div class="order-1 bg-white dark:bg-slate-900 rounded-2xl shadow-xl w-5/12 px-6 py-4 border border-slate-200 dark:border-slate-800">
-                        <h3 class="font-bold dark:text-white text-xl mb-1">Global Scale</h3>
-                        <p class="text-sm text-emerald-500 font-bold mb-3">Q2 2026</p>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-snug">Expansion to 40+ countries with regional CDN bridging and a massive 2.4M active listing milestone.</p>
+                    <div class="order-1 bg-white dark:bg-slate-900 rounded-[2rem] shadow-xl w-full lg:w-5/12 px-6 py-6 border border-slate-200 dark:border-slate-800 text-left lg:text-right hover:border-violet-500/50 transition-colors ml-14 lg:ml-0">
+                        <div class="flex lg:flex-row-reverse justify-between items-start mb-2">
+                            <h3 class="font-bold dark:text-white text-2xl mb-1">Quality Layer</h3>
+                            <span class="px-3 py-1 bg-violet-100 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400 font-black text-xs rounded-lg">Q3 2025</span>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed lg:ps-12">Integration of AI-driven fraud detection and blockchain certificates for high-ticket asset transfers.</p>
+                    </div>
+                </div>
+
+                <!-- 2026 (Right aligned on Desktop) -->
+                <div class="mb-12 flex flex-col lg:flex-row items-center justify-between w-full">
+                    <div class="order-1 hidden lg:block lg:w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-emerald-500 shadow-xl w-10 h-10 rounded-full mb-6 lg:mb-0">
+                        <h1 class="mx-auto font-black text-lg text-white">3</h1>
+                    </div>
+                    <div class="order-1 bg-white dark:bg-slate-900 rounded-[2rem] shadow-xl w-full lg:w-5/12 px-6 py-6 border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 transition-colors ml-14 lg:ml-0">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold dark:text-white text-2xl mb-1">Global Scale</h3>
+                            <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 font-black text-xs rounded-lg">Q2 2026</span>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Expansion to 40+ countries with regional CDN bridging and a massive 2.4M active listing milestone.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-<!-- Footer -->
+\n<!-- Footer -->
     <footer class="footer-gradient text-slate-300 pt-20 pb-10 border-t border-slate-800 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">

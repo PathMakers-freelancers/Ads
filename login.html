@@ -84,33 +84,11 @@
                 </div>
 
                 <div class="text-center mb-10">
-                    <h2 class="text-3xl font-heading font-black text-white mb-2 tracking-tight">Access Portal</h2>
-                    <p class="text-slate-300 font-medium text-sm">Secure entry via biometric or credentials.</p>
-                </div>
-
-                <!-- Tabs -->
-                <div class="flex p-1 bg-black/40 rounded-full mb-8 backdrop-blur-md border border-white/5">
-                    <button id="btn-login"
-                        class="flex-1 py-3 px-4 rounded-full text-sm font-bold bg-white text-slate-900 shadow-sm transition-all focus:outline-none"
-                        style="color: #0f172a !important;">Sign In</button>
-                    <button id="btn-register"
-                        class="flex-1 py-3 px-4 rounded-full text-sm font-bold text-slate-300 hover:text-white transition-all focus:outline-none">Register</button>
+                    <h2 class="text-3xl font-heading font-black text-white mb-2 tracking-tight">Welcome Back</h2>
+                    <p class="text-slate-300 font-medium text-sm">Secure entry to your AdNova dashboard.</p>
                 </div>
 
                 <form class="space-y-5" onsubmit="event.preventDefault(); window.location.href='user_dashboard.html';">
-
-                    <div id="register-field" class="hidden animate-fade-in-up">
-                        <label
-                            class="block text-[10px] font-black text-slate-300 uppercase tracking-widest mb-2 ml-1">Legal
-                            Name</label>
-                        <div class="relative">
-                            <i data-lucide="user"
-                                class="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-300"></i>
-                            <input type="text"
-                                class="w-full bg-black/40 border border-white/10 rounded-2xl py-4 pl-14 pr-5 text-white placeholder-slate-400 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all font-medium"
-                                placeholder="E.g. Sarah Connor">
-                        </div>
-                    </div>
 
                     <div class="animate-fade-in-up delay-100">
                         <label
@@ -147,10 +125,14 @@
 
                     <button
                         class="w-full bg-emerald-500 text-white font-black text-lg py-4 rounded-2xl hover:bg-emerald-400 transition-all shadow-lg shadow-emerald-500/25 active:scale-95 mt-4 flex items-center justify-center gap-2 group animate-fade-in-up delay-300">
-                        <span id="submit-text">Initiate Link</span>
+                        <span>Login</span>
                         <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
                     </button>
                 </form>
+
+                <div class="mt-6 text-center animate-fade-in-up delay-300">
+                    <p class="text-sm text-slate-400">Don't have an account? <a href="register.html" class="text-emerald-400 hover:text-white font-bold transition-colors">Create Account</a></p>
+                </div>
 
                 <div class="mt-8 pt-6 border-t border-white/10 text-center animate-fade-in-up delay-400">
                     <p class="text-xs text-slate-500 font-medium">Alternative entry vectors</p>
@@ -198,32 +180,6 @@
 
     <script>
         lucide.createIcons();
-        const btnLogin = document.getElementById('btn-login');
-        const btnRegister = document.getElementById('btn-register');
-        const registerField = document.getElementById('register-field');
-        const submitText = document.getElementById('submit-text');
-
-        btnLogin.addEventListener('click', () => {
-            btnLogin.className = 'flex-1 py-3 px-4 rounded-full text-sm font-bold bg-white text-slate-900 shadow-sm transition-all focus:outline-none';
-            btnLogin.style.setProperty('color', '#0f172a', 'important');
-            btnRegister.className = 'flex-1 py-3 px-4 rounded-full text-sm font-bold text-slate-300 hover:text-white transition-all focus:outline-none';
-            btnRegister.style.removeProperty('color');
-            registerField.classList.add('hidden');
-            submitText.innerText = 'Initiate Link';
-        });
-
-        btnRegister.addEventListener('click', () => {
-            btnRegister.className = 'flex-1 py-3 px-4 rounded-full text-sm font-bold bg-white text-slate-900 shadow-sm transition-all focus:outline-none';
-            btnRegister.style.setProperty('color', '#0f172a', 'important');
-            btnLogin.className = 'flex-1 py-3 px-4 rounded-full text-sm font-bold text-slate-300 hover:text-white transition-all focus:outline-none';
-            btnLogin.style.removeProperty('color');
-            registerField.classList.remove('hidden');
-            submitText.innerText = 'Create Identity';
-        });
-
-        if (window.location.hash === '#register') {
-            btnRegister.click();
-        }
     </script>
     <script src="main.js"></script>
     <script src="rtltoggle.js"></script>

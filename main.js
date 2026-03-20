@@ -181,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Expects buttons with data-tab-target="#id" and contents with id="id"
+    /* Commented out to prevent conflict with inline page scripts
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
 
@@ -206,6 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    */
 
     // Counter Animation
     const counters = document.querySelectorAll('.counter');

@@ -8,7 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <script>
         // Pre-load Theme & Direction
         const savedTheme = localStorage.getItem('theme') || 'light';
@@ -53,13 +55,13 @@
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.5);
             border-radius: 1.5rem;
-            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
         }
 
         .dark .dashboard-card {
             background-color: rgba(15, 23, 42, 0.7);
             border-color: rgba(255, 255, 255, 0.05);
-            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.2);
         }
 
         .dark .dashboard-card:hover {
@@ -70,7 +72,7 @@
             border-color: #cbd5e1;
         }
 
-        .shadow-[0_0_20px_rgba(139,92,246,0.15)] glow-violet {
+        .glow-violet {
             box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
         }
 
@@ -82,73 +84,72 @@
             transform: translateY(-2px);
         }
 
-        /* ApexCharts Tooltip Theme Fixes */
-        .apexcharts-tooltip {
-            background-color: white !important;
-            border-color: #e2e8f0 !important;
-            color: #0f172a !important;
-        }
-
-        .dark .apexcharts-tooltip {
-            background-color: #1e293b !important;
-            border-color: #334155 !important;
-            color: #fff !important;
-        }
-
-        .apexcharts-tooltip-title {
-            background-color: #f8fafc !important;
-            border-bottom: 1px solid #e2e8f0 !important;
-        }
-
-        .dark .apexcharts-tooltip-title {
-            background-color: #0f172a !important;
-            border-bottom: 1px solid #334155 !important;
-        }
-
-        @media (max-width: 640px) {
-            .dashboard-card {
-                padding: 16px;
+            /* ApexCharts Tooltip Theme Fixes */
+            .apexcharts-tooltip {
+                background-color: white !important;
+                border-color: #e2e8f0 !important;
+                color: #0f172a !important;
             }
-        }
+
+            .dark .apexcharts-tooltip {
+                background-color: #1e293b !important;
+                border-color: #334155 !important;
+                color: #fff !important;
+            }
+
+            .apexcharts-tooltip-title {
+                background-color: #f8fafc !important;
+                border-bottom: 1px solid #e2e8f0 !important;
+            }
+
+            .dark .apexcharts-tooltip-title {
+                background-color: #0f172a !important;
+                border-bottom: 1px solid #334155 !important;
+            }
+
+            @media (max-width: 640px) {
+                .dashboard-card {
+                    padding: 16px;
+                }
+            }
     </style>
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 
 <body class="bg-slate-50 dark:bg-slate-950 transition-colors duration-300 bg-user-dash">
-    <div class="fixed inset-0 bg-gradient-to-br from-slate-50 to-emerald-50/20 dark:from-slate-950 dark:to-violet-950/20 -z-10 absolute pointer-events-none"></div>
+    <div
+        class="fixed inset-0 bg-gradient-to-br from-slate-50 to-emerald-50/20 dark:from-slate-950 dark:to-violet-950/20 -z-10 absolute pointer-events-none">
+    </div>
 
     <!-- Navbar -->
-    <nav class="sticky top-0 z-[100] bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 py-5">
+    <nav
+        class="hidden sticky top-0 z-[100] bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 py-5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center gap-8">
                     <a href="index.html" class="flex items-center gap-2 group" dir="ltr">
                         <div
-                            class="w-12 h-12 bg-emerald-600 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-xl shadow-emerald-500/20 group-hover:rotate-6 transition-transform">A</div>
-                        <span
-                            class="text-2xl font-black tracking-tighter dark:text-white hidden sm:block">Ad<span class="text-emerald-500">Nova</span></span>
+                            class="w-12 h-12 bg-emerald-600 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-xl shadow-emerald-500/20 group-hover:rotate-6 transition-transform">
+                            A</div>
+                        <span class="text-2xl font-black tracking-tighter dark:text-white ">Ad<span
+                                class="text-emerald-500">Nova</span></span>
                     </a>
+
+                    </div>
 
                     <!-- Desktop Menu -->
                     <div class="flex items-center gap-4 sm:gap-6">
-                    <button id="dir-toggle"
-                        class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
-                        <i data-lucide="globe" class="w-5 h-5"></i>
-                    </button>
-                    <button id="theme-toggle"
-                        class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
-                        <i data-lucide="moon" class="w-5 h-5"></i>
-                    </button>
-                    <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-btn"
-                        class="lg:hidden p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
-                        <i data-lucide="menu" class="w-5 h-5"></i>
-                    </button>
-                    
+
+                        <!-- Mobile Menu Button -->
+                        <button id="mobile-menu-btn"
+                            class="lg:hidden p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
+                            <i data-lucide="menu" class="w-5 h-5"></i>
+                        </button>
+
+                    </div>
                 </div>
             </div>
-        </div>
     </nav>
 
     <!-- Mobile Menu Overlay -->
@@ -202,22 +203,41 @@
     </div>
 
     <!-- Dashboard Content Wrapper -->
-    <div
-        class="dashboard-wrapper flex min-h-[calc(100vh-80px)] bg-slate-50 dark:bg-[#0f172a] text-slate-900 dark:text-[#f3f4f6]">
+    <div class="dashboard-wrapper flex min-h-screen bg-slate-50 dark:bg-[#0f172a] text-slate-900 dark:text-[#f3f4f6]">
         <!-- Sidebar -->
         <aside id="sidebar"
-            class="dashboard-sidebar fixed inset-y-0 lg:sticky lg:top-20 start-0 lg:h-[calc(100vh-80px)] w-64 z-[110] lg:z-40 transform -translate-x-full rtl:translate-x-full lg:translate-x-0 lg:rtl:translate-x-0 transition-transform duration-300 overflow-y-auto bg-white/70 dark:bg-slate-900/70 backdrop-blur-2xl border-e border-slate-200 dark:border-white/10 shadow-2xl lg:shadow-none rtl:right-0 rtl:left-auto">
+            class="dashboard-sidebar fixed inset-y-0 lg:sticky lg:top-0 start-0 lg:h-screen w-64 z-[110] lg:z-40 transform -translate-x-full rtl:translate-x-full lg:translate-x-0 lg:rtl:translate-x-0 transition-transform duration-300 overflow-y-auto bg-white/70 dark:bg-slate-900/70 backdrop-blur-2xl border-e border-slate-200 dark:border-white/10 shadow-2xl lg:shadow-none rtl:right-0 rtl:left-auto">
             <div class="flex flex-col h-full p-4">
-                <!-- Navigation -->
-                <div class="lg:hidden flex justify-end mb-4">
-                    <button id="closeSidebarBtn" class="p-2 text-slate-500 hover:text-violet-500">
-                        <i data-lucide="x" class="w-6 h-6"></i>
+                <!-- Brand & Mobile Close -->
+                <div
+                    class="flex items-center justify-between mb-3 pb-3 border-b border-slate-100 dark:border-slate-800/50">
+                    <a href="index.html" class="flex items-center gap-2 group" dir="ltr">
+                        <div
+                            class="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-emerald-500/20 group-hover:rotate-6 transition-transform">
+                            A</div>
+                        <span class="text-xl font-black tracking-tighter dark:text-white">Ad<span
+                                class="text-emerald-500">Nova</span></span>
+                    </a>
+                    <button id="closeSidebarBtn"
+                        class="lg:hidden p-2 text-slate-500 hover:text-violet-500 bg-slate-100 dark:bg-slate-800 rounded-lg">
+                        <i data-lucide="x" class="w-5 h-5"></i>
                     </button>
                 </div>
                 <nav class="flex-1 space-y-1 mt-0">
-                    <div
-                        class="mx-3 mt-2 mb-1 px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded w-fit uppercase tracking-wider">
-                        USER</div>
+                    <div class="flex items-center justify-between w-full mb-2 mt-0 px-3">
+                        <div class="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded uppercase tracking-wider flex items-center justify-center h-9">
+                            USER
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button id="theme-toggle" class="flex items-center justify-center w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition-all shadow-sm" title="Toggle Dark Mode">
+                                <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
+                                <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+                            </button>
+                            <button id="dir-toggle" class="flex items-center justify-center w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition-all shadow-sm" title="Toggle RTL">
+                                <i data-lucide="globe" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
                     <a href="#view-overview" id="nav-overview"
                         class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/20">
                         <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
@@ -255,17 +275,13 @@
                     </a>
                 </nav>
 
-                <!-- User Profile -->
-                <div class="mt-auto pt-4 border-t border-slate-200 dark:border-slate-700/50">
-
-                    <div class="flex items-center gap-3 p-2">
-                        <img src="https://ui-avatars.com/api/?name=John+Doe&background=6366f1&color=fff"
-                            class="w-10 h-10 rounded-full" alt="User">
-                        <div class="flex-1 min-w-0">
-                            <p class="text-sm font-medium text-slate-900 dark:text-white truncate">John Doe</p>
-                            <p class="text-xs text-slate-500 dark:text-slate-400 truncate">Premium Member</p>
-                        </div>
-                    </div>
+                <!-- Logout Section -->
+                <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800/50">
+                    <a href="login.html"
+                        class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-violet-600 dark:text-violet-400 hover:bg-violet-50 dark:hover:bg-violet-900/20 transition-all group">
+                        <i data-lucide="log-out" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                        <span class="font-bold">Logout</span>
+                    </a>
                 </div>
             </div>
         </aside>
@@ -276,23 +292,41 @@
         </div>
 
         <!-- Main Content -->
-        <main class="flex-1 lg:ml-0 pt-8 min-h-screen">
-            <!-- Mobile Sidebar Toggle -->
-            <button id="contentMenuBtn"
-                class="lg:hidden mx-4 mb-4 p-2 bg-white dark:bg-[#1e293b] text-slate-600 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-700">
-                <span class="flex items-center gap-2 font-bold text-sm">
-                    <i data-lucide="menu" class="w-5 h-5"></i>
-                    Dashboard Menu
-                </span>
-            </button>
+        <main class="flex-1 lg:ml-0 pt-6 lg:pt-8 min-h-screen relative">
+            <!-- Global Top Action Bar -->
+            <div class="flex items-center justify-between mx-4 lg:mx-8 mb-4 lg:mb-6 lg:hidden">
+                <!-- Mobile Sidebar Toggle -->
+                <button id="contentMenuBtn"
+                    class="p-2.5 bg-white dark:bg-[#1e293b] text-slate-600 dark:text-slate-300 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors shadow-sm">
+                    <span class="flex items-center gap-2 font-bold text-sm">
+                        <i data-lucide="menu" class="w-5 h-5"></i>
+                        <span>Menu</span>
+                    </span>
+                </button>
+            </div>
 
             <div id="view-overview"
                 class="dashboard-view p-4 lg:p-8 max-w-7xl mx-auto space-y-6 animate-fade-in-up scroll-mt-24">
                 <!-- Header -->
-                <div>
-                    <h1 class="premium-h1 text-2xl lg:text-3xl mb-2">My Dashboard 🚀</h1>
-                    <p class="text-slate-600 dark:text-slate-400">Manage your profile, listings, and performance in one
-                        place.</p>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <h1 class="premium-h1 text-2xl lg:text-3xl mb-2">My Dashboard 🚀</h1>
+                        <p class="text-slate-600 dark:text-slate-400">Manage your profile, listings, and performance in one
+                            place.</p>
+                    </div>
+                    
+                    <!-- Profile Dropdown/Icon -->
+                    <div
+                        class="flex items-center gap-3 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md p-1.5 pe-4 rounded-full border border-slate-200 dark:border-slate-800 shadow-sm cursor-pointer hover:shadow-md transition-all group max-w-fit">
+                        <img src="https://ui-avatars.com/api/?name=John+Doe&background=6366f1&color=fff"
+                            class="w-9 h-9 rounded-full ring-2 ring-indigo-500/20 group-hover:ring-indigo-500/50 shadow-inner"
+                            alt="User Profile">
+                        <div class="hidden sm:block text-start ps-2 border-s border-slate-200 dark:border-slate-700">
+                            <p class="text-sm font-bold text-slate-900 dark:text-white leading-none">John Doe</p>
+                            <p class="text-[10px] font-bold text-emerald-500 mt-1 uppercase tracking-wider">Premium Member
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Row 1: Profile, Shortcuts, Wallet (3 Columns) -->
@@ -994,7 +1028,7 @@
     </div>
 
     <!-- Footer -->
-    
+
 
     <script src="main.js"></script>
     <script src="rtltoggle.js"></script>
@@ -1458,7 +1492,7 @@
     <script src="main.js"></script>
     <script src="rtltoggle.js"></script>
 
-    
+
 </body>
 
 </html>

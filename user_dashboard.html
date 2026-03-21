@@ -239,7 +239,7 @@
                         </div>
                     </div>
                     <a href="#view-overview" id="nav-overview"
-                        class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/20">
+                        class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-slate-900 dark:hover:text-white transition-colors">
                         <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
                         <span class="font-medium">Overview</span>
                     </a>
@@ -1137,8 +1137,6 @@
                 if (href === `#${targetId}`) {
                     link.classList.remove(...inactiveClasses);
                     link.classList.add(...activeClasses);
-                    // Also scroll sidebar if needed (optional but nice)
-                    // link.scrollIntoView({ block: 'nearest', inline: 'nearest' }); 
                 } else {
                     link.classList.remove(...activeClasses);
                     link.classList.add(...inactiveClasses);
@@ -1149,8 +1147,6 @@
         // 1. Intersection Observer for Scroll Spy
         const observerOptions = {
             root: null,
-            // Trigger when 40% of the target is visible or close to center
-            // Adjust rootMargin to make the active switch happen "nicely" as you scroll
             rootMargin: '-20% 0px -60% 0px',
             threshold: 0
         };
@@ -1179,6 +1175,9 @@
                         behavior: 'smooth'
                     });
 
+                    // Update Hash
+                    history.pushState(null, null, `#${targetId}`);
+
                     // Close Mobile Sidebar if open
                     if (window.innerWidth < 1024) {
                         const sidebar = document.getElementById('sidebar');
@@ -1196,6 +1195,19 @@
                     }
                 }
             });
+        });
+
+        // 3. Default Scroll on Load if hash exists
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const target = document.getElementById(hash);
+                if (target) {
+                    setTimeout(() => {
+                        window.scrollTo({ top: target.offsetTop - 100, behavior: 'smooth' });
+                    }, 100);
+                }
+            }
         });
 
         // 3. Default to Overview on Load if no hash

@@ -40,7 +40,9 @@
     <!-- ApexCharts -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <!-- Custom CSS -->
@@ -133,24 +135,28 @@
 
 <body
     class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300 font-inter bg-admin-dash">
-    <div class="fixed inset-0 bg-gradient-to-br from-slate-50 to-emerald-50/20 dark:from-slate-950 dark:to-violet-950/20 -z-10 absolute pointer-events-none"></div>
+    <div
+        class="fixed inset-0 bg-gradient-to-br from-slate-50 to-emerald-50/20 dark:from-slate-950 dark:to-violet-950/20 -z-10 absolute pointer-events-none">
+    </div>
 
     <!-- Navbar (Global) -->
-    <nav class="hidden sticky top-0 z-[100] bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 py-5">
+    <nav
+        class="hidden sticky top-0 z-[100] bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 py-5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center gap-8">
                     <a href="index.html" class="flex items-center gap-2 group" dir="ltr">
                         <div
-                            class="w-12 h-12 bg-emerald-600 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-xl shadow-emerald-500/20 group-hover:rotate-6 transition-transform">A</div>
-                        <span
-                            class="text-2xl font-black tracking-tighter dark:text-white ">Ad<span class="text-emerald-500">Nova</span></span>
+                            class="w-12 h-12 bg-emerald-600 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-xl shadow-emerald-500/20 group-hover:rotate-6 transition-transform">
+                            A</div>
+                        <span class="text-2xl font-black tracking-tighter dark:text-white ">Ad<span
+                                class="text-emerald-500">Nova</span></span>
                     </a>
 
-                    </div>
+                </div>
 
-                    <!-- Desktop Menu -->
-                    <div class="flex items-center gap-4 sm:gap-6">
+                <!-- Desktop Menu -->
+                <div class="flex items-center gap-4 sm:gap-6">
                     <button id="dir-toggle-old"
                         class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
                         <i data-lucide="globe" class="w-5 h-5"></i>
@@ -162,7 +168,7 @@
                         <!-- Sun for Dark Mode (hidden in light) -->
                         <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
                     </button>
-                    
+
                     <!-- Mobile Menu Button -->
                     <button id="mobile-menu-btn"
                         class="lg:hidden p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
@@ -235,11 +241,13 @@
                     <div class="flex items-center justify-between px-3">
                         <a href="index.html" class="flex items-center gap-2 group" dir="ltr">
                             <div
-                                class="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-emerald-500/20 group-hover:rotate-6 transition-transform">A</div>
-                            <span
-                                class="text-xl font-black tracking-tighter dark:text-white">Ad<span class="text-emerald-500">Nova</span></span>
+                                class="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-emerald-500/20 group-hover:rotate-6 transition-transform">
+                                A</div>
+                            <span class="text-xl font-black tracking-tighter dark:text-white">Ad<span
+                                    class="text-emerald-500">Nova</span></span>
                         </a>
-                        <button id="closeSidebarBtn" class="lg:hidden p-2 text-slate-500 hover:text-violet-500 bg-slate-100 dark:bg-slate-800 rounded-lg">
+                        <button id="closeSidebarBtn"
+                            class="lg:hidden p-2 text-slate-500 hover:text-violet-500 bg-slate-100 dark:bg-slate-800 rounded-lg">
                             <i data-lucide="x" class="w-5 h-5"></i>
                         </button>
                     </div>
@@ -260,21 +268,26 @@
                 <!-- Navigation -->
                 <nav class="flex-1 space-y-1 overflow-y-auto" id="sidebarNav">
                     <div class="flex items-center justify-between w-full mb-2 mt-0 px-3">
-                        <div class="px-3 py-1 bg-violet-600 text-white text-xs font-bold rounded uppercase tracking-wider flex items-center justify-center h-9">
+                        <div
+                            class="px-3 py-1 bg-violet-600 text-white text-xs font-bold rounded uppercase tracking-wider flex items-center justify-center h-9">
                             ADMIN
                         </div>
                         <div class="flex items-center gap-2">
-                            <button id="theme-toggle" class="flex items-center justify-center w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition-all shadow-sm" title="Toggle Dark Mode">
+                            <button id="theme-toggle"
+                                class="flex items-center justify-center w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition-all shadow-sm"
+                                title="Toggle Dark Mode">
                                 <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
                                 <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
                             </button>
-                            <button id="dir-toggle" class="flex items-center justify-center w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition-all shadow-sm" title="Toggle RTL">
+                            <button id="dir-toggle"
+                                class="flex items-center justify-center w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition-all shadow-sm"
+                                title="Toggle RTL">
                                 <i data-lucide="globe" class="w-4 h-4"></i>
                             </button>
                         </div>
                     </div>
                     <a href="#view-overview" id="sidebar-overview"
-                        class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl sidebar-item-active transition-all group">
+                        class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all group">
                         <i data-lucide="layout-grid" class="w-5 h-5"></i>
                         <span class="font-medium">Overview</span>
                     </a>
@@ -555,23 +568,68 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Listing 1: Reported -->
                     <div
-                        class="bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-200 dark:border-slate-800">
-                        <div class="aspect-video bg-slate-100 dark:bg-slate-800 rounded-lg mb-4 relative">
+                        class="bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-200 dark:border-slate-800 group">
+                        <div class="aspect-video rounded-lg mb-4 relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <span
-                                class="absolute top-2 right-2 px-2 py-1 bg-violet-500 text-white text-xs font-bold rounded">Reported</span>
+                                class="absolute top-2 right-2 px-2 py-1 bg-violet-500 text-white text-xs font-bold rounded shadow-lg">Reported</span>
                         </div>
-                        <h3 class="font-bold dark:text-white mb-1">Suspicious Ad Item</h3>
-                        <p class="text-xs text-slate-700 mb-4">Posted by Unknown</p>
+                        <h3 class="font-bold dark:text-white mb-1">Suspicious Premium Watch</h3>
+                        <p class="text-xs text-slate-500 mb-4">Posted by: <span
+                                class="text-emerald-500 font-bold">@unknown_user</span></p>
                         <div class="flex gap-2">
                             <button
-                                class="flex-1 py-2 bg-violet-50 text-violet-600 dark:bg-violet-900/20 dark:text-violet-400 rounded-lg text-sm font-bold">Ban</button>
+                                class="flex-1 py-2 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-lg text-sm font-bold hover:bg-violet-500 hover:text-white transition-all">Ban</button>
                             <button
-                                class="flex-1 py-2 bg-emerald-50 text-emerald-600 dark:bg-emerald-900/20 dark:text-emerald-400 rounded-lg text-sm font-bold">Ignore</button>
+                                class="flex-1 py-2 bg-emerald-600 text-white rounded-lg text-sm font-bold hover:bg-emerald-700 shadow-lg shadow-emerald-500/20 transition-all">Approve</button>
+                        </div>
+                    </div>
+
+                    <!-- Listing 2: Active -->
+                    <div
+                        class="bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-200 dark:border-slate-800 group">
+                        <div class="aspect-video rounded-lg mb-4 relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=800&q=80"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span
+                                class="absolute top-2 right-2 px-2 py-1 bg-emerald-500 text-white text-xs font-bold rounded shadow-lg">Active</span>
+                        </div>
+                        <h3 class="font-bold dark:text-white mb-1">Professional Mountain Bike</h3>
+                        <p class="text-xs text-slate-500 mb-4">Posted by: <span
+                                class="text-emerald-500 font-bold">@cycling_pro</span></p>
+                        <div class="flex gap-2">
+                            <button
+                                class="flex-1 py-2 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-lg text-sm font-bold hover:bg-violet-500 hover:text-white transition-all">Flag</button>
+                            <button
+                                class="flex-1 py-2 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-lg text-sm font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Listing 3: New -->
+                    <div
+                        class="bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-200 dark:border-slate-800 group">
+                        <div class="aspect-video rounded-lg mb-4 relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?w=800&q=80"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span
+                                class="absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white text-xs font-bold rounded shadow-lg">Review</span>
+                        </div>
+                        <h3 class="font-bold dark:text-white mb-1">PlayStation 5 Console</h3>
+                        <p class="text-xs text-slate-500 mb-4">Posted by: <span
+                                class="text-emerald-500 font-bold">@gamer_zone</span></p>
+                        <div class="flex gap-2">
+                            <button
+                                class="flex-1 py-2 bg-emerald-600 text-white rounded-lg text-sm font-bold hover:bg-emerald-700 shadow-lg shadow-emerald-500/20 transition-all">Verify</button>
+                            <button
+                                class="flex-1 py-2 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-lg text-sm font-bold hover:bg-violet-500 hover:text-white transition-all">Reject</button>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <!-- View: Analytics -->
             <div id="view-analytics"
@@ -609,7 +667,8 @@
                                 <span class="text-sm text-slate-700">Off</span>
                             </div>
                         </div>
-                        <button class="px-6 py-3 bg-emerald-600 text-white font-bold rounded-xl hover:bg-emerald-700">Save
+                        <button
+                            class="px-6 py-3 bg-emerald-600 text-white font-bold rounded-xl hover:bg-emerald-700">Save
                             Changes</button>
                     </div>
                 </div>
@@ -619,7 +678,7 @@
 
                 <!-- Footer -->
                 <!-- Footer -->
-                
+
             </div>
         </main>
     </div>
@@ -917,13 +976,7 @@
             }, 1500); // Slightly after render
         }
 
-        // Sidebar Logic (SPA) with Scroll Spy
-        const sidebarLinks = document.querySelectorAll('.sidebar-link');
-        const views = document.querySelectorAll('.admin-view');
-
         // Classes for Active State
-        // IMPORTANT: admin has specific active class "sidebar-item-active" defined in <style>
-        // We will toggle that class plus the text colors
         const inactiveClasses = ['text-slate-700', 'dark:text-slate-200', 'hover:bg-slate-50', 'dark:hover:bg-slate-800/50', 'hover:text-emerald-600', 'dark:hover:text-emerald-400'];
 
         function updateSidebarUI(targetId) {
@@ -939,7 +992,7 @@
             });
         }
 
-        // 1. Intersection Observer
+        // 1. Intersection Observer for Scroll Spy
         const observerOptions = {
             root: null,
             rootMargin: '-20% 0px -60% 0px',
@@ -968,6 +1021,9 @@
                         top: targetSection.offsetTop - 100,
                         behavior: 'smooth'
                     });
+
+                    // Update URL Hash without jump
+                    history.pushState(null, null, `#${targetId}`);
 
                     // Close sidebar on mobile
                     if (window.innerWidth < 1024) toggleSidebar(true);
@@ -1009,7 +1065,7 @@
     <script src="main.js"></script>
     <script src="rtltoggle.js"></script>
 
-    
+
 </body>
 
 </html>

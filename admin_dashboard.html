@@ -764,23 +764,25 @@
         const getChartColors = () => {
             const isDark = document.documentElement.classList.contains('dark');
             return {
+                isDark,
                 text: isDark ? '#94a3b8' : '#64748b',
                 grid: isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)',
                 colors: { indigo: '#6366f1', cyan: '#22d3ee', emerald: '#34d399', amber: '#fbbf24', purple: '#a78bfa', rose: '#fb7185', slate: '#94a3b8' }
             };
         };
 
-        const commonOptions = {
-            chart: { background: 'transparent', toolbar: { show: false }, fontFamily: 'Inter, sans-serif' },
-            theme: { mode: 'light' },
-            grid: { borderColor: 'transparent', strokeDashArray: 0 },
-            dataLabels: { enabled: false },
-            tooltip: { theme: 'dark', style: { fontSize: '12px' } }
-        };
-
         // Render ALL 10 Charts
         setTimeout(() => {
             const c = getChartColors();
+            
+            const commonOptions = {
+                chart: { background: 'transparent', toolbar: { show: false }, fontFamily: 'Inter, sans-serif' },
+                theme: { mode: c.isDark ? 'dark' : 'light' },
+                grid: { borderColor: 'transparent', strokeDashArray: 0 },
+                dataLabels: { enabled: false },
+                tooltip: { theme: c.isDark ? 'dark' : 'light', style: { fontSize: '12px' } }
+            };
+
             window.adminCharts = {};
 
             // 1. Revenue Line
@@ -1065,6 +1067,33 @@
         }
 
         setTimeout(() => { showToast('Welcome Admin', 'Dashboard updated with latest metrics.', 'success'); }, 2000);
+
+        // Observer for Theme Changes to update charts
+        const themeObserver = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    const isDark = document.documentElement.classList.contains('dark');
+                    const c = getChartColors();
+                    const mode = isDark ? 'dark' : 'light';
+                    
+                    if (window.adminCharts) {
+                        Object.values(window.adminCharts).forEach(chart => {
+                            if (chart && typeof chart.updateOptions === 'function') {
+                                chart.updateOptions({
+                                    theme: { mode: mode },
+                                    tooltip: { theme: mode },
+                                    xaxis: { labels: { style: { colors: c.text } } },
+                                    yaxis: { labels: { style: { colors: c.text } } },
+                                    grid: { borderColor: c.grid },
+                                    legend: { labels: { colors: c.text } }
+                                });
+                            }
+                        });
+                    }
+                }
+            });
+        });
+        themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 
     </script>
     <script src="./main.js"></script>

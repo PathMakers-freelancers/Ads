@@ -1006,12 +1006,43 @@
             threshold: 0
         };
 
+        const visibleViews = new Set();
+        let isAtBottom = false;
+
+        const mainContent = document.querySelector('main');
+        mainContent.addEventListener('scroll', () => {
+            if (mainContent.scrollHeight - mainContent.scrollTop - mainContent.clientHeight < 10) {
+                isAtBottom = true;
+                if (views.length > 0) updateSidebarUI(views[views.length - 1].id);
+            } else if (isAtBottom) {
+                isAtBottom = false;
+                for (const view of views) {
+                    if (visibleViews.has(view.id)) {
+                        updateSidebarUI(view.id);
+                        break;
+                    }
+                }
+            }
+        });
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    updateSidebarUI(entry.target.id);
+                    visibleViews.add(entry.target.id);
+                } else {
+                    visibleViews.delete(entry.target.id);
                 }
             });
+
+            // Find the first visible view in DOM order to highlight
+            if (!isAtBottom) {
+                for (const view of views) {
+                    if (visibleViews.has(view.id)) {
+                        updateSidebarUI(view.id);
+                        break;
+                    }
+                }
+            }
         }, observerOptions);
 
         views.forEach(view => observer.observe(view));

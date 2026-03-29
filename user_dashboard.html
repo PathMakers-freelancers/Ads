@@ -84,6 +84,17 @@
             transform: translateY(-2px);
         }
 
+        .sidebar-item-active {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+
+        .dark .sidebar-item-active {
+            background-color: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+        }
+
             /* ApexCharts Tooltip Theme Fixes */
             .apexcharts-tooltip {
                 background-color: white !important;
@@ -1124,8 +1135,7 @@
         const sections = document.querySelectorAll('.dashboard-view');
 
         // Classes
-        const activeClasses = ['bg-emerald-500/10', 'text-emerald-400', 'border', 'border-emerald-500/20'];
-        const inactiveClasses = ['text-slate-400', 'hover:bg-slate-800/50', 'hover:text-white'];
+        const inactiveClasses = ['text-slate-600', 'dark:text-slate-400', 'hover:bg-slate-100', 'dark:hover:bg-slate-800/50', 'hover:text-slate-900', 'dark:hover:text-white'];
 
         // Helper to update UI
         function updateSidebarUI(targetId) {
@@ -1134,9 +1144,9 @@
                 // Check if href matches #targetId
                 if (href === `#${targetId}`) {
                     link.classList.remove(...inactiveClasses);
-                    link.classList.add(...activeClasses);
+                    link.classList.add('sidebar-item-active');
                 } else {
-                    link.classList.remove(...activeClasses);
+                    link.classList.remove('sidebar-item-active');
                     link.classList.add(...inactiveClasses);
                 }
             });
@@ -1149,12 +1159,43 @@
             threshold: 0
         };
 
+        const visibleSections = new Set();
+        let isAtBottom = false;
+
+        window.addEventListener('scroll', () => {
+            // Check if user scrolled to the bottom of the page
+            if (Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 10) {
+                isAtBottom = true;
+                if (sections.length > 0) updateSidebarUI(sections[sections.length - 1].id);
+            } else if (isAtBottom) {
+                isAtBottom = false;
+                for (const section of sections) {
+                    if (visibleSections.has(section.id)) {
+                        updateSidebarUI(section.id);
+                        break;
+                    }
+                }
+            }
+        });
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    updateSidebarUI(entry.target.id);
+                    visibleSections.add(entry.target.id);
+                } else {
+                    visibleSections.delete(entry.target.id);
                 }
             });
+
+            // Find the first visible section in DOM order to highlight
+            if (!isAtBottom) {
+                for (const section of sections) {
+                    if (visibleSections.has(section.id)) {
+                        updateSidebarUI(section.id);
+                        break;
+                    }
+                }
+            }
         }, observerOptions);
 
         sections.forEach(section => observer.observe(section));

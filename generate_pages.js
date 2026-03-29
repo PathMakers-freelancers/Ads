@@ -86,8 +86,8 @@ const aboutContent = `
             <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1600&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="AdNova Team">
             <div class="absolute inset-0 z-10 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-12">
                 <div class="max-w-2xl text-left relative z-20">
-                    <h3 class="text-white text-3xl font-heading font-black mb-4">Founded on Trust. Built for Speed.</h3>
-                    <p class="text-slate-200 text-lg">Our headquarters in San Francisco acts as the nexus for our global operations, monitoring millions of secure transactions daily.</p>
+                    <h3 class="text-white text-3xl font-heading font-black mb-4" style="color: white !important;">Founded on Trust. Built for Speed.</h3>
+                    <p class="text-white text-lg" style="color: white !important;">Our headquarters in San Francisco acts as the nexus for our global operations, monitoring millions of secure transactions daily.</p>
                 </div>
             </div>
         </div>
